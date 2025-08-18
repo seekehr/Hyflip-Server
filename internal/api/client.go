@@ -1,0 +1,41 @@
+package api
+
+import (
+	"github.com/bytedance/sonic"
+	"github.com/valyala/fasthttp"
+)
+
+// HypixelApiClient - One client per API key.
+type HypixelApiClient struct {
+	ApiKey string
+	Client *fasthttp.Client
+}
+
+func Init(apiKey string) *HypixelApiClient {
+	client := &fasthttp.Client{
+		MaxConnsPerHost: 10, // LIVE connections per host. 10 is arbitrary for now
+	}
+	// Per Host also means Per API Key here since we're creating a new client for EVERY Api Key
+	return &HypixelApiClient{
+		ApiKey: apiKey,
+		Client: client,
+	}
+	// every API Key is... well, one API key since for now we're only using the internal API Key without support for user API Keys so yeah.
+}
+
+// Get is used to send requests efficiently (and without boilerplate) to (theoretically) ANY url. It sets the API key header, and if successful with the request, uses `dst` to unmarshall the data so you can handle any further errors yourself.
+func (cl *HypixelApiClient) Get(url string, dst any) error {
+	// fast http performance thing. request/responses pool to prevent GC usage basically
+	req := fasthttp.AcquireRequest()
+	resp := fasthttp.AcquireResponse()
+	defer fasthttp.ReleaseResponse(resp)
+	defer fasthttp.ReleaseRequest(req)
+	req.SetRequestURI(url)
+	req.Header.Set("API-Key", cl.ApiKey)
+	if err := cl.Client.Do(req, resp); err != nil {
+		return err
+	}
+
+	// sonic is MUCH faster. uses SIMD.
+	return sonic.Unmarshal(resp.Body(), dst)
+}
