@@ -12,7 +12,7 @@ Then the `auth_middleware` comes into play for EVERY request. It takes the `toke
 and the `username`. It checks if the hashed token (with the username as salt) exists in the db, and if so it proceeds. Only issue is that
 someone might just share their username and key and it would work. I'll fix this in the future though. Maybe use a discord oauth id as salt instead.
 
-As such, I can allow the 
+As such, I can allow... (i forgot what i was typing)
 # FLIPPER FLOW
 
 ### Bazaar Flipping
