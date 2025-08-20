@@ -15,12 +15,15 @@ someone might just share their username and key and it would work. I'll fix this
 As such, I can allow... (i forgot what i was typing)
 # FLIPPER FLOW
 
+First of all, make an API request to the BZ/AH API. 
 ### Bazaar Flipping
 
 So, for bazaar flipping, we have a bunch of stats. But for now, it will basically scour the bazaar endpoint and look at all the items. 
 And look for (e.g) `sell - buy > minProfitUserWants` or stuff like `volume > minVolumeUserWants`, and stuff like `excludeItemsUserWants()`. For that,
 I'll need a config file that each user can create easily and can also share them. How should I achieve this?
 
+So we access the API, which contains all items and will probably take up 100-200MB of memory but no big deal. So we check for
+profit (initialised in a default config).
 # TODO
 
 

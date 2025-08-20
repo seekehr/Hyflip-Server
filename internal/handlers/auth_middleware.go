@@ -1,14 +1,13 @@
 package handlers
 
 import (
-	"Hyflip-Server/internal/api"
 	"Hyflip-Server/internal/storage"
 	"fmt"
 	"github.com/labstack/echo/v4"
 	"net/http"
 )
 
-func AuthMiddleware(userDb *storage.UserDatabaseClient, hypixelApi *api.HypixelApiClient) echo.MiddlewareFunc {
+func AuthMiddleware(data *RequiredStructs) echo.MiddlewareFunc {
 	return func(next echo.HandlerFunc) echo.HandlerFunc {
 		return func(c echo.Context) error {
 			fmt.Println("uwu (auth here)")
@@ -24,7 +23,7 @@ func AuthMiddleware(userDb *storage.UserDatabaseClient, hypixelApi *api.HypixelA
 				})
 			}
 
-			exists, err := userDb.ExistsUser(storage.GetHash(username, token))
+			exists, err := data.UserDb.ExistsUser(storage.GetHash(username, token))
 			if err != nil || !exists {
 				fmt.Println(err)
 				return c.JSON(http.StatusUnauthorized, ResponseType{

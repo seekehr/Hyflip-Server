@@ -45,13 +45,33 @@ func InitConfigTable(cl *UserDatabaseClient) *ConfigTableClient {
 	}
 }
 
-func (cl *ConfigTableClient) SaveConfig(userKeyHash, userConfig *config.UserConfig) error {
+func (cl *ConfigTableClient) SaveConfig(userKeyHash string, userConfig *config.UserConfig) error {
 	// converting to jsonb to save
 	ahConfig, err := json.Marshal(userConfig.AhConfig)
 	if err != nil {
 		return err
 	}
 	bzConfig, err := json.Marshal(userConfig.BzConfig)
+	if err != nil {
+		return err
+	}
+
+	ctx, cancel := getContext()
+	defer cancel()
+	_, err = cl.pool.Exec(ctx, UpsertUserConfigQuery, userKeyHash, ahConfig, bzConfig)
+	return err
+}
+
+func (cl *ConfigTableClient) SaveDefaultConfig(userKeyHash string) error {
+	ahDefaultConfig := config.GenerateDefaultAHConfig()
+	bzDefaultConfig := config.GenerateDefaultBZConfig()
+
+	// converting to jsonb to save
+	ahConfig, err := json.Marshal(ahDefaultConfig)
+	if err != nil {
+		return err
+	}
+	bzConfig, err := json.Marshal(bzDefaultConfig)
 	if err != nil {
 		return err
 	}

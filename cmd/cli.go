@@ -46,7 +46,7 @@ func main() {
 	// Register routes
 	e := echo.New()
 	e.HideBanner = true
-	routes.RegisterRoutes(e, userDb, cl)
+	routes.RegisterRoutes(e, userDb, cl, configTable)
 	fmt.Println("Registered routes.")
 
 	// Start echo in a goroutine so we don't block our command loop ;3

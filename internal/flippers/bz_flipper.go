@@ -1,6 +1,9 @@
 package flippers
 
-import "Hyflip-Server/internal/api"
+import (
+	"Hyflip-Server/internal/api"
+	"Hyflip-Server/internal/config"
+)
 
 type Response struct {
 	Success     bool               `json:"success"`
@@ -33,6 +36,6 @@ type QuickStatus struct {
 	BuyOrders      int     `json:"buyOrders"`
 }
 
-func Flip(cl *api.HypixelApiClient) {
-
+func Flip(cl *api.HypixelApiClient, config *config.BZConfig) {
+	cl.G
 }

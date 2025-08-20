@@ -11,6 +11,7 @@ type UserConfig struct {
 }
 
 type AHConfig struct {
+	ConfigVersion       string   `json:"config_version"`
 	MinProfit           int      `json:"min_profit"`
 	MinProfitPercentage int      `json:"min_profit_percentage"`
 	ExcludeItems        []string `json:"exclude_items"`
@@ -20,6 +21,7 @@ type AHConfig struct {
 }
 
 type BZConfig struct {
+	ConfigVersion       string   `json:"config_version"`
 	MinProfit           int      `json:"min_profit"`
 	MinProfitPercentage int      `json:"min_profit_percentage"`
 	ExcludeItems        []string `json:"exclude_items"`
@@ -28,6 +30,30 @@ type BZConfig struct {
 	MaxVolume           int      `json:"max_volume"`
 	MinInstaBuys        int      `json:"min_insta_buys"`
 	MaxInstaSells       int      `json:"min_insta_sells"`
+}
+
+func GenerateDefaultAHConfig() *AHConfig {
+	return &AHConfig{
+		ConfigVersion:       "",
+		MinProfit:           1000000,
+		MinProfitPercentage: 20,
+		ExcludeItems:        nil,
+		IncludeCraftCost:    false,
+		MinVolume:           20,
+		MaxVolume:           20,
+	}
+}
+
+func GenerateDefaultBZConfig() *BZConfig {
+	return &BZConfig{
+		ConfigVersion:       "1.0.0",
+		MinProfit:           1000,
+		MinProfitPercentage: 20,
+		ExcludeItems:        nil,
+		IncludeCraftCost:    false,
+		MinVolume:           1000,
+		MaxVolume:           1000,
+	}
 }
 
 // Scan to allow unmarshalling AHConfig from jsonb.

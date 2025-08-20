@@ -36,7 +36,7 @@ func (p *RegisteredPlayers) Read() []string {
 	return strings.Split(strings.TrimSpace(content), "\n")
 }
 
-func CreateAccountPostHandler(p *RegisteredPlayers, userDb *storage.UserDatabaseClient, apiClient *api.HypixelApiClient) echo.HandlerFunc {
+func CreateAccountPostHandler(p *RegisteredPlayers, data *RequiredStructs) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		players := p.Read()
 		var req CreateAccountRequest
@@ -52,7 +52,7 @@ func CreateAccountPostHandler(p *RegisteredPlayers, userDb *storage.UserDatabase
 		for _, player := range players {
 			if player == username {
 				key := uuid.New().String()
-				playerUuid, err := api.GetMojangUuid(apiClient, username)
+				playerUuid, err := api.GetMojangUuid(data.Api, username)
 				fmt.Println("nice")
 				if err != nil {
 					return c.JSON(http.StatusBadRequest, ResponseType{
@@ -62,7 +62,7 @@ func CreateAccountPostHandler(p *RegisteredPlayers, userDb *storage.UserDatabase
 					})
 				}
 
-				err = userDb.CreateUser(storage.GetHash(key, username), playerUuid, username)
+				err = data.UserDb.CreateUser(storage.GetHash(key, username), playerUuid, username)
 				if err != nil {
 					return c.JSON(http.StatusInternalServerError, ResponseType{
 						Success: false,
