@@ -7,7 +7,7 @@ import (
 
 type RequiredStructs struct {
 	Api         *api.HypixelApiClient
-	UserDb      *storage.UserDatabaseClient
+	UsersTable  *storage.DatabaseClient
 	ConfigTable *storage.ConfigTableClient
 }
 

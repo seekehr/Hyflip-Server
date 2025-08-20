@@ -37,5 +37,4 @@ type QuickStatus struct {
 }
 
 func Flip(cl *api.HypixelApiClient, config *config.BZConfig) {
-	cl.G
 }

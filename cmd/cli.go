@@ -36,7 +36,7 @@ func main() {
 	checkKey(cl)
 
 	// Init DB
-	userDb := storage.InitUserDb()
+	userDb := storage.InitDb()
 	defer userDb.Close()
 	fmt.Println("Connected to DB.")
 	configTable := storage.InitConfigTable(userDb)

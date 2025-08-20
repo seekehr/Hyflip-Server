@@ -42,11 +42,11 @@ const UserExistsQuery = `
 SELECT true FROM tokens WHERE token = $1 LIMIT 1;
 `
 
-type UserDatabaseClient struct {
+type DatabaseClient struct {
 	pool *pgxpool.Pool
 }
 
-func InitUserDb() *UserDatabaseClient {
+func InitDb() *DatabaseClient {
 	ctx, cancel := getContext()
 	defer cancel()
 	dbpool, err := pgxpool.New(ctx, os.Getenv("DATABASE_URL"))
@@ -61,13 +61,13 @@ func InitUserDb() *UserDatabaseClient {
 	if err != nil {
 		panic("unable to create users table: " + err.Error())
 	}
-	return &UserDatabaseClient{
+	return &DatabaseClient{
 		pool: dbpool,
 	}
 }
 
 // DeleteAnyExistingUserKey Usually used upon registration to make sure one user doesn't have multiple keys.
-func (cl *UserDatabaseClient) DeleteAnyExistingUserKey(username string) error {
+func (cl *DatabaseClient) DeleteAnyExistingUserKey(username string) error {
 	ctx, cancel := getContext()
 	defer cancel()
 	_, err := cl.pool.Exec(ctx, DeleteUserExistingKeyQuery, username)
@@ -78,7 +78,7 @@ func (cl *UserDatabaseClient) DeleteAnyExistingUserKey(username string) error {
 }
 
 // CreateUser Registers a new key for the user.
-func (cl *UserDatabaseClient) CreateUser(userKeyHash string, uuid string, username string) error {
+func (cl *DatabaseClient) CreateUser(userKeyHash string, uuid string, username string) error {
 	ctx, cancel := getContext()
 	defer cancel()
 	err := cl.DeleteAnyExistingUserKey(username)
@@ -95,7 +95,7 @@ func (cl *UserDatabaseClient) CreateUser(userKeyHash string, uuid string, userna
 }
 
 // GetUser returns the user UUID and hash from their key.
-func (cl *UserDatabaseClient) GetUser(userKeyHash string) (string, string, error) {
+func (cl *DatabaseClient) GetUser(userKeyHash string) (string, string, error) {
 	var uuid, username string
 	ctx, cancel := getContext()
 	err := cl.pool.QueryRow(
@@ -113,7 +113,7 @@ func (cl *UserDatabaseClient) GetUser(userKeyHash string) (string, string, error
 }
 
 // GetKeyFromUser returns the hashed key for a given username.
-func (cl *UserDatabaseClient) GetKeyFromUser(username string) (string, error) {
+func (cl *DatabaseClient) GetKeyFromUser(username string) (string, error) {
 	ctx, cancel := getContext()
 	defer cancel()
 
@@ -126,7 +126,7 @@ func (cl *UserDatabaseClient) GetKeyFromUser(username string) (string, error) {
 	return keyHash, nil
 }
 
-func (cl *UserDatabaseClient) ExistsUser(userKeyHash string) (bool, error) {
+func (cl *DatabaseClient) ExistsUser(userKeyHash string) (bool, error) {
 	ctx, cancel := getContext()
 	defer cancel()
 	var exists bool
@@ -137,7 +137,7 @@ func (cl *UserDatabaseClient) ExistsUser(userKeyHash string) (bool, error) {
 	return exists, nil
 }
 
-func (cl *UserDatabaseClient) Close() {
+func (cl *DatabaseClient) Close() {
 	cl.pool.Close()
 }
 

@@ -8,10 +8,10 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 )
 
-func RegisterRoutes(e *echo.Echo, userDb *storage.UserDatabaseClient, hypixelApi *api.HypixelApiClient, configTable *storage.ConfigTableClient) {
+func RegisterRoutes(e *echo.Echo, userDb *storage.DatabaseClient, hypixelApi *api.HypixelApiClient, configTable *storage.ConfigTableClient) {
 	reqStruct := &handlers.RequiredStructs{
 		Api:         hypixelApi,
-		UserDb:      userDb,
+		UsersTable:  userDb,
 		ConfigTable: configTable,
 	}
 

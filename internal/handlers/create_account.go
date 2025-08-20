@@ -3,7 +3,6 @@ package handlers
 import (
 	"Hyflip-Server/internal/api"
 	"Hyflip-Server/internal/storage"
-	"fmt"
 	"github.com/google/uuid"
 	"github.com/labstack/echo/v4"
 	"net/http"
@@ -53,7 +52,6 @@ func CreateAccountPostHandler(p *RegisteredPlayers, data *RequiredStructs) echo.
 			if player == username {
 				key := uuid.New().String()
 				playerUuid, err := api.GetMojangUuid(data.Api, username)
-				fmt.Println("nice")
 				if err != nil {
 					return c.JSON(http.StatusBadRequest, ResponseType{
 						Success: false,
@@ -62,13 +60,41 @@ func CreateAccountPostHandler(p *RegisteredPlayers, data *RequiredStructs) echo.
 					})
 				}
 
-				err = data.UserDb.CreateUser(storage.GetHash(key, username), playerUuid, username)
-				if err != nil {
-					return c.JSON(http.StatusInternalServerError, ResponseType{
-						Success: false,
-						Data:    nil,
-						Message: "Error creating user. Error: " + err.Error(),
-					})
+				hash := storage.GetHash(key, username)
+				respChan := make(chan *ResponseType, 2)
+				// Save user in the user table
+				go func() {
+					err = data.UsersTable.CreateUser(hash, playerUuid, username)
+					if err != nil {
+						respChan <- &ResponseType{
+							Success: false,
+							Data:    nil,
+							Message: "Retry. Error creating user. Error: " + err.Error(),
+						}
+						return
+					}
+					respChan <- nil
+				}()
+
+				// Save user default config
+				go func() {
+					err := data.ConfigTable.SaveDefaultConfig(hash)
+					if err != nil {
+						respChan <- &ResponseType{
+							Success: false,
+							Data:    nil,
+							Message: "Retry. Error saving config: " + err.Error(),
+						}
+						return
+					}
+					respChan <- nil
+				}()
+
+				// collect both results
+				for i := 0; i < 2; i++ {
+					if response := <-respChan; response != nil {
+						return c.JSON(http.StatusInternalServerError, response)
+					}
 				}
 
 				return c.JSON(http.StatusOK, ResponseType{

@@ -23,7 +23,7 @@ func AuthMiddleware(data *RequiredStructs) echo.MiddlewareFunc {
 				})
 			}
 
-			exists, err := data.UserDb.ExistsUser(storage.GetHash(username, token))
+			exists, err := data.UsersTable.ExistsUser(storage.GetHash(username, token))
 			if err != nil || !exists {
 				fmt.Println(err)
 				return c.JSON(http.StatusUnauthorized, ResponseType{
