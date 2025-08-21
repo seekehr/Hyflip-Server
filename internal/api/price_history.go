@@ -11,8 +11,9 @@ type PricePoint struct {
 	Sell float64 `json:"s"`
 }
 
-type Product struct {
+type PriceHistoryProduct struct {
 	ProductID      string  `json:"productId"`
+	Profit         int     `json:"profit"`
 	SellPrice      float64 `json:"sellPrice"`
 	BuyPrice       float64 `json:"buyPrice"`
 	SellVolume     int     `json:"sellVolume"`
@@ -59,7 +60,7 @@ func GetPriceHistory(cl *HypixelApiClient, itemId string, timeSpan int) ([]Price
 }
 
 // IsManipulatedBazaarProduct checks for suspiciously sharp price changes with weak volume.
-func IsManipulatedBazaarProduct(cl *HypixelApiClient, p *Product, timeSpan int) (bool, error) {
+func IsManipulatedBazaarProduct(cl *HypixelApiClient, p *PriceHistoryProduct, timeSpan int) (bool, error) {
 	points, err := GetPriceHistory(cl, p.ProductID, timeSpan)
 	if err != nil {
 		return false, err

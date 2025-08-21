@@ -6,7 +6,7 @@ import (
 	"github.com/valyala/fasthttp"
 )
 
-// HypixelApiClient - One client per API key.
+// HypixelApiClient - One client per API key. Name is kind of misleading lol, this client is also used for all kind of other reqs.
 type HypixelApiClient struct {
 	ApiKey string
 	Client *fasthttp.Client

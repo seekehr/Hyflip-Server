@@ -4,7 +4,11 @@ import (
 	"Hyflip-Server/internal/api"
 	"Hyflip-Server/internal/config"
 	"fmt"
+	"strings"
+	"sync"
 )
+
+const PriceHistoryTimeSpan = 3600 * 24 * 7 // 1 week
 
 type Response struct {
 	Success     bool               `json:"success"`
@@ -38,14 +42,16 @@ type QuickStatus struct {
 }
 
 type FoundFlip struct {
-	Profit  int    `json:"profit"`
-	ItemId  int    `json:"itemId"`
-	Command string `json:"command"`
+	Profit    int     `json:"profit"`
+	ItemId    string  `json:"itemId"`
+	Command   string  `json:"command"`
+	SellPrice float64 `json:"sellPrice"`
+	BuyPrice  float64 `json:"buyPrice"`
 }
 
-const BAZAAR_TAX = 1.25
+const BazaarTax = 1.25
 
-func Flip(cl *api.HypixelApiClient, config *config.BZConfig) (*FoundFlip, error) {
+func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error) {
 	var resp Response
 	err := cl.Get(api.SbApiUrl+"bazaar", &resp)
 	if err != nil {
@@ -55,7 +61,48 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) (*FoundFlip, error)
 		return nil, fmt.Errorf("bzflip not successful")
 	}
 
+	// products which pass our initial check, and will now be checked for market manipulating.
+	respectableProducts := make(chan api.PriceHistoryProduct, 100)
+	var (
+		wg      sync.WaitGroup
+		mu      sync.Mutex
+		results []FoundFlip
+	)
+
+	maxWorkers := 10
+	for i := 0; i < maxWorkers; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			for product := range respectableProducts {
+				fr, err := api.IsManipulatedBazaarProduct(cl, &product, PriceHistoryTimeSpan)
+				if err != nil {
+					continue
+				}
+				if fr {
+					fmt.Println(product.ProductID + " is suspected to be market manipulated.")
+					continue
+				}
+
+				mu.Lock()
+				results = append(results, FoundFlip{
+					ItemId:    product.ProductID,
+					Profit:    product.Profit,
+					Command:   "/bzs " + product.ProductID,
+					SellPrice: product.SellPrice,
+					BuyPrice:  product.BuyPrice,
+				})
+				mu.Unlock()
+			}
+		}()
+	}
+	
 	for _, product := range resp.Products {
+		// Name is excluded. Can be "COBBLE" e.g. to exclude COBBLESTONE, ENCHANTED_COBBLESTONE and so on
+		if isIdExcluded(product.ProductID, config) {
+			continue
+		}
+
 		profit := int(CalculateWithTax(float32(product.QuickStatus.BuyPrice - product.QuickStatus.SellPrice)))
 		if profit < config.MinProfit {
 			continue
@@ -80,10 +127,38 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) (*FoundFlip, error)
 		if buyMovingWeek < config.MinBuyMovingWeek || sellMovingWeek < config.MinSellMovingWeek {
 			continue
 		}
+
+		// copy everytime but allg ig. if we sent *Product then it would just point to the latest variable in the loop as the variable will be re-used
+		// so 0xUWU would replace 0x322 as product after an iteration
+		respectableProducts <- api.PriceHistoryProduct{
+			ProductID:      product.ProductID,
+			Profit:         profit,
+			SellPrice:      product.QuickStatus.SellPrice,
+			BuyPrice:       product.QuickStatus.BuyPrice,
+			SellVolume:     sellVol,
+			SellMovingWeek: sellMovingWeek,
+			BuyVolume:      buyVol,
+			BuyMovingWeek:  buyMovingWeek,
+		}
 	}
+	close(respectableProducts)
+	wg.Wait()
+	if len(results) == 0 {
+		return nil, fmt.Errorf("no flipped products found")
+	}
+	return results, nil
+}
+
+func isIdExcluded(itemId string, config *config.BZConfig) bool {
+	for _, v := range config.ExcludeItems {
+		if strings.Contains(v, itemId) {
+			return true
+		}
+	}
+	return false
 }
 
 // CalculateWithTax calculates the profit you get after bazaar tax cut.
 func CalculateWithTax(num float32) float32 {
-	return (BAZAAR_TAX / 100) * num
+	return (BazaarTax / 100) * num
 }
