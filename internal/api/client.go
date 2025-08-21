@@ -1,6 +1,7 @@
 package api
 
 import (
+	"fmt"
 	"github.com/bytedance/sonic"
 	"github.com/valyala/fasthttp"
 )
@@ -34,6 +35,9 @@ func (cl *HypixelApiClient) Get(url string, dst any) error {
 	req.Header.Set("API-Key", cl.ApiKey)
 	if err := cl.Client.Do(req, resp); err != nil {
 		return err
+	}
+	if resp.StatusCode() != 200 { // might need to change in future; 200 is a bit too general but works for pricechecker & hypixel api for now.
+		return fmt.Errorf("invalid status code; " + resp.String())
 	}
 
 	// sonic is MUCH faster. uses SIMD.

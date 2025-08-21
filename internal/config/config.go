@@ -26,8 +26,10 @@ type BZConfig struct {
 	MinProfitPercentage int      `json:"min_profit_percentage"`
 	ExcludeItems        []string `json:"exclude_items"`
 	IncludeCraftCost    bool     `json:"include_craft_cost"`
-	MinVolume           int      `json:"min_volume"`
-	MaxVolume           int      `json:"max_volume"`
+	MinVolumeDiff       int      `json:"min_volume_diff"`
+	MinBuyVolume        int      `json:"min_buy_volume"`
+	MinSellMovingWeek   int      `json:"sell_moving_week"`
+	MinBuyMovingWeek    int      `json:"buy_moving_week"`
 	MinInstaBuys        int      `json:"min_insta_buys"`
 	MaxInstaSells       int      `json:"min_insta_sells"`
 }
@@ -51,8 +53,10 @@ func GenerateDefaultBZConfig() *BZConfig {
 		MinProfitPercentage: 20,
 		ExcludeItems:        nil,
 		IncludeCraftCost:    false,
-		MinVolume:           1000,
-		MaxVolume:           1000,
+		MinBuyVolume:        1000,
+		MinVolumeDiff:       100,
+		MinSellMovingWeek:   10000,
+		MinBuyMovingWeek:    10000,
 	}
 }
 
