@@ -2,15 +2,15 @@ package handlers
 
 import (
 	"Hyflip-Server/internal/storage"
-	"fmt"
 	"github.com/labstack/echo/v4"
+	"log"
 	"net/http"
 )
 
 func AuthMiddleware(data *RequiredStructs) echo.MiddlewareFunc {
 	return func(next echo.HandlerFunc) echo.HandlerFunc {
 		return func(c echo.Context) error {
-			fmt.Println("uwu (auth here)")
+			log.Println("uwu (auth here)")
 			// userKeyHash
 			token := c.Request().Header.Get("Authorization")
 			username := c.Request().URL.Query().Get("username")
@@ -25,7 +25,7 @@ func AuthMiddleware(data *RequiredStructs) echo.MiddlewareFunc {
 
 			exists, err := data.UsersTable.ExistsUser(storage.GetHash(username, token))
 			if err != nil || !exists {
-				fmt.Println(err)
+				log.Println(err)
 				return c.JSON(http.StatusUnauthorized, ResponseType{
 					Success: false,
 					Message: "invalid token",

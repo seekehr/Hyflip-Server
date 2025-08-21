@@ -2,8 +2,8 @@ package storage
 
 import (
 	"context"
-	"fmt"
 	"github.com/jackc/pgx/v5/pgxpool"
+	"log"
 	"os"
 	"strconv"
 	"time"
@@ -90,7 +90,7 @@ func (cl *DatabaseClient) CreateUser(userKeyHash string, uuid string, username s
 		return err
 	}
 
-	fmt.Println("Rows affected: " + strconv.Itoa(int(rowsAffected.RowsAffected())))
+	log.Println("Rows affected: " + strconv.Itoa(int(rowsAffected.RowsAffected())))
 	return nil
 }
 

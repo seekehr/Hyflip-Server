@@ -4,7 +4,7 @@ import (
 	"Hyflip-Server/internal/api"
 	"Hyflip-Server/internal/config"
 	"fmt"
-	"strconv"
+	"log"
 	"strings"
 	"sync"
 )
@@ -52,6 +52,7 @@ type FoundFlip struct {
 
 const BazaarTax = 1.25
 
+// Flip todo: stream the flips for more efficacy.
 func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error) {
 	var resp Response
 	err := cl.Get(api.SbApiUrl+"bazaar", &resp)
@@ -61,7 +62,7 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 	if !resp.Success {
 		return nil, fmt.Errorf("bzflip not successful")
 	}
-	fmt.Printf("\nBazaar response success was: %t. Products found: %d\n", resp.Success, len(resp.Products))
+	log.Printf("\nBazaar response success was: %t. Products found: %d\n", resp.Success, len(resp.Products))
 
 	// products which pass our initial check, and will now be checked for market manipulating.
 	respectableProducts := make(chan api.PriceHistoryProduct, 100)
@@ -71,7 +72,7 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 		results []FoundFlip
 	)
 
-	maxWorkers := 10
+	maxWorkers := 50
 	for i := 0; i < maxWorkers; i++ {
 		wg.Add(1)
 		go func() {
@@ -82,7 +83,7 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 					continue
 				}
 				if fr {
-					fmt.Println(product.ProductID + " is suspected to be market manipulated.")
+					log.Println(product.ProductID + " is suspected to be market manipulated.")
 					continue
 				}
 
@@ -99,50 +100,53 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 		}()
 	}
 
-	fmt.Println("Iterating through found products...")
+	log.Println("Iterating through found products...")
 	for _, product := range resp.Products {
 		// Name is excluded. Can be "COBBLE" e.g. to exclude COBBLESTONE, ENCHANTED_COBBLESTONE and so on
 		if isIdExcluded(product.ProductID, config) {
-			fmt.Println("Ignoring product: " + product.ProductID + ". Cause: EXCLUDED_ITEMS.")
+			log.Println("Ignoring product: " + product.ProductID + ". Cause: EXCLUDED_ITEMS.")
 			continue
 		}
 
-		profit := int((float64(product.QuickStatus.BuyPrice) - float64(product.QuickStatus.SellPrice)) * BazaarTax / 100.0)
-		if profit < config.MinProfit {
-			fmt.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_PROFIT (" + strconv.Itoa(profit) + ").")
+		taxFactor := 1 - BazaarTax/100.0 // 0.9875 if tax = 1.25%
+		profit := (product.QuickStatus.BuyPrice - product.QuickStatus.SellPrice) * taxFactor
+
+		if profit < float64(config.MinProfit) {
+			//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_PROFIT (" + strconv.FormatFloat(profit, 'f', 2, 64) + ").")
 			continue
 		}
 
-		profitPercentage := int(float64(profit) / product.QuickStatus.SellPrice * 100)
-		if profitPercentage < config.MinProfitPercentage {
-			fmt.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_PROFIT_% (" + strconv.Itoa(profitPercentage) + ").")
+		profitPercentage := profit / product.QuickStatus.SellPrice * 100
+		if profitPercentage < float64(config.MinProfitPercentage) {
+			//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_PROFIT_% (" + strconv.FormatFloat(profitPercentage, 'f', 2, 64) + ").")
 			continue
 		}
 
 		buyVol := product.QuickStatus.BuyVolume
 		sellVol := product.QuickStatus.SellVolume
 		if buyVol < config.MinBuyVolume { // low demand
-			fmt.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_VOL (" + strconv.Itoa(buyVol) + ").")
+			//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_VOL (" + strconv.Itoa(buyVol) + ").")
 			continue
 		}
 		if buyVol-sellVol < config.MinVolumeDiff { // should have at least this much diff in demand compared to supply
-			fmt.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_VOL_DIFF (" + strconv.Itoa(buyVol-sellVol) + ").")
+			//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_VOL_DIFF (" + strconv.Itoa(buyVol-sellVol) + ").")
 			continue
 		}
 
 		buyMovingWeek := product.QuickStatus.BuyMovingWeek
 		sellMovingWeek := product.QuickStatus.SellMovingWeek
 		if buyMovingWeek < config.MinBuyMovingWeek || sellMovingWeek < config.MinSellMovingWeek {
-			fmt.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_/_SELL_WEEK (" + strconv.Itoa(buyMovingWeek) + "/" + strconv.Itoa(sellMovingWeek) + ").")
+			//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_/_SELL_WEEK (" + strconv.Itoa(buyMovingWeek) + "/" + strconv.Itoa(sellMovingWeek) + ").")
 			continue
 		}
 
-		fmt.Println("Respectable product " + product.ProductID + " found.")
+		//log.Println("Respectable product " + product.ProductID + " found.")
+
 		// copy everytime but allg ig. if we sent *Product then it would just point to the latest variable in the loop as the variable will be re-used
 		// so 0xUWU would replace 0x322 as product after an iteration
 		respectableProducts <- api.PriceHistoryProduct{
 			ProductID:      product.ProductID,
-			Profit:         profit,
+			Profit:         int(profit),
 			SellPrice:      product.QuickStatus.SellPrice,
 			BuyPrice:       product.QuickStatus.BuyPrice,
 			SellVolume:     sellVol,
@@ -166,9 +170,4 @@ func isIdExcluded(itemId string, config *config.BZConfig) bool {
 		}
 	}
 	return false
-}
-
-// CalculateWithTax calculates the profit you get after bazaar tax cut.
-func CalculateWithTax(num float32) float32 {
-	return (BazaarTax / 100) * num
 }
