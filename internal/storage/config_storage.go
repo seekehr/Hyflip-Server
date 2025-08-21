@@ -31,7 +31,7 @@ type ConfigTableClient struct {
 }
 
 // InitConfigTable initializes ConfigTableClient
-func InitConfigTable(cl *UserDatabaseClient) *ConfigTableClient {
+func InitConfigTable(cl *DatabaseClient) *ConfigTableClient {
 	ctx, cancel := getContext()
 	defer cancel()
 

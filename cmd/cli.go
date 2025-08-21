@@ -2,7 +2,9 @@ package main
 
 import (
 	"Hyflip-Server/internal/api"
+	"Hyflip-Server/internal/config"
 	"Hyflip-Server/internal/env"
+	"Hyflip-Server/internal/flippers"
 	"Hyflip-Server/internal/routes"
 	"Hyflip-Server/internal/storage"
 	"bufio"
@@ -10,6 +12,7 @@ import (
 	"fmt"
 	"github.com/labstack/echo/v4"
 	"io"
+	"log"
 	"net/http"
 	"os"
 	"strings"
@@ -24,6 +27,7 @@ type ResponseType struct {
 
 // For testing purposes.
 func main() {
+	initLogs()
 	// Init env
 	env.InitEnv()
 	key := os.Getenv(env.INTERNAL_HYPIXEL_API_KEY)
@@ -54,7 +58,21 @@ func main() {
 		e.Logger.Fatal(e.Start(":3000"))
 	}()
 
-	commandLoop()
+	token := os.Getenv("TOKEN")
+	if token == "" {
+		fmt.Println("Token not found in .env.")
+		createAccount("Seekher")
+		fmt.Println("Attempting to create account. Add the token in .env and reload...")
+		return
+	}
+
+	conf, err := loadConfigs(token, configTable)
+	if err != nil {
+		fmt.Println("Error loading config. Error: " + err.Error())
+		return
+	}
+
+	commandLoop(cl, conf)
 }
 
 func checkKey(cl *api.HypixelApiClient) {
@@ -70,8 +88,24 @@ func checkKey(cl *api.HypixelApiClient) {
 	}
 }
 
-func commandLoop() {
-	time.Sleep(500 * time.Millisecond) // for our > to LIKELY appear below the 'http server started at'
+func initLogs() {
+	os.Mkdir("logs", os.ModePerm)
+	file, err := os.OpenFile("logs/app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	// Redirect all log output to the file
+	log.SetOutput(file)
+}
+
+func loadConfigs(token string, configTable *storage.ConfigTableClient) (*config.UserConfig, error) {
+	return configTable.GetConfig(token)
+}
+
+func commandLoop(cl *api.HypixelApiClient, config *config.UserConfig) {
+	time.Sleep(230 * time.Millisecond) // for our > to LIKELY appear below the 'http server started at'
 	reader := bufio.NewReader(os.Stdin)
 
 	for {
@@ -88,35 +122,51 @@ func commandLoop() {
 			}
 
 			username := parts[1]
-			var response ResponseType
-			err := makeRequestAndReadResp(true,
-				"http://localhost:3000/create_account",
-				strings.NewReader("{\"username\":\""+username+"\"}"),
-				&response)
+			createAccount(username)
+		case line == "bzflip":
+			flips, err := flippers.Flip(cl, &config.BzConfig)
 			if err != nil {
-				continue
+				panic(err)
 			}
-
-			if response.Data == nil {
-				fmt.Printf("\nEmpty response data. Could not create account. Message: %s. Success: %t. \n", response.Message, response.Success)
-				continue
+			for _, flip := range flips {
+				fmt.Printf("\nFound flip! Id: %s, profit: %d.", flip.ItemId, flip.Profit)
 			}
-
-			token := response.Data.(map[string]interface{})
-			if _, ok := token["key"]; !ok {
-				fmt.Println("User key not found. Empty response.")
-				continue
-			}
-
-			fmt.Printf("Account created for %s. Key: %s\n", username, token)
-			fmt.Println(token)
 		case line == "exit":
 			fmt.Println("Exiting...")
 			return
 		default:
-			fmt.Println("Unknown command. Available: cracc <username>, exit")
+			fmt.Println("Unknown command. Available: cracc <username>, bzflip, exit")
 		}
 	}
+}
+
+// createAccount - convenience sake.
+func createAccount(username string) {
+	var response ResponseType
+	err := makeRequestAndReadResp(true,
+		"http://localhost:3000/create_account",
+		strings.NewReader("{\"username\":\""+username+"\"}"),
+		&response)
+	if err != nil {
+		fmt.Println("Error creating account. Error: " + err.Error())
+		return
+	}
+
+	if response.Data == nil {
+		fmt.Printf("\nEmpty response data. Could not create account. Message: %s. Success: %t. \n", response.Message, response.Success)
+		return
+	}
+
+	tokenMap := response.Data.(map[string]interface{})
+	key, ok := tokenMap["key"].(string)
+	if !ok {
+		fmt.Println("User key not found or invalid type. Empty response.")
+		return
+	}
+
+	hash := storage.GetHash(key, username)
+	fmt.Printf("Account created for %s. Key: %s\n", username, hash)
+	fmt.Println(hash)
 }
 
 func makeRequestAndReadResp(post bool, url string, body *strings.Reader, dst any) error {

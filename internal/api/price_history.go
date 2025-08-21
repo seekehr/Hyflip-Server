@@ -31,7 +31,7 @@ func GetPriceHistory(cl *HypixelApiClient, itemId string, timeSpan int) ([]Price
 	var history map[string]PricePoint
 	err := cl.Get(PriceTrackerUrl+itemId, &history)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("error while loading price history: " + err.Error())
 	}
 	// Extract keys and sort timestamps chronologically. Ugh
 	timestamps := make([]string, 0, len(history))

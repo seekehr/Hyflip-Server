@@ -60,20 +60,32 @@ func GenerateDefaultBZConfig() *BZConfig {
 	}
 }
 
-// Scan to allow unmarshalling AHConfig from jsonb.
 func (a *AHConfig) Scan(src interface{}) error {
-	b, ok := src.([]byte)
-	if !ok {
-		return fmt.Errorf("AHConfig: expected []byte, got %T", src)
+	var b []byte
+
+	switch v := src.(type) {
+	case []byte:
+		b = v
+	case string:
+		b = []byte(v)
+	default:
+		return fmt.Errorf("AHConfig: expected []byte or string, got %T", src)
 	}
+
 	return json.Unmarshal(b, a)
 }
 
-// Scan to allow unmarshalling BZConfig from jsonb.
-func (a *BZConfig) Scan(src interface{}) error {
-	b, ok := src.([]byte)
-	if !ok {
-		return fmt.Errorf("AHConfig: expected []byte, got %T", src)
+func (b *BZConfig) Scan(src interface{}) error {
+	var data []byte
+
+	switch v := src.(type) {
+	case []byte:
+		data = v
+	case string:
+		data = []byte(v)
+	default:
+		return fmt.Errorf("BZConfig: expected []byte or string, got %T", src)
 	}
-	return json.Unmarshal(b, a)
+
+	return json.Unmarshal(data, b)
 }

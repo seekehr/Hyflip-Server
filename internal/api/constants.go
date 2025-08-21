@@ -7,7 +7,7 @@ const BaseApiUrl = "https://api.hypixel.net/v2/"
 const MojangUuidApi = "https://api.mojang.com/users/profiles/minecraft/"
 
 // SbApiUrl is the base skyblock API url
-const SbApiUrl = "https://api.hypixel.net/v2/resources/skyblock/"
+const SbApiUrl = "https://api.hypixel.net/v2/skyblock/"
 
 // PriceTrackerUrl is the price history URL to prevent market manipulation. Shoutout NEU
 const PriceTrackerUrl = "https://pricehistory.notenoughupdates.org?item="

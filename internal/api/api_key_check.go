@@ -16,7 +16,9 @@ func CheckApiKey(cl *HypixelApiClient) (bool, error) {
 	// Note: NOT a valid endpoint in Hypixel API v2. But we could use literally anything else and it'd tell us if the API key is invalid or not, so works.
 	err := cl.Get(BaseApiUrl+"key", &jsonDecodedBody)
 	if err != nil {
-		return false, err
+		if !strings.Contains(err.Error(), "invalid status") {
+			return false, err
+		}
 	}
 
 	if jsonDecodedBody.Success {
