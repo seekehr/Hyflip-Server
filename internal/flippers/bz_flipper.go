@@ -44,14 +44,25 @@ type QuickStatus struct {
 }
 
 type FoundFlip struct {
-	Profit    int     `json:"profit"`
-	ItemId    string  `json:"itemId"`
-	Command   string  `json:"command"`
-	SellPrice float64 `json:"sellPrice"`
-	BuyPrice  float64 `json:"buyPrice"`
+	ProductID                       string  `json:"productId"`
+	Command                         string  `json:"command"`
+	Profit                          int     `json:"profit"`
+	SellPrice                       float64 `json:"sellPrice"`
+	BuyPrice                        float64 `json:"buyPrice"`
+	SellVolume                      int     `json:"sellVolume"`
+	SellMovingWeek                  int     `json:"sellMovingWeek"`
+	BuyVolume                       int     `json:"buyVolume"`
+	BuyMovingWeek                   int     `json:"buyMovingWeek"`
+	RecommendedFlipVolume           int     `json:"recommendedFlipVolume"`
+	ProfitFromRecommendedFlipVolume int     `json:"profitFromRecommendedFlipVolume"`
 }
 
-const BazaarTax = 1.25
+const (
+	VolumeAverageCheck       = 8
+	MaxSwingPercentage       = 40
+	RecommendedBuyPercentage = 0.01 // 1%;arbitrary for now
+	BazaarTax                = 1.25
+)
 
 // Flip Todo: Cache.
 // Flip returns a channel of found flips (for efficiency purposes). It uses the config to filter items and then checks for market manipulation using `price_checker.go`.
@@ -91,12 +102,20 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan FoundFlip, 
 					continue
 				}
 
+				recomFlipVol := int(float64(product.BuyMovingWeek/VolumeAverageCheck) * RecommendedBuyPercentage)
+				profitFromRecom := product.Profit * recomFlipVol
 				resultsChan <- FoundFlip{
-					ItemId:    product.ProductID,
-					Profit:    product.Profit,
-					Command:   "/bzs " + product.ProductID,
-					SellPrice: product.SellPrice,
-					BuyPrice:  product.BuyPrice,
+					ProductID:                       product.ProductID,
+					Command:                         "/bzs " + product.ProductID,
+					Profit:                          product.Profit,
+					SellPrice:                       product.SellPrice,
+					BuyPrice:                        product.BuyPrice,
+					SellVolume:                      product.SellVolume,
+					SellMovingWeek:                  product.SellMovingWeek,
+					BuyVolume:                       product.BuyVolume,
+					BuyMovingWeek:                   product.BuyMovingWeek,
+					RecommendedFlipVolume:           recomFlipVol,
+					ProfitFromRecommendedFlipVolume: profitFromRecom,
 				}
 			}
 		}()
@@ -136,10 +155,17 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan FoundFlip, 
 				continue
 			}
 
+			// less moving week buy
 			buyMovingWeek := product.QuickStatus.BuyMovingWeek
 			sellMovingWeek := product.QuickStatus.SellMovingWeek
 			if buyMovingWeek < config.MinBuyMovingWeek || sellMovingWeek < config.MinSellMovingWeek {
 				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_/_SELL_WEEK (" + strconv.Itoa(buyMovingWeek) + "/" + strconv.Itoa(sellMovingWeek) + ").")
+				continue
+			}
+
+			// to ensure there is enough daily demand that you dont have to do weekly flips lol
+			if buyMovingWeek/VolumeAverageCheck <= 10 || sellMovingWeek/VolumeAverageCheck <= 10 {
+				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_DAILY_BUY_/_SELL_WEEK (" + strconv.Itoa(buyMovingWeek / VolumeAverageCheck) + "/" + strconv.Itoa(sellMovingWeek / VolumeAverageCheck) + ").")
 				continue
 			}
 

@@ -22,7 +22,7 @@ type PriceHistoryProduct struct {
 	BuyMovingWeek  int     `json:"buyMovingWeek"`
 }
 
-const VolumeAverageCheck = 8 // Means: weekly moved volume / VolumeAverageCheck
+const VolumeAverageCheck = 8
 const MaxSwingPercentage = 40
 
 // GetPriceHistory of a product. timeSpan is in minutes.
