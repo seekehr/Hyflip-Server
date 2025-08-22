@@ -5920,3 +5920,2175 @@ Found flip! Id: SHARD_MAGMA_SLUG, profit: 17116.
 Found flip! Id: SHARD_CHILL, profit: 6568.
 2025/08/22 04:11:53 Flipping complete in  2.281112542s
 2025/08/22 04:11:53 > 
+2025/08/22 18:45:02 API Key is valid. Proceeding...
+2025/08/22 18:45:02 Connected to DB.
+2025/08/22 18:45:02 Initialized config table.
+2025/08/22 18:45:02 Registered routes.
+2025/08/22 18:45:02 > 
+2025/08/22 18:45:06 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 18:45:06 Iterating through found products...
+2025/08/22 18:45:08 MANA_DISINTEGRATOR is suspected to be market manipulated.
+2025/08/22 18:45:08 SHARD_VERDANT is suspected to be market manipulated.
+2025/08/22 18:45:08 SHARD_CAVERNSHADE is suspected to be market manipulated.
+2025/08/22 18:45:09 SHARD_SOUL_OF_THE_ALPHA is suspected to be market manipulated.
+2025/08/22 18:45:09 SHARD_KADA_KNIGHT is suspected to be market manipulated.
+2025/08/22 18:45:11 
+Found flip! Id: SHARD_ENT, profit: 8291.
+2025/08/22 18:45:11 
+Found flip! Id: SULPHURIC_COAL, profit: 1430.
+2025/08/22 18:45:11 
+Found flip! Id: FRIED_FEATHER, profit: 3776.
+2025/08/22 18:45:11 
+Found flip! Id: PLASMA, profit: 3606.
+2025/08/22 18:45:11 
+Found flip! Id: SHARD_GOLDEN_GHOUL, profit: 11403.
+2025/08/22 18:45:11 Flipping complete in  6.02680558s
+2025/08/22 18:45:11 > 
+2025/08/22 18:46:42 API Key is valid. Proceeding...
+2025/08/22 18:46:42 Connected to DB.
+2025/08/22 18:46:42 Initialized config table.
+2025/08/22 18:46:42 Registered routes.
+2025/08/22 18:46:43 > 
+2025/08/22 18:46:46 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 18:46:46 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 18:46:46 Iterating through found products...
+2025/08/22 18:46:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 18:46:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 18:46:47 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 18:46:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 18:46:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 18:46:48 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 18:46:48 SHARD_STRIDER_SURFER is suspected to be market manipulated.
+2025/08/22 18:46:48 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 18:46:48 SHARD_SPIKE is suspected to be market manipulated.
+2025/08/22 18:46:48 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 18:46:48 SHARD_JOYDIVE is suspected to be market manipulated.
+2025/08/22 18:46:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 18:46:49 SHARD_APEX_DRAGON is suspected to be market manipulated.
+2025/08/22 18:46:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 18:47:03 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 18:47:03 API Key is valid. Proceeding...
+2025/08/22 18:47:03 Connected to DB.
+2025/08/22 18:47:03 Initialized config table.
+2025/08/22 18:47:03 Registered routes.
+2025/08/22 18:47:03 > 
+2025/08/22 18:47:06 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 18:47:06 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 18:47:06 Iterating through found products...
+2025/08/22 18:47:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 18:47:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 18:47:08 SINGED_POWDER is suspected to be market manipulated.
+2025/08/22 18:47:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 18:47:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 18:47:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 18:47:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 18:47:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 18:47:14 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 18:47:14 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAPIS_ZOMBIE
+2025/08/22 18:47:20 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 18:47:20 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 18:47:20 
+Found flip! Id: X, profit: 6301.
+2025/08/22 18:47:20 
+Found flip! Id: SHARD_CHILL, profit: 8139.
+2025/08/22 18:47:20 
+Found flip! Id: SHARD_MAGMA_SLUG, profit: 10653.
+2025/08/22 18:47:20 
+Found flip! Id: SHARD_FIRE_EEL, profit: 31699.
+2025/08/22 18:47:20 
+Found flip! Id: SHARD_ZOMBIE_SOLDIER, profit: 9894.
+2025/08/22 18:47:20 
+Found flip! Id: SHARD_FLASH, profit: 20537.
+2025/08/22 18:47:20 
+Found flip! Id: SHARD_MINER_ZOMBIE, profit: 5364.
+2025/08/22 18:47:20 
+Found flip! Id: SHARD_LAPIS_ZOMBIE, profit: 3434.
+2025/08/22 18:47:20 Flipping complete in  15.38139943s
+2025/08/22 18:47:20 > 
+2025/08/22 18:47:39 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 18:47:39 API Key is valid. Proceeding...
+2025/08/22 18:47:39 Connected to DB.
+2025/08/22 18:47:39 Initialized config table.
+2025/08/22 18:47:39 Registered routes.
+2025/08/22 18:47:40 > 
+2025/08/22 18:47:47 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 18:47:47 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 18:47:47 Iterating through found products...
+2025/08/22 18:47:48 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_THYST
+2025/08/22 18:47:48 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 18:47:48 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLARE
+2025/08/22 18:47:48 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_SOUL_OF_THE_ALPHA
+2025/08/22 18:47:49 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 18:47:49 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_RAIN_SLIME
+2025/08/22 18:47:49 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 18:47:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TROGLOBYTE
+2025/08/22 18:47:49 SHARD_TROGLOBYTE is suspected to be market manipulated.
+2025/08/22 18:47:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 18:47:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=EXPORTABLE_CARROTS
+2025/08/22 18:47:49 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=ECTOPLASM
+2025/08/22 18:47:49 EXPORTABLE_CARROTS is suspected to be market manipulated.
+2025/08/22 18:47:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOCHIBEAR
+2025/08/22 18:47:49 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 18:47:49 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_SYCOPHANT
+2025/08/22 18:47:49 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLAMING_SPIDER
+2025/08/22 18:47:49 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_VERDANT
+2025/08/22 18:47:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 18:47:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=CORRUPT_SOIL
+2025/08/22 18:47:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BEZOS
+2025/08/22 18:47:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GOLDEN_GHOUL
+2025/08/22 18:47:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 18:47:50 SHARD_SPIKE is suspected to be market manipulated.
+2025/08/22 18:47:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 18:47:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VORACIOUS_SPIDER
+2025/08/22 18:47:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 18:47:51 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_WITHER_SPECTER
+2025/08/22 18:47:51 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=MANA_DISINTEGRATOR
+2025/08/22 18:47:51 MANA_DISINTEGRATOR is suspected to be market manipulated.
+2025/08/22 18:47:51 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SULPHURIC_COAL
+2025/08/22 18:47:51 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAPIS_ZOMBIE
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BEZAL
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAVA_FLAME
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BOLT
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_PIRANHA
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 18:47:52 SHARD_APEX_DRAGON is suspected to be market manipulated.
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 18:47:52 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TADGANG
+2025/08/22 18:47:52 SHARD_TADGANG is suspected to be market manipulated.
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZEALOT
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CAVERNSHADE
+2025/08/22 18:47:52 SHARD_CAVERNSHADE is suspected to be market manipulated.
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_XYZ
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 18:47:52 SHARD_JOYDIVE is suspected to be market manipulated.
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BLUE_SHARK_TOOTH
+2025/08/22 18:47:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CINDER_BAT
+2025/08/22 18:47:52 SHARD_CINDER_BAT is suspected to be market manipulated.
+2025/08/22 18:47:53 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 18:47:53 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ENCHANTED_GLISTERING_MELON
+2025/08/22 18:47:53 ENCHANTED_GLISTERING_MELON is suspected to be market manipulated.
+2025/08/22 18:47:53 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_OBSIDIAN_DEFENDER
+2025/08/22 18:47:53 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SALMON
+2025/08/22 18:47:53 SHARD_OBSIDIAN_DEFENDER is suspected to be market manipulated.
+2025/08/22 18:47:53 SHARD_SALMON is suspected to be market manipulated.
+2025/08/22 18:47:53 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 18:47:53 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BARBARIAN_DUKE_X
+2025/08/22 18:47:53 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 18:47:53 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 18:47:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BAMBULEAF
+2025/08/22 18:47:54 SHARD_BAMBULEAF is suspected to be market manipulated.
+2025/08/22 18:47:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEER
+2025/08/22 18:47:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=PLASMA
+2025/08/22 18:47:54 SHARD_SEER is suspected to be market manipulated.
+2025/08/22 18:47:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_NEWT
+2025/08/22 18:47:54 SHARD_NEWT is suspected to be market manipulated.
+2025/08/22 18:47:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MIST
+2025/08/22 18:47:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOSSYBIT
+2025/08/22 18:47:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 18:47:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_POWER_DRAGON
+2025/08/22 18:47:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_AZURE
+2025/08/22 18:47:54 SHARD_AZURE is suspected to be market manipulated.
+2025/08/22 18:47:55 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_KADA_KNIGHT
+2025/08/22 18:47:55 SHARD_KADA_KNIGHT is suspected to be market manipulated.
+2025/08/22 18:47:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=NURSE_SHARK_TOOTH
+2025/08/22 18:48:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GHOST
+2025/08/22 18:48:05 SHARD_GHOST is suspected to be market manipulated.
+2025/08/22 18:48:17 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_COD
+2025/08/22 18:48:17 SHARD_COD is suspected to be market manipulated.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_STAR_SENTRY, profit: 9556.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_MOCHIBEAR, profit: 23813.
+2025/08/22 18:48:17 
+Found flip! Id: CORRUPT_SOIL, profit: 54213.
+2025/08/22 18:48:17 
+Found flip! Id: FRIED_FEATHER, profit: 3776.
+2025/08/22 18:48:17 
+Found flip! Id: BEZOS, profit: 2012.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_GOLDEN_GHOUL, profit: 11510.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_ENT, profit: 8355.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_VORACIOUS_SPIDER, profit: 12737.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_FLASH, profit: 20537.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_WITHER_SPECTER, profit: 7767.
+2025/08/22 18:48:17 
+Found flip! Id: SULPHURIC_COAL, profit: 1430.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_LAPIS_ZOMBIE, profit: 3434.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_BEZAL, profit: 13796.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_LAVA_FLAME, profit: 24602.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_BOLT, profit: 33239.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_PIRANHA, profit: 24576.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_ZEALOT, profit: 5901.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_XYZ, profit: 15370.
+2025/08/22 18:48:17 
+Found flip! Id: BLUE_SHARK_TOOTH, profit: 4745.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_ZOMBIE_SOLDIER, profit: 9907.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_BARBARIAN_DUKE_X, profit: 57971.
+2025/08/22 18:48:17 
+Found flip! Id: X, profit: 6301.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_MAGMA_SLUG, profit: 10653.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_SEA_ARCHER, profit: 3577.
+2025/08/22 18:48:17 
+Found flip! Id: PLASMA, profit: 3606.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_MIST, profit: 17270.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_MOSSYBIT, profit: 26566.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_FIRE_EEL, profit: 31699.
+2025/08/22 18:48:17 
+Found flip! Id: SHARD_POWER_DRAGON, profit: 132548.
+2025/08/22 18:48:17 
+Found flip! Id: NURSE_SHARK_TOOTH, profit: 3902.
+2025/08/22 18:48:17 Flipping complete in  30.871584826s
+2025/08/22 18:48:17 > 
+2025/08/22 18:49:21 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 18:49:21 API Key is valid. Proceeding...
+2025/08/22 18:49:21 Connected to DB.
+2025/08/22 18:49:21 Initialized config table.
+2025/08/22 18:49:21 Registered routes.
+2025/08/22 18:49:21 > 
+2025/08/22 18:49:28 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 18:49:28 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 18:49:28 Iterating through found products...
+2025/08/22 18:49:29 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_POWER_DRAGON
+2025/08/22 18:49:29 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 18:49:29 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLARE
+2025/08/22 18:49:29 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 18:49:29 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_GHOST
+2025/08/22 18:49:29 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_VORACIOUS_SPIDER
+2025/08/22 18:49:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SOUL_OF_THE_ALPHA
+2025/08/22 18:49:29 SHARD_SOUL_OF_THE_ALPHA is suspected to be market manipulated.
+2025/08/22 18:49:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_NEWT
+2025/08/22 18:49:29 SHARD_NEWT is suspected to be market manipulated.
+2025/08/22 18:49:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_KADA_KNIGHT
+2025/08/22 18:49:29 SHARD_KADA_KNIGHT is suspected to be market manipulated.
+2025/08/22 18:49:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TADGANG
+2025/08/22 18:49:29 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 18:49:29 SHARD_TADGANG is suspected to be market manipulated.
+2025/08/22 18:49:30 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_THYST
+2025/08/22 18:49:30 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 18:49:30 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=ECTOPLASM
+2025/08/22 18:49:30 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_CINDER_BAT
+2025/08/22 18:49:30 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_XYZ
+2025/08/22 18:49:30 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=NURSE_SHARK_TOOTH
+2025/08/22 18:49:30 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 18:49:30 SHARD_SPIKE is suspected to be market manipulated.
+2025/08/22 18:49:30 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 18:49:30 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_PIRANHA
+2025/08/22 18:49:30 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 18:49:30 SHARD_STRIDER_SURFER is suspected to be market manipulated.
+2025/08/22 18:49:30 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BAMBULEAF
+2025/08/22 18:49:30 SHARD_BAMBULEAF is suspected to be market manipulated.
+2025/08/22 18:49:31 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 18:49:31 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOCHIBEAR
+2025/08/22 18:49:31 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MIST
+2025/08/22 18:49:32 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 18:49:32 SHARD_APEX_DRAGON is suspected to be market manipulated.
+2025/08/22 18:49:32 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 18:49:32 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZEALOT
+2025/08/22 18:49:32 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_AZURE
+2025/08/22 18:49:32 SHARD_AZURE is suspected to be market manipulated.
+2025/08/22 18:49:32 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 18:49:32 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BARBARIAN_DUKE_X
+2025/08/22 18:49:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GOLDEN_GHOUL
+2025/08/22 18:49:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 18:49:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BEZAL
+2025/08/22 18:49:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SALMON
+2025/08/22 18:49:33 SHARD_SALMON is suspected to be market manipulated.
+2025/08/22 18:49:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAVA_FLAME
+2025/08/22 18:49:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 18:49:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_WITHER_SPECTER
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SYCOPHANT
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CAVERNSHADE
+2025/08/22 18:49:34 SHARD_CAVERNSHADE is suspected to be market manipulated.
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_OBSIDIAN_DEFENDER
+2025/08/22 18:49:34 SHARD_OBSIDIAN_DEFENDER is suspected to be market manipulated.
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLAMING_SPIDER
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=MANA_DISINTEGRATOR
+2025/08/22 18:49:34 MANA_DISINTEGRATOR is suspected to be market manipulated.
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEER
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VERDANT
+2025/08/22 18:49:34 SHARD_SEER is suspected to be market manipulated.
+2025/08/22 18:49:34 SHARD_VERDANT is suspected to be market manipulated.
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TROGLOBYTE
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 18:49:34 SHARD_JOYDIVE is suspected to be market manipulated.
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ENCHANTED_GLISTERING_MELON
+2025/08/22 18:49:34 ENCHANTED_GLISTERING_MELON is suspected to be market manipulated.
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SULPHURIC_COAL
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=CORRUPT_SOIL
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 18:49:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 18:49:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_COD
+2025/08/22 18:49:35 SHARD_COD is suspected to be market manipulated.
+2025/08/22 18:49:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOSSYBIT
+2025/08/22 18:49:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_RAIN_SLIME
+2025/08/22 18:49:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAPIS_ZOMBIE
+2025/08/22 18:49:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 18:49:35 SINGED_POWDER is suspected to be market manipulated.
+2025/08/22 18:49:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BLUE_SHARK_TOOTH
+2025/08/22 18:49:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BEZOS
+2025/08/22 18:49:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=PLASMA
+2025/08/22 18:49:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=EXPORTABLE_CARROTS
+2025/08/22 18:49:36 EXPORTABLE_CARROTS is suspected to be market manipulated.
+2025/08/22 18:49:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BOLT
+2025/08/22 18:49:40 Used 50 goroutines.
+2025/08/22 18:49:40 
+Found flip! Id: NURSE_SHARK_TOOTH, profit: 3902.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_MAGMA_SLUG, profit: 10653.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_PIRANHA, profit: 24577.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_ZOMBIE_SOLDIER, profit: 9884.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_MOCHIBEAR, profit: 23813.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_MIST, profit: 17271.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_FIRE_EEL, profit: 31784.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_ZEALOT, profit: 5918.
+2025/08/22 18:49:40 
+Found flip! Id: X, profit: 6301.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_BARBARIAN_DUKE_X, profit: 57971.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_GOLDEN_GHOUL, profit: 11510.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_FLASH, profit: 19989.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_BEZAL, profit: 13803.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_LAVA_FLAME, profit: 24602.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_CHILL, profit: 8140.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_WITHER_SPECTER, profit: 7620.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_SYCOPHANT, profit: 10046.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_FLAMING_SPIDER, profit: 10164.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_TROGLOBYTE, profit: 21318.
+2025/08/22 18:49:40 
+Found flip! Id: SULPHURIC_COAL, profit: 1430.
+2025/08/22 18:49:40 
+Found flip! Id: CORRUPT_SOIL, profit: 54213.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_ENT, profit: 8370.
+2025/08/22 18:49:40 
+Found flip! Id: FRIED_FEATHER, profit: 3776.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_MOSSYBIT, profit: 26566.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_RAIN_SLIME, profit: 24779.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_LAPIS_ZOMBIE, profit: 3434.
+2025/08/22 18:49:40 
+Found flip! Id: BLUE_SHARK_TOOTH, profit: 4745.
+2025/08/22 18:49:40 
+Found flip! Id: BEZOS, profit: 2012.
+2025/08/22 18:49:40 
+Found flip! Id: PLASMA, profit: 3606.
+2025/08/22 18:49:40 
+Found flip! Id: SHARD_BOLT, profit: 33239.
+2025/08/22 18:49:40 Flipping complete in  13.392194155s
+2025/08/22 18:49:40 > 
+2025/08/22 18:50:00 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 18:50:00 API Key is valid. Proceeding...
+2025/08/22 18:50:00 Connected to DB.
+2025/08/22 18:50:00 Initialized config table.
+2025/08/22 18:50:00 Registered routes.
+2025/08/22 18:50:00 > 
+2025/08/22 18:50:03 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 18:50:03 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 18:50:03 Iterating through found products...
+2025/08/22 18:50:03 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_CAVERNSHADE
+2025/08/22 18:50:03 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=PLASMA
+2025/08/22 18:50:03 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=BEZOS
+2025/08/22 18:50:03 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_WITHER_SPECTER
+2025/08/22 18:50:03 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 18:50:03 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 18:50:03 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 18:50:03 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=ENCHANTED_GLISTERING_MELON
+2025/08/22 18:50:04 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_MIST
+2025/08/22 18:50:04 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_AZURE
+2025/08/22 18:50:04 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=ECTOPLASM
+2025/08/22 18:50:04 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_KADA_KNIGHT
+2025/08/22 18:50:04 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 18:50:04 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_NEWT
+2025/08/22 18:50:04 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_BAMBULEAF
+2025/08/22 18:50:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 18:50:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TADGANG
+2025/08/22 18:50:04 SHARD_TADGANG is suspected to be market manipulated.
+2025/08/22 18:50:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 18:50:04 SHARD_SPIKE is suspected to be market manipulated.
+2025/08/22 18:50:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 18:50:04 SHARD_STRIDER_SURFER is suspected to be market manipulated.
+2025/08/22 18:50:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 18:50:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SALMON
+2025/08/22 18:50:04 SHARD_SALMON is suspected to be market manipulated.
+2025/08/22 18:50:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_COD
+2025/08/22 18:50:05 SHARD_COD is suspected to be market manipulated.
+2025/08/22 18:50:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=MANA_DISINTEGRATOR
+2025/08/22 18:50:05 MANA_DISINTEGRATOR is suspected to be market manipulated.
+2025/08/22 18:50:06 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=EXPORTABLE_CARROTS
+2025/08/22 18:50:06 EXPORTABLE_CARROTS is suspected to be market manipulated.
+2025/08/22 18:50:06 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BLUE_SHARK_TOOTH
+2025/08/22 18:50:06 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAPIS_ZOMBIE
+2025/08/22 18:50:06 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOCHIBEAR
+2025/08/22 18:50:06 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_XYZ
+2025/08/22 18:50:06 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GOLDEN_GHOUL
+2025/08/22 18:50:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_RAIN_SLIME
+2025/08/22 18:50:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLARE
+2025/08/22 18:50:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 18:50:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TROGLOBYTE
+2025/08/22 18:50:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BARBARIAN_DUKE_X
+2025/08/22 18:50:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEER
+2025/08/22 18:50:07 SHARD_SEER is suspected to be market manipulated.
+2025/08/22 18:50:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BOLT
+2025/08/22 18:50:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 18:50:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_PIRANHA
+2025/08/22 18:50:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 18:50:08 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 18:50:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAVA_FLAME
+2025/08/22 18:50:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CINDER_BAT
+2025/08/22 18:50:08 SHARD_CINDER_BAT is suspected to be market manipulated.
+2025/08/22 18:50:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 18:50:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOSSYBIT
+2025/08/22 18:50:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SOUL_OF_THE_ALPHA
+2025/08/22 18:50:08 SHARD_SOUL_OF_THE_ALPHA is suspected to be market manipulated.
+2025/08/22 18:50:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=CORRUPT_SOIL
+2025/08/22 18:50:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=AGARIMOO_TONGUE
+2025/08/22 18:50:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GHOST
+2025/08/22 18:50:09 SHARD_GHOST is suspected to be market manipulated.
+2025/08/22 18:50:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SULPHURIC_COAL
+2025/08/22 18:50:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=NURSE_SHARK_TOOTH
+2025/08/22 18:50:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLAMING_SPIDER
+2025/08/22 18:50:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_THYST
+2025/08/22 18:50:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BEZAL
+2025/08/22 18:50:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 18:50:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_OBSIDIAN_DEFENDER
+2025/08/22 18:50:09 SHARD_OBSIDIAN_DEFENDER is suspected to be market manipulated.
+2025/08/22 18:50:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 18:50:10 SINGED_POWDER is suspected to be market manipulated.
+2025/08/22 18:50:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VORACIOUS_SPIDER
+2025/08/22 18:50:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 18:50:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_POWER_DRAGON
+2025/08/22 18:50:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 18:50:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 18:50:10 SHARD_APEX_DRAGON is suspected to be market manipulated.
+2025/08/22 18:50:14 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZEALOT
+2025/08/22 18:50:16 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SYCOPHANT
+2025/08/22 18:50:22 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VERDANT
+2025/08/22 18:50:22 SHARD_VERDANT is suspected to be market manipulated.
+2025/08/22 18:50:22 Used 50 goroutines.
+2025/08/22 18:50:22 
+Found flip! Id: FRIED_FEATHER, profit: 3776.
+2025/08/22 18:50:22 
+Found flip! Id: X, profit: 6301.
+2025/08/22 18:50:22 
+Found flip! Id: BLUE_SHARK_TOOTH, profit: 4745.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_LAPIS_ZOMBIE, profit: 3434.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_MOCHIBEAR, profit: 23813.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_XYZ, profit: 15370.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_GOLDEN_GHOUL, profit: 11510.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_RAIN_SLIME, profit: 24779.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_FLARE, profit: 10785.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_FIRE_EEL, profit: 31794.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_TROGLOBYTE, profit: 21318.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_BARBARIAN_DUKE_X, profit: 57971.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_BOLT, profit: 33239.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_FLASH, profit: 19991.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_PIRANHA, profit: 24577.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_LAVA_FLAME, profit: 24602.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_ZOMBIE_SOLDIER, profit: 9884.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_MOSSYBIT, profit: 26566.
+2025/08/22 18:50:22 
+Found flip! Id: CORRUPT_SOIL, profit: 54213.
+2025/08/22 18:50:22 
+Found flip! Id: AGARIMOO_TONGUE, profit: 5167.
+2025/08/22 18:50:22 
+Found flip! Id: SULPHURIC_COAL, profit: 1430.
+2025/08/22 18:50:22 
+Found flip! Id: NURSE_SHARK_TOOTH, profit: 3902.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_FLAMING_SPIDER, profit: 10164.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_THYST, profit: 14998.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_BEZAL, profit: 14164.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_SEA_ARCHER, profit: 3577.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_VORACIOUS_SPIDER, profit: 12712.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_ENT, profit: 8370.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_POWER_DRAGON, profit: 132972.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_MINER_ZOMBIE, profit: 5437.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_ZEALOT, profit: 5918.
+2025/08/22 18:50:22 
+Found flip! Id: SHARD_SYCOPHANT, profit: 9407.
+2025/08/22 18:50:22 Flipping complete in  20.56075136s
+2025/08/22 18:50:22 > 
+2025/08/22 18:57:48 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 18:57:48 API Key is valid. Proceeding...
+2025/08/22 18:57:48 Connected to DB.
+2025/08/22 18:57:48 Initialized config table.
+2025/08/22 18:57:48 Registered routes.
+2025/08/22 18:57:48 > 
+2025/08/22 18:57:52 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 18:57:52 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 18:57:52 Iterating through found products...
+2025/08/22 18:57:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 18:57:54 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 18:57:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SULPHURIC_COAL
+2025/08/22 18:57:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=NURSE_SHARK_TOOTH
+2025/08/22 18:57:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SALMON
+2025/08/22 18:57:54 SHARD_SALMON is suspected to be market manipulated.
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLARE
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_XYZ
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_RAIN_SLIME
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_VORACIOUS_SPIDER
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_AZURE
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_POWER_DRAGON
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_GOLDEN_GHOUL
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=CORRUPT_SOIL
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_TADGANG
+2025/08/22 18:57:54 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 18:57:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 18:57:54 SHARD_JOYDIVE is suspected to be market manipulated.
+2025/08/22 18:57:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CAVERNSHADE
+2025/08/22 18:57:54 SHARD_CAVERNSHADE is suspected to be market manipulated.
+2025/08/22 18:57:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 18:57:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SYCOPHANT
+2025/08/22 18:57:55 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BEZAL
+2025/08/22 18:57:56 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MIST
+2025/08/22 18:57:56 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=PLASMA
+2025/08/22 18:57:56 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 18:57:56 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 18:57:56 SINGED_POWDER is suspected to be market manipulated.
+2025/08/22 18:57:56 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BARBARIAN_DUKE_X
+2025/08/22 18:57:56 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZEALOT
+2025/08/22 18:57:56 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOCHIBEAR
+2025/08/22 18:57:56 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CINDER_BAT
+2025/08/22 18:57:56 SHARD_CINDER_BAT is suspected to be market manipulated.
+2025/08/22 18:57:56 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=AGARIMOO_TONGUE
+2025/08/22 18:57:56 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAVA_FLAME
+2025/08/22 18:57:56 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOSSYBIT
+2025/08/22 18:57:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_PIRANHA
+2025/08/22 18:57:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TROGLOBYTE
+2025/08/22 18:57:57 SHARD_TROGLOBYTE is suspected to be market manipulated.
+2025/08/22 18:57:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_KADA_KNIGHT
+2025/08/22 18:57:57 SHARD_KADA_KNIGHT is suspected to be market manipulated.
+2025/08/22 18:57:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=MANA_DISINTEGRATOR
+2025/08/22 18:57:57 MANA_DISINTEGRATOR is suspected to be market manipulated.
+2025/08/22 18:57:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 18:57:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=EXPORTABLE_CARROTS
+2025/08/22 18:57:57 EXPORTABLE_CARROTS is suspected to be market manipulated.
+2025/08/22 18:57:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ENCHANTED_GLISTERING_MELON
+2025/08/22 18:57:57 ENCHANTED_GLISTERING_MELON is suspected to be market manipulated.
+2025/08/22 18:57:57 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_OBSIDIAN_DEFENDER
+2025/08/22 18:57:57 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_SOUL_OF_THE_ALPHA
+2025/08/22 18:57:57 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEER
+2025/08/22 18:57:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLAMING_SPIDER
+2025/08/22 18:57:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 18:57:57 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 18:57:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BAMBULEAF
+2025/08/22 18:57:57 SHARD_BAMBULEAF is suspected to be market manipulated.
+2025/08/22 18:57:58 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BEZOS
+2025/08/22 18:57:58 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_NEWT
+2025/08/22 18:57:58 SHARD_NEWT is suspected to be market manipulated.
+2025/08/22 18:57:58 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GHOST
+2025/08/22 18:57:58 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BOLT
+2025/08/22 18:57:58 SHARD_GHOST is suspected to be market manipulated.
+2025/08/22 18:57:59 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_THYST
+2025/08/22 18:58:01 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 18:58:01 SHARD_STRIDER_SURFER is suspected to be market manipulated.
+2025/08/22 18:58:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BLUE_SHARK_TOOTH
+2025/08/22 18:58:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ECTOPLASM
+2025/08/22 18:58:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 18:58:07 SHARD_APEX_DRAGON is suspected to be market manipulated.
+2025/08/22 18:58:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 18:58:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_WITHER_SPECTER
+2025/08/22 18:58:11 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VERDANT
+2025/08/22 18:58:11 SHARD_VERDANT is suspected to be market manipulated.
+2025/08/22 18:58:22 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_COD
+2025/08/22 18:58:22 SHARD_COD is suspected to be market manipulated.
+2025/08/22 18:58:22 Used 62 goroutines.
+2025/08/22 18:58:22 
+Found flip! Id: SULPHURIC_COAL, profit: 1441.
+2025/08/22 18:58:22 
+Found flip! Id: NURSE_SHARK_TOOTH, profit: 3902.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_FLASH, profit: 20025.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_SYCOPHANT, profit: 9375.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_BEZAL, profit: 14506.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_MIST, profit: 16766.
+2025/08/22 18:58:22 
+Found flip! Id: PLASMA, profit: 3606.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_MAGMA_SLUG, profit: 10653.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_BARBARIAN_DUKE_X, profit: 57970.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_ZEALOT, profit: 5899.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_MOCHIBEAR, profit: 25333.
+2025/08/22 18:58:22 
+Found flip! Id: AGARIMOO_TONGUE, profit: 5075.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_LAVA_FLAME, profit: 24602.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_MOSSYBIT, profit: 25881.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_PIRANHA, profit: 24620.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_MINER_ZOMBIE, profit: 5708.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_FLAMING_SPIDER, profit: 10159.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_ENT, profit: 8386.
+2025/08/22 18:58:22 
+Found flip! Id: BEZOS, profit: 2029.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_BOLT, profit: 33238.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_THYST, profit: 15021.
+2025/08/22 18:58:22 
+Found flip! Id: BLUE_SHARK_TOOTH, profit: 4745.
+2025/08/22 18:58:22 
+Found flip! Id: ECTOPLASM, profit: 34515.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_FIRE_EEL, profit: 31648.
+2025/08/22 18:58:22 
+Found flip! Id: SHARD_WITHER_SPECTER, profit: 7164.
+2025/08/22 18:58:22 Flipping complete in  30.348265146s
+2025/08/22 18:58:22 > 
+2025/08/22 18:58:42 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 18:58:42 API Key is valid. Proceeding...
+2025/08/22 18:58:42 Connected to DB.
+2025/08/22 18:58:42 Initialized config table.
+2025/08/22 18:58:42 Registered routes.
+2025/08/22 18:58:42 > 
+2025/08/22 18:58:46 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 18:58:46 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 18:58:46 Iterating through found products...
+2025/08/22 18:58:46 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_AZURE
+2025/08/22 18:58:46 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 18:58:46 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 18:58:46 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=MANA_DISINTEGRATOR
+2025/08/22 18:58:46 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 18:58:46 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_POWER_DRAGON
+2025/08/22 18:58:46 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEER
+2025/08/22 18:58:46 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_VERDANT
+2025/08/22 18:58:46 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 18:58:46 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_NEWT
+2025/08/22 18:58:46 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SULPHURIC_COAL
+2025/08/22 18:58:46 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_OBSIDIAN_DEFENDER
+2025/08/22 18:58:47 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_SYCOPHANT
+2025/08/22 18:58:47 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_RAIN_SLIME
+2025/08/22 18:58:47 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=ECTOPLASM
+2025/08/22 18:58:47 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 18:58:47 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_COD
+2025/08/22 18:58:47 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_WITHER_SPECTER
+2025/08/22 18:58:47 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_GHOST
+2025/08/22 18:58:47 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOSSYBIT
+2025/08/22 18:58:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 18:58:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TROGLOBYTE
+2025/08/22 18:58:47 SHARD_TROGLOBYTE is suspected to be market manipulated.
+2025/08/22 18:58:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SOUL_OF_THE_ALPHA
+2025/08/22 18:58:47 SHARD_SOUL_OF_THE_ALPHA is suspected to be market manipulated.
+2025/08/22 18:58:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLAMING_SPIDER
+2025/08/22 18:58:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAVA_FLAME
+2025/08/22 18:58:47 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 18:58:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 18:58:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=PLASMA
+2025/08/22 18:58:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=NURSE_SHARK_TOOTH
+2025/08/22 18:58:48 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CAVERNSHADE
+2025/08/22 18:58:48 SHARD_CAVERNSHADE is suspected to be market manipulated.
+2025/08/22 18:58:48 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 18:58:48 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 18:58:48 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CINDER_BAT
+2025/08/22 18:58:48 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BEZOS
+2025/08/22 18:58:48 SHARD_CINDER_BAT is suspected to be market manipulated.
+2025/08/22 18:58:48 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 18:58:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BAMBULEAF
+2025/08/22 18:58:49 SHARD_BAMBULEAF is suspected to be market manipulated.
+2025/08/22 18:58:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLARE
+2025/08/22 18:58:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 18:58:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=AGARIMOO_TONGUE
+2025/08/22 18:58:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BOLT
+2025/08/22 18:58:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 18:58:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MIST
+2025/08/22 18:58:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BLUE_SHARK_TOOTH
+2025/08/22 18:58:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 18:58:50 SHARD_STRIDER_SURFER is suspected to be market manipulated.
+2025/08/22 18:58:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 18:58:50 SINGED_POWDER is suspected to be market manipulated.
+2025/08/22 18:58:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=CORRUPT_SOIL
+2025/08/22 18:58:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TADGANG
+2025/08/22 18:58:50 SHARD_TADGANG is suspected to be market manipulated.
+2025/08/22 18:58:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_THYST
+2025/08/22 18:58:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BARBARIAN_DUKE_X
+2025/08/22 18:58:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZEALOT
+2025/08/22 18:58:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GOLDEN_GHOUL
+2025/08/22 18:58:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_KADA_KNIGHT
+2025/08/22 18:58:50 SHARD_KADA_KNIGHT is suspected to be market manipulated.
+2025/08/22 18:58:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SALMON
+2025/08/22 18:58:50 SHARD_SALMON is suspected to be market manipulated.
+2025/08/22 18:58:51 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 18:58:51 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ENCHANTED_GLISTERING_MELON
+2025/08/22 18:58:51 ENCHANTED_GLISTERING_MELON is suspected to be market manipulated.
+2025/08/22 18:58:51 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_XYZ
+2025/08/22 18:58:51 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_PIRANHA
+2025/08/22 18:58:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 18:58:55 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=EXPORTABLE_CARROTS
+2025/08/22 18:58:55 EXPORTABLE_CARROTS is suspected to be market manipulated.
+2025/08/22 18:58:55 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 18:58:55 SHARD_SPIKE is suspected to be market manipulated.
+2025/08/22 18:58:58 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VORACIOUS_SPIDER
+2025/08/22 18:59:12 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BEZAL
+2025/08/22 18:59:18 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOCHIBEAR
+2025/08/22 18:59:18 Used 62 goroutines.
+2025/08/22 18:59:18 
+Found flip! Id: X, profit: 6301.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_FLAMING_SPIDER, profit: 10159.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_LAVA_FLAME, profit: 24602.
+2025/08/22 18:59:18 
+Found flip! Id: FRIED_FEATHER, profit: 3776.
+2025/08/22 18:59:18 
+Found flip! Id: PLASMA, profit: 3606.
+2025/08/22 18:59:18 
+Found flip! Id: NURSE_SHARK_TOOTH, profit: 3902.
+2025/08/22 18:59:18 
+Found flip! Id: BEZOS, profit: 2029.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_FIRE_EEL, profit: 31660.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_FLARE, profit: 9501.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_FLASH, profit: 20025.
+2025/08/22 18:59:18 
+Found flip! Id: AGARIMOO_TONGUE, profit: 5075.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_BOLT, profit: 33238.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_ENT, profit: 8386.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_MIST, profit: 16766.
+2025/08/22 18:59:18 
+Found flip! Id: BLUE_SHARK_TOOTH, profit: 4745.
+2025/08/22 18:59:18 
+Found flip! Id: CORRUPT_SOIL, profit: 54159.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_THYST, profit: 15033.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_BARBARIAN_DUKE_X, profit: 57970.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_ZEALOT, profit: 5899.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_GOLDEN_GHOUL, profit: 11142.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_MAGMA_SLUG, profit: 10653.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_XYZ, profit: 15370.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_PIRANHA, profit: 24620.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_STAR_SENTRY, profit: 9613.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_VORACIOUS_SPIDER, profit: 12714.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_BEZAL, profit: 14506.
+2025/08/22 18:59:18 
+Found flip! Id: SHARD_MOCHIBEAR, profit: 25333.
+2025/08/22 18:59:18 Flipping complete in  33.195604378s
+2025/08/22 18:59:18 > 
+2025/08/22 19:02:29 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 19:02:29 API Key is valid. Proceeding...
+2025/08/22 19:02:29 Connected to DB.
+2025/08/22 19:02:29 Initialized config table.
+2025/08/22 19:02:29 Registered routes.
+2025/08/22 19:02:30 > 
+2025/08/22 19:02:33 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 19:02:33 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 19:02:33 Iterating through found products...
+2025/08/22 19:02:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=PLASMA
+2025/08/22 19:02:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_KADA_KNIGHT
+2025/08/22 19:02:34 SHARD_KADA_KNIGHT is suspected to be market manipulated.
+2025/08/22 19:02:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ECTOPLASM
+2025/08/22 19:02:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BEZOS
+2025/08/22 19:02:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAPIS_ZOMBIE
+2025/08/22 19:02:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOCHIBEAR
+2025/08/22 19:02:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 19:02:35 SHARD_JOYDIVE is suspected to be market manipulated.
+2025/08/22 19:02:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAVA_FLAME
+2025/08/22 19:02:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SALMON
+2025/08/22 19:02:35 SHARD_SALMON is suspected to be market manipulated.
+2025/08/22 19:02:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ENCHANTED_GLISTERING_MELON
+2025/08/22 19:02:35 ENCHANTED_GLISTERING_MELON is suspected to be market manipulated.
+2025/08/22 19:02:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 19:02:35 SHARD_APEX_DRAGON is suspected to be market manipulated.
+2025/08/22 19:02:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MIST
+2025/08/22 19:02:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CINDER_BAT
+2025/08/22 19:02:35 SHARD_CINDER_BAT is suspected to be market manipulated.
+2025/08/22 19:02:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_COD
+2025/08/22 19:02:36 SHARD_COD is suspected to be market manipulated.
+2025/08/22 19:02:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_XYZ
+2025/08/22 19:02:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 19:02:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_POWER_DRAGON
+2025/08/22 19:02:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SULPHURIC_COAL
+2025/08/22 19:02:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BAMBULEAF
+2025/08/22 19:02:38 SHARD_BAMBULEAF is suspected to be market manipulated.
+2025/08/22 19:02:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BEZAL
+2025/08/22 19:02:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLAMING_SPIDER
+2025/08/22 19:02:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SYCOPHANT
+2025/08/22 19:02:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_NEWT
+2025/08/22 19:02:38 SHARD_NEWT is suspected to be market manipulated.
+2025/08/22 19:02:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BLUE_SHARK_TOOTH
+2025/08/22 19:02:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 19:02:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 19:02:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 19:02:38 SINGED_POWDER is suspected to be market manipulated.
+2025/08/22 19:02:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLARE
+2025/08/22 19:02:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SOUL_OF_THE_ALPHA
+2025/08/22 19:02:39 SHARD_SOUL_OF_THE_ALPHA is suspected to be market manipulated.
+2025/08/22 19:02:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 19:02:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_RAIN_SLIME
+2025/08/22 19:02:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TROGLOBYTE
+2025/08/22 19:02:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_PIRANHA
+2025/08/22 19:02:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 19:02:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=NURSE_SHARK_TOOTH
+2025/08/22 19:02:39 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 19:02:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 19:02:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 19:02:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GOLDEN_GHOUL
+2025/08/22 19:02:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CAVERNSHADE
+2025/08/22 19:02:40 SHARD_CAVERNSHADE is suspected to be market manipulated.
+2025/08/22 19:02:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TADGANG
+2025/08/22 19:02:40 SHARD_TADGANG is suspected to be market manipulated.
+2025/08/22 19:02:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEER
+2025/08/22 19:02:40 SHARD_SEER is suspected to be market manipulated.
+2025/08/22 19:02:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 19:02:40 SHARD_STRIDER_SURFER is suspected to be market manipulated.
+2025/08/22 19:02:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FINE_TOPAZ_GEM
+2025/08/22 19:02:41 FINE_TOPAZ_GEM is suspected to be market manipulated.
+2025/08/22 19:02:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BOLT
+2025/08/22 19:02:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=MANA_DISINTEGRATOR
+2025/08/22 19:02:42 MANA_DISINTEGRATOR is suspected to be market manipulated.
+2025/08/22 19:02:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BARBARIAN_DUKE_X
+2025/08/22 19:02:44 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=AGARIMOO_TONGUE
+2025/08/22 19:02:46 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_THYST
+2025/08/22 19:02:46 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 19:02:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 19:02:50 SHARD_SPIKE is suspected to be market manipulated.
+2025/08/22 19:02:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VORACIOUS_SPIDER
+2025/08/22 19:02:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=CORRUPT_SOIL
+2025/08/22 19:02:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 19:02:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 19:02:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 19:02:58 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZEALOT
+2025/08/22 19:03:01 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_WITHER_SPECTER
+2025/08/22 19:03:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 19:03:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOSSYBIT
+2025/08/22 19:03:12 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VERDANT
+2025/08/22 19:03:12 SHARD_VERDANT is suspected to be market manipulated.
+2025/08/22 19:03:14 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=EXPORTABLE_CARROTS
+2025/08/22 19:03:14 EXPORTABLE_CARROTS is suspected to be market manipulated.
+2025/08/22 19:03:22 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_OBSIDIAN_DEFENDER
+2025/08/22 19:03:22 SHARD_OBSIDIAN_DEFENDER is suspected to be market manipulated.
+2025/08/22 19:03:23 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GHOST
+2025/08/22 19:03:23 SHARD_GHOST is suspected to be market manipulated.
+2025/08/22 19:03:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_AZURE
+2025/08/22 19:03:54 SHARD_AZURE is suspected to be market manipulated.
+2025/08/22 19:03:54 
+Found flip! Id: PLASMA, profit: 3606.
+2025/08/22 19:03:54 
+Found flip! Id: ECTOPLASM, profit: 34515.
+2025/08/22 19:03:54 
+Found flip! Id: BEZOS, profit: 2029.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_LAPIS_ZOMBIE, profit: 3433.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_MOCHIBEAR, profit: 25333.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_LAVA_FLAME, profit: 24602.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_MIST, profit: 16340.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_XYZ, profit: 15370.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_CHILL, profit: 8054.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_POWER_DRAGON, profit: 131073.
+2025/08/22 19:03:54 
+Found flip! Id: SULPHURIC_COAL, profit: 1440.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_BEZAL, profit: 15112.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_FLAMING_SPIDER, profit: 10159.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_SYCOPHANT, profit: 9384.
+2025/08/22 19:03:54 
+Found flip! Id: BLUE_SHARK_TOOTH, profit: 4746.
+2025/08/22 19:03:54 
+Found flip! Id: X, profit: 6301.
+2025/08/22 19:03:54 
+Found flip! Id: FRIED_FEATHER, profit: 3776.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_FLARE, profit: 9502.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_STAR_SENTRY, profit: 9707.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_RAIN_SLIME, profit: 27401.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_TROGLOBYTE, profit: 23267.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_PIRANHA, profit: 24277.
+2025/08/22 19:03:54 
+Found flip! Id: NURSE_SHARK_TOOTH, profit: 3902.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_SEA_ARCHER, profit: 3576.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_MINER_ZOMBIE, profit: 5719.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_GOLDEN_GHOUL, profit: 11142.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_BOLT, profit: 33238.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_BARBARIAN_DUKE_X, profit: 57970.
+2025/08/22 19:03:54 
+Found flip! Id: AGARIMOO_TONGUE, profit: 5080.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_THYST, profit: 14876.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_MAGMA_SLUG, profit: 10653.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_VORACIOUS_SPIDER, profit: 12641.
+2025/08/22 19:03:54 
+Found flip! Id: CORRUPT_SOIL, profit: 53743.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_FIRE_EEL, profit: 31595.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_FLASH, profit: 20031.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_ZOMBIE_SOLDIER, profit: 9850.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_ZEALOT, profit: 5894.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_WITHER_SPECTER, profit: 7416.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_ENT, profit: 8278.
+2025/08/22 19:03:54 
+Found flip! Id: SHARD_MOSSYBIT, profit: 27392.
+2025/08/22 19:03:54 Flipping complete in  1m22.565465586s
+2025/08/22 19:03:54 > 
+2025/08/22 19:32:57 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 19:32:57 API Key is valid. Proceeding...
+2025/08/22 19:32:57 Connected to DB.
+2025/08/22 19:32:57 Initialized config table.
+2025/08/22 19:32:57 Registered routes.
+2025/08/22 19:32:57 > 
+2025/08/22 19:33:02 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 19:33:02 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 19:33:02 Iterating through found products...
+2025/08/22 19:33:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_COD
+2025/08/22 19:33:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=CORRUPT_SOIL
+2025/08/22 19:33:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 19:33:04 SHARD_MAGMA_SLUG is suspected to be market manipulated.
+2025/08/22 19:33:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_RAIN_SLIME
+2025/08/22 19:33:04 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 19:33:04 
+Error processing SHARD_FLASH: error while loading price history: invalid status code; HTTP/1.1 500 Internal Server Error
+Server: cloudflare
+Date: Fri, 22 Aug 2025 14:33:03 GMT
+Content-Type: text/html
+Content-Length: 186
+Alt-Svc: h3=":443"; ma=86400
+Connection: keep-alive
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Cf-Cache-Status: DYNAMIC
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=by9fEIIp6vpJ9RrWl9J2bfnvfB%!!(MISSING)B(MISSING)J8UpgbkVokyP7U07hFXEIuiV9V1o6eHXr%!!(MISSING)F(MISSING)V2EsXh9nL26DaYEn20o%!!(MISSING)B(MISSING)i98X5YZBxa4I5XZRu2BcE1uGyhDTGGlSx6p7ArXD68a8zwwLg%!!(MISSING)D(MISSING)%!!(MISSING)D(MISSING)"}]}
+Cf-Ray: 97331540fa8740c8-SIN
+
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>nginx/1.18.0 (Ubuntu)</center>
+</body>
+</html>
+
+2025/08/22 19:33:04 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 19:33:04 
+Error processing SHARD_JOYDIVE: error while loading price history: invalid status code; HTTP/1.1 500 Internal Server Error
+Server: cloudflare
+Date: Fri, 22 Aug 2025 14:33:03 GMT
+Content-Type: text/html
+Content-Length: 186
+Alt-Svc: h3=":443"; ma=86400
+Connection: keep-alive
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Cf-Cache-Status: DYNAMIC
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=aN%!!(MISSING)B(MISSING)Xctrj6%!!(MISSING)B(MISSING)LRyAFvmUdVUKv5vrj5%!!(MISSING)F(MISSING)klfUgNatHEn63LQq1GYW18OawuGy9k00ZhQpy%!!(MISSING)B(MISSING)3S99H2ujqikPIqOjxoVTtzcksZFILcke9DtIxKg%!!(MISSING)B(MISSING)B97LYChbX1brM%!!(MISSING)F(MISSING)sLrEdCEOQ%!!(MISSING)D(MISSING)%!!(MISSING)D(MISSING)"}]}
+Cf-Ray: 97331540f88efd7f-SIN
+
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>nginx/1.18.0 (Ubuntu)</center>
+</body>
+</html>
+
+2025/08/22 19:33:04 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEER
+2025/08/22 19:33:04 
+Error processing SHARD_SEER: error while loading price history: invalid status code; HTTP/1.1 500 Internal Server Error
+Server: cloudflare
+Date: Fri, 22 Aug 2025 14:33:03 GMT
+Content-Type: text/html
+Content-Length: 186
+Alt-Svc: h3=":443"; ma=86400
+Connection: keep-alive
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Cf-Cache-Status: DYNAMIC
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=TggnsPuFBER5b8V2c72voh8inAyzhP6K%!!(MISSING)B(MISSING)VsblRUd%!!(MISSING)B(MISSING)RydHoVBCTSgHmlNdB%!!(MISSING)B(MISSING)YCk40PQvnMI9j6dQWHjlhjC7T42vfeu%!!(MISSING)B(MISSING)AXnawLY8JeoyH%!!(MISSING)F(MISSING)HOcRg9Bf4idJiakAp%!!(MISSING)F(MISSING)cBCs%!!(MISSING)D(MISSING)"}]}
+Cf-Ray: 97331540ff695f3f-SIN
+
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>nginx/1.18.0 (Ubuntu)</center>
+</body>
+</html>
+
+2025/08/22 19:33:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ORB_OF_ENERGY
+2025/08/22 19:33:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CINDER_BAT
+2025/08/22 19:33:05 SHARD_CINDER_BAT is suspected to be market manipulated.
+2025/08/22 19:33:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=PLASMA
+2025/08/22 19:33:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 19:33:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 19:33:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 19:33:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 19:33:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_PIRANHA
+2025/08/22 19:33:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLAMING_SPIDER
+2025/08/22 19:33:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZEALOT
+2025/08/22 19:33:06 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_VERDANT
+2025/08/22 19:33:06 
+Error processing SHARD_VERDANT: error while loading price history: invalid status code; HTTP/1.1 500 Internal Server Error
+Server: cloudflare
+Date: Fri, 22 Aug 2025 14:33:05 GMT
+Content-Type: text/html
+Content-Length: 186
+Alt-Svc: h3=":443"; ma=86400
+Connection: keep-alive
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Cf-Cache-Status: DYNAMIC
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=YExzITf9qfO4bWqAhRZo2zst0p4132fdHwLBmAwIDthkoeAyHLdU4%!!(MISSING)F(MISSING)ezHBIdvbnX%!!(MISSING)B(MISSING)2kUveAymu95cXFIYeJAxvHWw0lLmS6cntwIq1jM7Lpvvjub18yMip7J%!!(MISSING)B(MISSING)HWZWr31bA%!!(MISSING)D(MISSING)%!!(MISSING)D(MISSING)"}]}
+Cf-Ray: 97331540f83740dd-SIN
+
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>nginx/1.18.0 (Ubuntu)</center>
+</body>
+</html>
+
+2025/08/22 19:33:06 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_THYST
+2025/08/22 19:33:06 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLARE
+2025/08/22 19:33:06 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SALMON
+2025/08/22 19:33:06 SHARD_SALMON is suspected to be market manipulated.
+2025/08/22 19:33:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_OBSIDIAN_DEFENDER
+2025/08/22 19:33:07 SHARD_OBSIDIAN_DEFENDER is suspected to be market manipulated.
+2025/08/22 19:33:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BLUE_SHARK_TOOTH
+2025/08/22 19:33:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BARBARIAN_DUKE_X
+2025/08/22 19:33:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_XYZ
+2025/08/22 19:33:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ECTOPLASM
+2025/08/22 19:33:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CAVERNSHADE
+2025/08/22 19:33:07 SHARD_CAVERNSHADE is suspected to be market manipulated.
+2025/08/22 19:33:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ENCHANTED_GLISTERING_MELON
+2025/08/22 19:33:07 ENCHANTED_GLISTERING_MELON is suspected to be market manipulated.
+2025/08/22 19:33:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAVA_FLAME
+2025/08/22 19:33:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 19:33:07 SHARD_APEX_DRAGON is suspected to be market manipulated.
+2025/08/22 19:33:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOSSYBIT
+2025/08/22 19:33:07 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SULPHURIC_COAL
+2025/08/22 19:33:07 
+Error processing SULPHURIC_COAL: error while loading price history: invalid status code; HTTP/1.1 500 Internal Server Error
+Server: cloudflare
+Date: Fri, 22 Aug 2025 14:33:07 GMT
+Content-Type: text/html
+Content-Length: 186
+Alt-Svc: h3=":443"; ma=86400
+Connection: keep-alive
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Cf-Cache-Status: DYNAMIC
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=t%!!(MISSING)F(MISSING)H8KX9lCJuEs1l9cVOk1x0K%!!(MISSING)B(MISSING)rgy6Hn81HXxviosbaNfBSj37abJhIfzJr3g20LxdmlHbAFE6GWMuh2iv9WoFA%!!(MISSING)B(MISSING)5eWpgOG3JuKb%!!(MISSING)B(MISSING)pno3ZFazQcLzQffEh5%!!(MISSING)F(MISSING)OBklix6YCow%!!(MISSING)D(MISSING)%!!(MISSING)D(MISSING)"}]}
+Cf-Ray: 97331540fe1e91bd-SIN
+
+<html>
+<head><title>500 Internal Server Error</title></head>
+<body>
+<center><h1>500 Internal Server Error</h1></center>
+<hr><center>nginx/1.18.0 (Ubuntu)</center>
+</body>
+</html>
+
+2025/08/22 19:33:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 19:33:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 19:33:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_WITHER_SPECTER
+2025/08/22 19:33:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=MANA_DISINTEGRATOR
+2025/08/22 19:33:08 MANA_DISINTEGRATOR is suspected to be market manipulated.
+2025/08/22 19:33:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 19:33:08 SHARD_SPIKE is suspected to be market manipulated.
+2025/08/22 19:33:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 19:33:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SYCOPHANT
+2025/08/22 19:33:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SOUL_OF_THE_ALPHA
+2025/08/22 19:33:08 SHARD_SOUL_OF_THE_ALPHA is suspected to be market manipulated.
+2025/08/22 19:33:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOCHIBEAR
+2025/08/22 19:33:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_POWER_DRAGON
+2025/08/22 19:33:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FINE_TOPAZ_GEM
+2025/08/22 19:33:09 FINE_TOPAZ_GEM is suspected to be market manipulated.
+2025/08/22 19:33:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BOLT
+2025/08/22 19:33:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 19:33:09 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 19:33:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_NEWT
+2025/08/22 19:33:09 SHARD_NEWT is suspected to be market manipulated.
+2025/08/22 19:33:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GOLDEN_GHOUL
+2025/08/22 19:33:11 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_KADA_KNIGHT
+2025/08/22 19:33:11 SHARD_KADA_KNIGHT is suspected to be market manipulated.
+2025/08/22 19:33:11 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TROGLOBYTE
+2025/08/22 19:33:11 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MIST
+2025/08/22 19:33:13 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 19:33:15 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GLACITE_WALKER
+2025/08/22 19:33:15 SHARD_GLACITE_WALKER is suspected to be market manipulated.
+2025/08/22 19:33:16 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=NURSE_SHARK_TOOTH
+2025/08/22 19:33:16 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=AGARIMOO_TONGUE
+2025/08/22 19:33:16 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BAMBULEAF
+2025/08/22 19:33:17 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 19:33:17 SHARD_STRIDER_SURFER is suspected to be market manipulated.
+2025/08/22 19:33:18 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TADGANG
+2025/08/22 19:33:18 SHARD_TADGANG is suspected to be market manipulated.
+2025/08/22 19:33:19 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 19:33:19 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BEZOS
+2025/08/22 19:33:19 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 19:33:19 SINGED_POWDER is suspected to be market manipulated.
+2025/08/22 19:33:19 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VORACIOUS_SPIDER
+2025/08/22 19:33:21 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GHOST
+2025/08/22 19:33:21 SHARD_GHOST is suspected to be market manipulated.
+2025/08/22 19:33:22 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_AZURE
+2025/08/22 19:33:22 SHARD_AZURE is suspected to be market manipulated.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_COD, profit: 3127.
+2025/08/22 19:33:22 
+Found flip! Id: CORRUPT_SOIL, profit: 53649.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_RAIN_SLIME, profit: 27163.
+2025/08/22 19:33:22 
+Found flip! Id: ORB_OF_ENERGY, profit: 2123.
+2025/08/22 19:33:22 
+Found flip! Id: PLASMA, profit: 3606.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_FIRE_EEL, profit: 30072.
+2025/08/22 19:33:22 
+Found flip! Id: X, profit: 6301.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_ENT, profit: 8394.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_ZOMBIE_SOLDIER, profit: 10106.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_PIRANHA, profit: 25344.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_FLAMING_SPIDER, profit: 10212.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_ZEALOT, profit: 5915.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_THYST, profit: 14925.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_FLARE, profit: 8370.
+2025/08/22 19:33:22 
+Found flip! Id: BLUE_SHARK_TOOTH, profit: 4750.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_BARBARIAN_DUKE_X, profit: 57970.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_XYZ, profit: 15370.
+2025/08/22 19:33:22 
+Found flip! Id: ECTOPLASM, profit: 34514.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_LAVA_FLAME, profit: 24602.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_MOSSYBIT, profit: 27489.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_SEA_ARCHER, profit: 3397.
+2025/08/22 19:33:22 
+Found flip! Id: FRIED_FEATHER, profit: 3776.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_WITHER_SPECTER, profit: 7695.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_STAR_SENTRY, profit: 10459.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_SYCOPHANT, profit: 9393.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_MOCHIBEAR, profit: 25855.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_POWER_DRAGON, profit: 126410.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_BOLT, profit: 33238.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_GOLDEN_GHOUL, profit: 10374.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_TROGLOBYTE, profit: 23465.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_MIST, profit: 16869.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_CHILL, profit: 8026.
+2025/08/22 19:33:22 
+Found flip! Id: NURSE_SHARK_TOOTH, profit: 3902.
+2025/08/22 19:33:22 
+Found flip! Id: AGARIMOO_TONGUE, profit: 5143.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_BAMBULEAF, profit: 31973.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_MINER_ZOMBIE, profit: 5994.
+2025/08/22 19:33:22 
+Found flip! Id: BEZOS, profit: 2029.
+2025/08/22 19:33:22 
+Found flip! Id: SHARD_VORACIOUS_SPIDER, profit: 12982.
+2025/08/22 19:33:22 Flipping complete in  21.768766845s
+2025/08/22 19:33:22 > 
+2025/08/22 19:33:31 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 19:33:31 API Key is valid. Proceeding...
+2025/08/22 19:33:31 Connected to DB.
+2025/08/22 19:33:31 Initialized config table.
+2025/08/22 19:33:31 Registered routes.
+2025/08/22 19:33:31 > 
+2025/08/22 19:33:35 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 19:33:35 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 19:33:35 Iterating through found products...
+2025/08/22 19:33:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SULPHURIC_COAL
+2025/08/22 19:33:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CAVERNSHADE
+2025/08/22 19:33:37 SHARD_CAVERNSHADE is suspected to be market manipulated.
+2025/08/22 19:33:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_THYST
+2025/08/22 19:33:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ENCHANTED_GLISTERING_MELON
+2025/08/22 19:33:37 ENCHANTED_GLISTERING_MELON is suspected to be market manipulated.
+2025/08/22 19:33:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLAMING_SPIDER
+2025/08/22 19:33:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_PIRANHA
+2025/08/22 19:33:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 19:33:37 SHARD_SPIKE is suspected to be market manipulated.
+2025/08/22 19:33:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 19:33:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_COD
+2025/08/22 19:33:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAVA_FLAME
+2025/08/22 19:33:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 19:33:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=MANA_DISINTEGRATOR
+2025/08/22 19:33:39 MANA_DISINTEGRATOR is suspected to be market manipulated.
+2025/08/22 19:33:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=CORRUPT_SOIL
+2025/08/22 19:33:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 19:33:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 19:33:39 SINGED_POWDER is suspected to be market manipulated.
+2025/08/22 19:33:39 SHARD_APEX_DRAGON is suspected to be market manipulated.
+2025/08/22 19:33:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GOLDEN_GHOUL
+2025/08/22 19:33:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOCHIBEAR
+2025/08/22 19:33:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TADGANG
+2025/08/22 19:33:40 SHARD_TADGANG is suspected to be market manipulated.
+2025/08/22 19:33:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_AZURE
+2025/08/22 19:33:40 SHARD_AZURE is suspected to be market manipulated.
+2025/08/22 19:33:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MIST
+2025/08/22 19:33:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 19:33:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=PLASMA
+2025/08/22 19:33:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 19:33:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VORACIOUS_SPIDER
+2025/08/22 19:33:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TROGLOBYTE
+2025/08/22 19:33:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_NEWT
+2025/08/22 19:33:41 SHARD_NEWT is suspected to be market manipulated.
+2025/08/22 19:33:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOSSYBIT
+2025/08/22 19:33:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 19:33:41 SHARD_MAGMA_SLUG is suspected to be market manipulated.
+2025/08/22 19:33:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CINDER_BAT
+2025/08/22 19:33:41 SHARD_CINDER_BAT is suspected to be market manipulated.
+2025/08/22 19:33:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEER
+2025/08/22 19:33:41 SHARD_SEER is suspected to be market manipulated.
+2025/08/22 19:33:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VERDANT
+2025/08/22 19:33:41 SHARD_VERDANT is suspected to be market manipulated.
+2025/08/22 19:33:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BARBARIAN_DUKE_X
+2025/08/22 19:33:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_XYZ
+2025/08/22 19:33:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_RAIN_SLIME
+2025/08/22 19:33:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 19:33:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 19:33:42 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 19:33:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ORB_OF_ENERGY
+2025/08/22 19:33:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BAMBULEAF
+2025/08/22 19:33:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_WITHER_SPECTER
+2025/08/22 19:33:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BEZOS
+2025/08/22 19:33:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SOUL_OF_THE_ALPHA
+2025/08/22 19:33:42 SHARD_SOUL_OF_THE_ALPHA is suspected to be market manipulated.
+2025/08/22 19:33:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 19:33:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_OBSIDIAN_DEFENDER
+2025/08/22 19:33:42 SHARD_OBSIDIAN_DEFENDER is suspected to be market manipulated.
+2025/08/22 19:33:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_POWER_DRAGON
+2025/08/22 19:33:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 19:33:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BLUE_SHARK_TOOTH
+2025/08/22 19:33:43 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 19:33:43 SHARD_STRIDER_SURFER is suspected to be market manipulated.
+2025/08/22 19:33:43 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_KADA_KNIGHT
+2025/08/22 19:33:43 SHARD_KADA_KNIGHT is suspected to be market manipulated.
+2025/08/22 19:33:43 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SYCOPHANT
+2025/08/22 19:33:44 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=NURSE_SHARK_TOOTH
+2025/08/22 19:33:45 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GLACITE_WALKER
+2025/08/22 19:33:45 SHARD_GLACITE_WALKER is suspected to be market manipulated.
+2025/08/22 19:33:46 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FINE_TOPAZ_GEM
+2025/08/22 19:33:46 FINE_TOPAZ_GEM is suspected to be market manipulated.
+2025/08/22 19:33:48 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ECTOPLASM
+2025/08/22 19:33:48 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 19:33:48 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BOLT
+2025/08/22 19:33:53 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=AGARIMOO_TONGUE
+2025/08/22 19:33:55 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GHOST
+2025/08/22 19:33:55 SHARD_GHOST is suspected to be market manipulated.
+2025/08/22 19:33:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SALMON
+2025/08/22 19:33:57 SHARD_SALMON is suspected to be market manipulated.
+2025/08/22 19:33:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 19:33:57 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLARE
+2025/08/22 19:34:01 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZEALOT
+2025/08/22 19:34:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 19:34:08 SHARD_JOYDIVE is suspected to be market manipulated.
+2025/08/22 19:34:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 19:34:09 
+Found flip! Id: SULPHURIC_COAL, profit: 1482.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_THYST, profit: 14926.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_FLAMING_SPIDER, profit: 10212.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_PIRANHA, profit: 25384.
+2025/08/22 19:34:09 
+Found flip! Id: FRIED_FEATHER, profit: 3776.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_COD, profit: 3127.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_LAVA_FLAME, profit: 24602.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_FIRE_EEL, profit: 30074.
+2025/08/22 19:34:09 
+Found flip! Id: CORRUPT_SOIL, profit: 53380.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_GOLDEN_GHOUL, profit: 10374.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_MOCHIBEAR, profit: 25855.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_MIST, profit: 16861.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_STAR_SENTRY, profit: 10459.
+2025/08/22 19:34:09 
+Found flip! Id: PLASMA, profit: 3606.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_CHILL, profit: 8026.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_VORACIOUS_SPIDER, profit: 12982.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_TROGLOBYTE, profit: 23467.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_MOSSYBIT, profit: 27419.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_BARBARIAN_DUKE_X, profit: 57970.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_XYZ, profit: 15370.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_RAIN_SLIME, profit: 27163.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_FLASH, profit: 21732.
+2025/08/22 19:34:09 
+Found flip! Id: ORB_OF_ENERGY, profit: 2123.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_BAMBULEAF, profit: 31973.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_WITHER_SPECTER, profit: 7354.
+2025/08/22 19:34:09 
+Found flip! Id: BEZOS, profit: 2029.
+2025/08/22 19:34:09 
+Found flip! Id: X, profit: 6301.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_POWER_DRAGON, profit: 126410.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_ZOMBIE_SOLDIER, profit: 10106.
+2025/08/22 19:34:09 
+Found flip! Id: BLUE_SHARK_TOOTH, profit: 4750.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_SYCOPHANT, profit: 9350.
+2025/08/22 19:34:09 
+Found flip! Id: NURSE_SHARK_TOOTH, profit: 3902.
+2025/08/22 19:34:09 
+Found flip! Id: ECTOPLASM, profit: 34514.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_MINER_ZOMBIE, profit: 5994.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_BOLT, profit: 33238.
+2025/08/22 19:34:09 
+Found flip! Id: AGARIMOO_TONGUE, profit: 5143.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_ENT, profit: 8394.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_FLARE, profit: 8370.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_ZEALOT, profit: 5915.
+2025/08/22 19:34:09 
+Found flip! Id: SHARD_SEA_ARCHER, profit: 3397.
+2025/08/22 19:34:09 Flipping complete in  36.639785956s
+2025/08/22 19:34:09 > 
+2025/08/22 19:34:21 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 19:34:21 API Key is valid. Proceeding...
+2025/08/22 19:34:21 Connected to DB.
+2025/08/22 19:34:21 Initialized config table.
+2025/08/22 19:34:21 Registered routes.
+2025/08/22 19:34:21 > 
+2025/08/22 19:34:27 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 19:34:27 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 19:34:27 Iterating through found products...
+2025/08/22 19:34:28 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ENCHANTED_GLISTERING_MELON
+2025/08/22 19:34:28 ENCHANTED_GLISTERING_MELON is suspected to be market manipulated.
+2025/08/22 19:34:28 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_RAIN_SLIME
+2025/08/22 19:34:28 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TROGLOBYTE
+2025/08/22 19:34:28 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BAMBULEAF
+2025/08/22 19:34:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 19:34:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 19:34:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLARE
+2025/08/22 19:34:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 19:34:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 19:34:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAVA_FLAME
+2025/08/22 19:34:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEER
+2025/08/22 19:34:29 SHARD_SEER is suspected to be market manipulated.
+2025/08/22 19:34:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GHOST
+2025/08/22 19:34:29 SHARD_GHOST is suspected to be market manipulated.
+2025/08/22 19:34:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=AGARIMOO_TONGUE
+2025/08/22 19:34:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SULPHURIC_COAL
+2025/08/22 19:34:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ECTOPLASM
+2025/08/22 19:34:30 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOCHIBEAR
+2025/08/22 19:34:30 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CINDER_BAT
+2025/08/22 19:34:30 SHARD_CINDER_BAT is suspected to be market manipulated.
+2025/08/22 19:34:31 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 19:34:31 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 19:34:31 SHARD_STRIDER_SURFER is suspected to be market manipulated.
+2025/08/22 19:34:32 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZEALOT
+2025/08/22 19:34:32 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_PIRANHA
+2025/08/22 19:34:32 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_COD
+2025/08/22 19:34:32 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=PLASMA
+2025/08/22 19:34:32 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_XYZ
+2025/08/22 19:34:32 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 19:34:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_NEWT
+2025/08/22 19:34:33 SHARD_NEWT is suspected to be market manipulated.
+2025/08/22 19:34:33 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 19:34:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GOLDEN_GHOUL
+2025/08/22 19:34:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLAMING_SPIDER
+2025/08/22 19:34:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VORACIOUS_SPIDER
+2025/08/22 19:34:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FINE_TOPAZ_GEM
+2025/08/22 19:34:33 FINE_TOPAZ_GEM is suspected to be market manipulated.
+2025/08/22 19:34:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ORB_OF_ENERGY
+2025/08/22 19:34:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 19:34:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_POWER_DRAGON
+2025/08/22 19:34:33 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 19:34:33 SHARD_JOYDIVE is suspected to be market manipulated.
+2025/08/22 19:34:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SOUL_OF_THE_ALPHA
+2025/08/22 19:34:34 SHARD_SOUL_OF_THE_ALPHA is suspected to be market manipulated.
+2025/08/22 19:34:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_WITHER_SPECTER
+2025/08/22 19:34:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SYCOPHANT
+2025/08/22 19:34:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BOLT
+2025/08/22 19:34:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_OBSIDIAN_DEFENDER
+2025/08/22 19:34:34 SHARD_OBSIDIAN_DEFENDER is suspected to be market manipulated.
+2025/08/22 19:34:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MIST
+2025/08/22 19:34:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOSSYBIT
+2025/08/22 19:34:34 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 19:34:34 SHARD_MAGMA_SLUG is suspected to be market manipulated.
+2025/08/22 19:34:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=NURSE_SHARK_TOOTH
+2025/08/22 19:34:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_THYST
+2025/08/22 19:34:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_KADA_KNIGHT
+2025/08/22 19:34:35 SHARD_KADA_KNIGHT is suspected to be market manipulated.
+2025/08/22 19:34:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 19:34:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 19:34:35 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 19:34:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TADGANG
+2025/08/22 19:34:36 SHARD_TADGANG is suspected to be market manipulated.
+2025/08/22 19:34:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=CORRUPT_SOIL
+2025/08/22 19:34:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BARBARIAN_DUKE_X
+2025/08/22 19:34:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SALMON
+2025/08/22 19:34:37 SHARD_SALMON is suspected to be market manipulated.
+2025/08/22 19:34:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=MANA_DISINTEGRATOR
+2025/08/22 19:34:37 MANA_DISINTEGRATOR is suspected to be market manipulated.
+2025/08/22 19:34:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BEZOS
+2025/08/22 19:34:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CAVERNSHADE
+2025/08/22 19:34:38 SHARD_CAVERNSHADE is suspected to be market manipulated.
+2025/08/22 19:34:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_AZURE
+2025/08/22 19:34:39 SHARD_AZURE is suspected to be market manipulated.
+2025/08/22 19:34:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 19:34:40 SINGED_POWDER is suspected to be market manipulated.
+2025/08/22 19:34:43 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 19:34:43 SHARD_APEX_DRAGON is suspected to be market manipulated.
+2025/08/22 19:34:44 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VERDANT
+2025/08/22 19:34:44 SHARD_VERDANT is suspected to be market manipulated.
+2025/08/22 19:34:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 19:34:50 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GLACITE_WALKER
+2025/08/22 19:34:50 SHARD_GLACITE_WALKER is suspected to be market manipulated.
+2025/08/22 19:34:54 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 19:34:54 SHARD_SPIKE is suspected to be market manipulated.
+2025/08/22 19:35:00 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BLUE_SHARK_TOOTH
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_RAIN_SLIME, profit: 27163.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_TROGLOBYTE, profit: 23467.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_BAMBULEAF, profit: 31973.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_STAR_SENTRY, profit: 10470.
+2025/08/22 19:35:00 
+Found flip! Id: X, profit: 6301.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_FLARE, profit: 8370.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_ZOMBIE_SOLDIER, profit: 9944.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_FLASH, profit: 21725.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_LAVA_FLAME, profit: 24602.
+2025/08/22 19:35:00 
+Found flip! Id: AGARIMOO_TONGUE, profit: 5143.
+2025/08/22 19:35:00 
+Found flip! Id: SULPHURIC_COAL, profit: 1482.
+2025/08/22 19:35:00 
+Found flip! Id: ECTOPLASM, profit: 34514.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_MOCHIBEAR, profit: 25855.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_CHILL, profit: 7841.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_ZEALOT, profit: 5915.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_PIRANHA, profit: 35355.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_COD, profit: 3127.
+2025/08/22 19:35:00 
+Found flip! Id: PLASMA, profit: 3606.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_XYZ, profit: 15370.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_ENT, profit: 8394.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_GOLDEN_GHOUL, profit: 10374.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_FLAMING_SPIDER, profit: 10212.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_VORACIOUS_SPIDER, profit: 12982.
+2025/08/22 19:35:00 
+Found flip! Id: ORB_OF_ENERGY, profit: 2123.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_SEA_ARCHER, profit: 3397.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_POWER_DRAGON, profit: 126410.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_WITHER_SPECTER, profit: 7354.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_SYCOPHANT, profit: 9301.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_BOLT, profit: 33238.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_MIST, profit: 16861.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_MOSSYBIT, profit: 27377.
+2025/08/22 19:35:00 
+Found flip! Id: NURSE_SHARK_TOOTH, profit: 3902.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_THYST, profit: 14926.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_FIRE_EEL, profit: 30074.
+2025/08/22 19:35:00 
+Found flip! Id: CORRUPT_SOIL, profit: 53380.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_BARBARIAN_DUKE_X, profit: 57970.
+2025/08/22 19:35:00 
+Found flip! Id: BEZOS, profit: 2029.
+2025/08/22 19:35:00 
+Found flip! Id: SHARD_MINER_ZOMBIE, profit: 6009.
+2025/08/22 19:35:00 
+Found flip! Id: BLUE_SHARK_TOOTH, profit: 4750.
+2025/08/22 19:35:00 Flipping complete in  37.007048517s
+2025/08/22 19:35:00 > 
+2025/08/22 19:35:04 Unknown command. Available: cracc <username>, bzflip, exit
+2025/08/22 19:35:04 > 
+2025/08/22 19:38:56 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 19:38:56 API Key is valid. Proceeding...
+2025/08/22 19:38:56 Connected to DB.
+2025/08/22 19:38:56 Initialized config table.
+2025/08/22 19:38:56 Registered routes.
+2025/08/22 19:38:57 > 
+2025/08/22 19:39:00 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 19:39:00 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 19:39:00 Iterating through found products...
+2025/08/22 19:39:02 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GLACITE_WALKER
+2025/08/22 19:39:02 SHARD_GLACITE_WALKER is suspected to be market manipulated.
+2025/08/22 19:39:02 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CINDER_BAT
+2025/08/22 19:39:02 SHARD_CINDER_BAT is suspected to be market manipulated.
+2025/08/22 19:39:02 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 19:39:02 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_POWER_DRAGON
+2025/08/22 19:39:02 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 19:39:02 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_SYCOPHANT
+2025/08/22 19:39:02 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_PIRANHA
+2025/08/22 19:39:02 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_BARBARIAN_DUKE_X
+2025/08/22 19:39:02 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_OBSIDIAN_DEFENDER
+2025/08/22 19:39:02 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLAMING_SPIDER
+2025/08/22 19:39:02 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=EXPORTABLE_CARROTS
+2025/08/22 19:39:02 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 19:39:02 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLARE
+2025/08/22 19:39:02 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BOLT
+2025/08/22 19:39:02 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 19:39:02 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 19:39:02 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GOLDEN_GHOUL
+2025/08/22 19:39:02 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOCHIBEAR
+2025/08/22 19:39:03 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=CORRUPT_SOIL
+2025/08/22 19:39:03 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=AGARIMOO_TONGUE
+2025/08/22 19:39:03 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SOUL_OF_THE_ALPHA
+2025/08/22 19:39:03 SHARD_SOUL_OF_THE_ALPHA is suspected to be market manipulated.
+2025/08/22 19:39:03 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAVA_FLAME
+2025/08/22 19:39:03 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 19:39:03 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 19:39:04 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 19:39:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ENCHANTED_GLISTERING_MELON
+2025/08/22 19:39:04 ENCHANTED_GLISTERING_MELON is suspected to be market manipulated.
+2025/08/22 19:39:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_KADA_KNIGHT
+2025/08/22 19:39:04 SHARD_KADA_KNIGHT is suspected to be market manipulated.
+2025/08/22 19:39:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 19:39:04 SINGED_POWDER is suspected to be market manipulated.
+2025/08/22 19:39:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_COD
+2025/08/22 19:39:04 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 19:39:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 19:39:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 19:39:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_NEWT
+2025/08/22 19:39:05 SHARD_NEWT is suspected to be market manipulated.
+2025/08/22 19:39:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_THYST
+2025/08/22 19:39:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SALMON
+2025/08/22 19:39:05 SHARD_SALMON is suspected to be market manipulated.
+2025/08/22 19:39:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BEZOS
+2025/08/22 19:39:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_WITHER_SPECTER
+2025/08/22 19:39:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOSSYBIT
+2025/08/22 19:39:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GHOST
+2025/08/22 19:39:05 SHARD_GHOST is suspected to be market manipulated.
+2025/08/22 19:39:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CAVERNSHADE
+2025/08/22 19:39:05 SHARD_CAVERNSHADE is suspected to be market manipulated.
+2025/08/22 19:39:05 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=BLUE_SHARK_TOOTH
+2025/08/22 19:39:05 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 19:39:05 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_VERDANT
+2025/08/22 19:39:06 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 19:39:06 SHARD_SPIKE is suspected to be market manipulated.
+2025/08/22 19:39:06 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=NURSE_SHARK_TOOTH
+2025/08/22 19:39:06 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BAMBULEAF
+2025/08/22 19:39:07 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEER
+2025/08/22 19:39:07 SHARD_SEER is suspected to be market manipulated.
+2025/08/22 19:39:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VORACIOUS_SPIDER
+2025/08/22 19:39:09 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_TROGLOBYTE
+2025/08/22 19:39:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_AZURE
+2025/08/22 19:39:10 SHARD_AZURE is suspected to be market manipulated.
+2025/08/22 19:39:10 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 19:39:10 Encountered status code 500 for url https://pricehistory.notenoughupdates.org?item=ORB_OF_ENERGY
+2025/08/22 19:39:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TADGANG
+2025/08/22 19:39:10 SHARD_TADGANG is suspected to be market manipulated.
+2025/08/22 19:39:11 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FINE_TOPAZ_GEM
+2025/08/22 19:39:11 FINE_TOPAZ_GEM is suspected to be market manipulated.
+2025/08/22 19:39:12 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_XYZ
+2025/08/22 19:39:13 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 19:39:13 SHARD_MAGMA_SLUG is suspected to be market manipulated.
+2025/08/22 19:39:15 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=MANA_DISINTEGRATOR
+2025/08/22 19:39:15 MANA_DISINTEGRATOR is suspected to be market manipulated.
+2025/08/22 19:39:16 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=PLASMA
+2025/08/22 19:39:18 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 19:39:19 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SULPHURIC_COAL
+2025/08/22 19:39:23 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_RAIN_SLIME
+2025/08/22 19:39:24 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZEALOT
+2025/08/22 19:39:25 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MIST
+2025/08/22 19:39:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ECTOPLASM
+2025/08/22 19:39:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 19:39:39 SHARD_APEX_DRAGON is suspected to be market manipulated.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_STAR_SENTRY, profit: 10399.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_POWER_DRAGON, profit: 126141.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_FLARE, profit: 8370.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_BOLT, profit: 33238.
+2025/08/22 19:39:39 
+Found flip! Id: FRIED_FEATHER, profit: 3776.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_MINER_ZOMBIE, profit: 5967.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_GOLDEN_GHOUL, profit: 10374.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_MOCHIBEAR, profit: 25626.
+2025/08/22 19:39:39 
+Found flip! Id: CORRUPT_SOIL, profit: 54078.
+2025/08/22 19:39:39 
+Found flip! Id: AGARIMOO_TONGUE, profit: 5150.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_LAVA_FLAME, profit: 24602.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_COD, profit: 3065.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_FLASH, profit: 22011.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_SEA_ARCHER, profit: 3397.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_ENT, profit: 8405.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_THYST, profit: 14919.
+2025/08/22 19:39:39 
+Found flip! Id: BEZOS, profit: 2029.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_WITHER_SPECTER, profit: 7355.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_MOSSYBIT, profit: 25124.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_CHILL, profit: 7660.
+2025/08/22 19:39:39 
+Found flip! Id: NURSE_SHARK_TOOTH, profit: 3902.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_BAMBULEAF, profit: 37029.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_VORACIOUS_SPIDER, profit: 12880.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_XYZ, profit: 15370.
+2025/08/22 19:39:39 
+Found flip! Id: PLASMA, profit: 3606.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_FIRE_EEL, profit: 30075.
+2025/08/22 19:39:39 
+Found flip! Id: SULPHURIC_COAL, profit: 1482.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_RAIN_SLIME, profit: 27058.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_ZEALOT, profit: 5870.
+2025/08/22 19:39:39 
+Found flip! Id: SHARD_MIST, profit: 16918.
+2025/08/22 19:39:39 
+Found flip! Id: ECTOPLASM, profit: 34514.
+2025/08/22 19:39:39 Flipping complete in  41.049330254s
+2025/08/22 19:39:39 > 
+2025/08/22 19:41:44 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 19:41:44 API Key is valid. Proceeding...
+2025/08/22 19:41:44 Connected to DB.
+2025/08/22 19:41:44 Initialized config table.
+2025/08/22 19:41:44 Registered routes.
+2025/08/22 19:41:44 > 
+2025/08/22 19:42:00 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 19:42:00 API Key is valid. Proceeding...
+2025/08/22 19:42:00 Connected to DB.
+2025/08/22 19:42:00 Initialized config table.
+2025/08/22 19:42:00 Registered routes.
+2025/08/22 19:42:01 > 
+2025/08/22 19:42:06 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 19:42:06 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 19:42:06 Iterating through found products...
+2025/08/22 19:42:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAVA_FLAME
+2025/08/22 19:42:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FINE_TOPAZ_GEM
+2025/08/22 19:42:10 FINE_TOPAZ_GEM is suspected to be market manipulated.
+2025/08/22 19:42:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ENCHANTED_GLISTERING_MELON
+2025/08/22 19:42:10 ENCHANTED_GLISTERING_MELON is suspected to be market manipulated.
+2025/08/22 19:42:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CAVERNSHADE
+2025/08/22 19:42:10 SHARD_CAVERNSHADE is suspected to be market manipulated.
+2025/08/22 19:42:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 19:42:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 19:42:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SYCOPHANT
+2025/08/22 19:42:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_PIRANHA
+2025/08/22 19:42:10 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SALMON
+2025/08/22 19:42:11 SHARD_SALMON is suspected to be market manipulated.
+2025/08/22 19:42:11 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 19:42:11 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLAMING_SPIDER
+2025/08/22 19:42:11 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VERDANT
+2025/08/22 19:42:11 SHARD_VERDANT is suspected to be market manipulated.
+2025/08/22 19:42:11 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_OBSIDIAN_DEFENDER
+2025/08/22 19:42:11 SHARD_OBSIDIAN_DEFENDER is suspected to be market manipulated.
+2025/08/22 19:42:11 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=NURSE_SHARK_TOOTH
+2025/08/22 19:42:12 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 19:42:12 SHARD_APEX_DRAGON is suspected to be market manipulated.
+2025/08/22 19:42:12 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 19:42:13 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 19:42:13 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 19:42:13 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CINDER_BAT
+2025/08/22 19:42:13 SHARD_CINDER_BAT is suspected to be market manipulated.
+2025/08/22 19:42:13 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEER
+2025/08/22 19:42:13 SHARD_SEER is suspected to be market manipulated.
+2025/08/22 19:42:13 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=EXPORTABLE_CARROTS
+2025/08/22 19:42:13 EXPORTABLE_CARROTS is suspected to be market manipulated.
+2025/08/22 19:42:13 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TROGLOBYTE
+2025/08/22 19:42:13 SHARD_TROGLOBYTE is suspected to be market manipulated.
+2025/08/22 19:42:13 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BLUE_SHARK_TOOTH
+2025/08/22 19:42:13 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GOLDEN_GHOUL
+2025/08/22 19:42:14 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=PLASMA
+2025/08/22 19:42:14 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 19:42:14 SHARD_STRIDER_SURFER is suspected to be market manipulated.
+2025/08/22 19:42:14 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLARE
+2025/08/22 19:42:14 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_POWER_DRAGON
+2025/08/22 19:42:14 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GLACITE_WALKER
+2025/08/22 19:42:14 SHARD_GLACITE_WALKER is suspected to be market manipulated.
+2025/08/22 19:42:15 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_WITHER_SPECTER
+2025/08/22 19:42:15 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_XYZ
+2025/08/22 19:42:15 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_AZURE
+2025/08/22 19:42:15 SHARD_AZURE is suspected to be market manipulated.
+2025/08/22 19:42:15 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TADGANG
+2025/08/22 19:42:15 SHARD_TADGANG is suspected to be market manipulated.
+2025/08/22 19:42:16 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOCHIBEAR
+2025/08/22 19:42:16 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=AGARIMOO_TONGUE
+2025/08/22 19:42:16 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 19:42:16 SHARD_MAGMA_SLUG is suspected to be market manipulated.
+2025/08/22 19:42:16 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 19:42:16 SINGED_POWDER is suspected to be market manipulated.
+2025/08/22 19:42:16 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=CORRUPT_SOIL
+2025/08/22 19:42:17 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 19:42:17 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GHOST
+2025/08/22 19:42:17 SHARD_GHOST is suspected to be market manipulated.
+2025/08/22 19:42:17 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VORACIOUS_SPIDER
+2025/08/22 19:42:17 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SOUL_OF_THE_ALPHA
+2025/08/22 19:42:17 SHARD_SOUL_OF_THE_ALPHA is suspected to be market manipulated.
+2025/08/22 19:42:18 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_COD
+2025/08/22 19:42:18 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_KADA_KNIGHT
+2025/08/22 19:42:18 SHARD_KADA_KNIGHT is suspected to be market manipulated.
+2025/08/22 19:42:18 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BOLT
+2025/08/22 19:42:18 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=MANA_DISINTEGRATOR
+2025/08/22 19:42:18 MANA_DISINTEGRATOR is suspected to be market manipulated.
+2025/08/22 19:42:18 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 19:42:18 SHARD_SPIKE is suspected to be market manipulated.
+2025/08/22 19:42:19 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 19:42:19 SHARD_JOYDIVE is suspected to be market manipulated.
+2025/08/22 19:42:19 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BEZOS
+2025/08/22 19:42:19 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZEALOT
+2025/08/22 19:42:19 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BARBARIAN_DUKE_X
+2025/08/22 19:42:20 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MIST
+2025/08/22 19:42:22 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_RAIN_SLIME
+2025/08/22 19:42:22 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 19:42:23 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ORB_OF_ENERGY
+2025/08/22 19:42:24 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 19:42:26 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 19:42:27 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 19:42:28 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_THYST
+2025/08/22 19:42:28 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_NEWT
+2025/08/22 19:42:28 SHARD_NEWT is suspected to be market manipulated.
+2025/08/22 19:42:28 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 19:42:29 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOSSYBIT
+2025/08/22 19:42:35 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ECTOPLASM
+2025/08/22 19:42:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SULPHURIC_COAL
+2025/08/22 19:42:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BAMBULEAF
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_LAVA_FLAME, profit: 24602.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_SEA_ARCHER, profit: 3397.
+2025/08/22 19:42:47 
+Found flip! Id: FRIED_FEATHER, profit: 3550.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_SYCOPHANT, profit: 9320.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_PIRANHA, profit: 34638.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_FLAMING_SPIDER, profit: 10368.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_MINER_ZOMBIE, profit: 6116.
+2025/08/22 19:42:47 
+Found flip! Id: NURSE_SHARK_TOOTH, profit: 3902.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_FLASH, profit: 22014.
+2025/08/22 19:42:47 
+Found flip! Id: BLUE_SHARK_TOOTH, profit: 4750.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_GOLDEN_GHOUL, profit: 10374.
+2025/08/22 19:42:47 
+Found flip! Id: PLASMA, profit: 3594.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_FLARE, profit: 8369.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_POWER_DRAGON, profit: 125327.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_WITHER_SPECTER, profit: 7363.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_XYZ, profit: 15370.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_MOCHIBEAR, profit: 21962.
+2025/08/22 19:42:47 
+Found flip! Id: AGARIMOO_TONGUE, profit: 5157.
+2025/08/22 19:42:47 
+Found flip! Id: CORRUPT_SOIL, profit: 53387.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_CHILL, profit: 7714.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_VORACIOUS_SPIDER, profit: 13016.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_COD, profit: 3047.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_BOLT, profit: 33238.
+2025/08/22 19:42:47 
+Found flip! Id: BEZOS, profit: 2029.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_ZEALOT, profit: 5870.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_BARBARIAN_DUKE_X, profit: 57971.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_MIST, profit: 16924.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_RAIN_SLIME, profit: 25980.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_FIRE_EEL, profit: 31571.
+2025/08/22 19:42:47 
+Found flip! Id: ORB_OF_ENERGY, profit: 2123.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_ZOMBIE_SOLDIER, profit: 10163.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_STAR_SENTRY, profit: 10399.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_ENT, profit: 8420.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_THYST, profit: 14668.
+2025/08/22 19:42:47 
+Found flip! Id: X, profit: 6301.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_MOSSYBIT, profit: 25150.
+2025/08/22 19:42:47 
+Found flip! Id: ECTOPLASM, profit: 34514.
+2025/08/22 19:42:47 
+Found flip! Id: SULPHURIC_COAL, profit: 1482.
+2025/08/22 19:42:47 
+Found flip! Id: SHARD_BAMBULEAF, profit: 36920.
+2025/08/22 19:42:47 Flipping complete in  43.584606722s
+2025/08/22 19:42:47 > 
+2025/08/22 19:46:23 Encountered status code 404 for url https://api.hypixel.net/v2/key
+2025/08/22 19:46:23 API Key is valid. Proceeding...
+2025/08/22 19:46:23 Connected to DB.
+2025/08/22 19:46:23 Initialized config table.
+2025/08/22 19:46:23 Registered routes.
+2025/08/22 19:46:23 > 
+2025/08/22 19:46:33 Encountered status code 200 for url https://api.hypixel.net/v2/skyblock/bazaar
+2025/08/22 19:46:33 
+Bazaar response success was: true. Products found: 1712
+2025/08/22 19:46:33 Iterating through found products...
+2025/08/22 19:46:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BAMBULEAF
+2025/08/22 19:46:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAPIS_ZOMBIE
+2025/08/22 19:46:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SYCOPHANT
+2025/08/22 19:46:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=PLASMA
+2025/08/22 19:46:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GLACITE_WALKER
+2025/08/22 19:46:36 SHARD_GLACITE_WALKER is suspected to be market manipulated.
+2025/08/22 19:46:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SPIKE
+2025/08/22 19:46:36 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_WITHER_SPECTER
+2025/08/22 19:46:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLASH
+2025/08/22 19:46:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=X
+2025/08/22 19:46:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEA_ARCHER
+2025/08/22 19:46:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BLUE_SHARK_TOOTH
+2025/08/22 19:46:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SINGED_POWDER
+2025/08/22 19:46:37 SINGED_POWDER is suspected to be market manipulated.
+2025/08/22 19:46:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ENT
+2025/08/22 19:46:37 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=CORRUPT_SOIL
+2025/08/22 19:46:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BARBARIAN_DUKE_X
+2025/08/22 19:46:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_XYZ
+2025/08/22 19:46:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOSSYBIT
+2025/08/22 19:46:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BOLT
+2025/08/22 19:46:38 SHARD_BOLT is suspected to be market manipulated.
+2025/08/22 19:46:38 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SULPHURIC_COAL
+2025/08/22 19:46:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_NEWT
+2025/08/22 19:46:39 SHARD_NEWT is suspected to be market manipulated.
+2025/08/22 19:46:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MINER_ZOMBIE
+2025/08/22 19:46:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SOUL_OF_THE_ALPHA
+2025/08/22 19:46:39 SHARD_SOUL_OF_THE_ALPHA is suspected to be market manipulated.
+2025/08/22 19:46:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TROGLOBYTE
+2025/08/22 19:46:39 SHARD_TROGLOBYTE is suspected to be market manipulated.
+2025/08/22 19:46:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VORACIOUS_SPIDER
+2025/08/22 19:46:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_APEX_DRAGON
+2025/08/22 19:46:39 SHARD_APEX_DRAGON is suspected to be market manipulated.
+2025/08/22 19:46:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GOLDEN_GHOUL
+2025/08/22 19:46:39 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLARE
+2025/08/22 19:46:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_VERDANT
+2025/08/22 19:46:40 SHARD_VERDANT is suspected to be market manipulated.
+2025/08/22 19:46:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MIST
+2025/08/22 19:46:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_PIRANHA
+2025/08/22 19:46:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STAR_SENTRY
+2025/08/22 19:46:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MOCHIBEAR
+2025/08/22 19:46:40 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ENCHANTED_GLISTERING_MELON
+2025/08/22 19:46:40 ENCHANTED_GLISTERING_MELON is suspected to be market manipulated.
+2025/08/22 19:46:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=NURSE_SHARK_TOOTH
+2025/08/22 19:46:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_OBSIDIAN_DEFENDER
+2025/08/22 19:46:41 SHARD_OBSIDIAN_DEFENDER is suspected to be market manipulated.
+2025/08/22 19:46:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FLAMING_SPIDER
+2025/08/22 19:46:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CINDER_BAT
+2025/08/22 19:46:41 SHARD_CINDER_BAT is suspected to be market manipulated.
+2025/08/22 19:46:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_KADA_KNIGHT
+2025/08/22 19:46:41 SHARD_KADA_KNIGHT is suspected to be market manipulated.
+2025/08/22 19:46:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_JOYDIVE
+2025/08/22 19:46:41 SHARD_JOYDIVE is suspected to be market manipulated.
+2025/08/22 19:46:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=MANA_DISINTEGRATOR
+2025/08/22 19:46:41 MANA_DISINTEGRATOR is suspected to be market manipulated.
+2025/08/22 19:46:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CHILL
+2025/08/22 19:46:41 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_FIRE_EEL
+2025/08/22 19:46:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BRUISER
+2025/08/22 19:46:42 SHARD_BRUISER is suspected to be market manipulated.
+2025/08/22 19:46:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_CAVERNSHADE
+2025/08/22 19:46:42 SHARD_CAVERNSHADE is suspected to be market manipulated.
+2025/08/22 19:46:42 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_STRIDER_SURFER
+2025/08/22 19:46:42 SHARD_STRIDER_SURFER is suspected to be market manipulated.
+2025/08/22 19:46:43 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_POWER_DRAGON
+2025/08/22 19:46:43 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SEER
+2025/08/22 19:46:43 SHARD_SEER is suspected to be market manipulated.
+2025/08/22 19:46:43 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_SALMON
+2025/08/22 19:46:43 SHARD_SALMON is suspected to be market manipulated.
+2025/08/22 19:46:43 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_THYST
+2025/08/22 19:46:43 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=ECTOPLASM
+2025/08/22 19:46:43 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_LAVA_FLAME
+2025/08/22 19:46:43 SHARD_LAVA_FLAME is suspected to be market manipulated.
+2025/08/22 19:46:44 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=EXPORTABLE_CARROTS
+2025/08/22 19:46:44 EXPORTABLE_CARROTS is suspected to be market manipulated.
+2025/08/22 19:46:44 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FINE_TOPAZ_GEM
+2025/08/22 19:46:44 FINE_TOPAZ_GEM is suspected to be market manipulated.
+2025/08/22 19:46:45 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_TADGANG
+2025/08/22 19:46:45 SHARD_TADGANG is suspected to be market manipulated.
+2025/08/22 19:46:46 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_RAIN_SLIME
+2025/08/22 19:46:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_GHOST
+2025/08/22 19:46:47 SHARD_GHOST is suspected to be market manipulated.
+2025/08/22 19:46:47 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=BEZOS
+2025/08/22 19:46:49 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZOMBIE_SOLDIER
+2025/08/22 19:46:52 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_AZURE
+2025/08/22 19:46:52 SHARD_AZURE is suspected to be market manipulated.
+2025/08/22 19:46:55 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_COD
+2025/08/22 19:47:00 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_ZEALOT
+2025/08/22 19:47:00 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=FRIED_FEATHER
+2025/08/22 19:47:08 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_BURNINGSOUL
+2025/08/22 19:47:08 SHARD_BURNINGSOUL is suspected to be market manipulated.
+2025/08/22 19:47:09 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=AGARIMOO_TONGUE
+2025/08/22 19:47:09 AGARIMOO_TONGUE is suspected to be market manipulated.
+2025/08/22 19:47:18 Encountered status code 200 for url https://pricehistory.notenoughupdates.org?item=SHARD_MAGMA_SLUG
+2025/08/22 19:47:18 SHARD_MAGMA_SLUG is suspected to be market manipulated.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_BAMBULEAF, profit: 36930.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_LAPIS_ZOMBIE, profit: 3430.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_SYCOPHANT, profit: 10004.
+2025/08/22 19:47:18 
+Found flip! Id: PLASMA, profit: 3596.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_SPIKE, profit: 20008.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_WITHER_SPECTER, profit: 6909.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_FLASH, profit: 21662.
+2025/08/22 19:47:18 
+Found flip! Id: X, profit: 6301.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_SEA_ARCHER, profit: 3397.
+2025/08/22 19:47:18 
+Found flip! Id: BLUE_SHARK_TOOTH, profit: 4750.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_ENT, profit: 8438.
+2025/08/22 19:47:18 
+Found flip! Id: CORRUPT_SOIL, profit: 51927.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_BARBARIAN_DUKE_X, profit: 57971.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_XYZ, profit: 15370.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_MOSSYBIT, profit: 25059.
+2025/08/22 19:47:18 
+Found flip! Id: SULPHURIC_COAL, profit: 1482.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_MINER_ZOMBIE, profit: 5811.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_VORACIOUS_SPIDER, profit: 13021.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_GOLDEN_GHOUL, profit: 10369.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_FLARE, profit: 8369.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_MIST, profit: 16924.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_PIRANHA, profit: 34376.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_STAR_SENTRY, profit: 9877.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_MOCHIBEAR, profit: 22033.
+2025/08/22 19:47:18 
+Found flip! Id: NURSE_SHARK_TOOTH, profit: 3902.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_FLAMING_SPIDER, profit: 10668.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_CHILL, profit: 7715.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_FIRE_EEL, profit: 29836.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_POWER_DRAGON, profit: 124103.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_THYST, profit: 14690.
+2025/08/22 19:47:18 
+Found flip! Id: ECTOPLASM, profit: 34514.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_RAIN_SLIME, profit: 25731.
+2025/08/22 19:47:18 
+Found flip! Id: BEZOS, profit: 2029.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_ZOMBIE_SOLDIER, profit: 10127.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_COD, profit: 3041.
+2025/08/22 19:47:18 
+Found flip! Id: SHARD_ZEALOT, profit: 5900.
+2025/08/22 19:47:18 
+Found flip! Id: FRIED_FEATHER, profit: 3544.
+2025/08/22 19:47:18 Flipping complete in  47.967801111s
+2025/08/22 19:47:18 > 

@@ -13,6 +13,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	_ "net/http/pprof"
 	"os"
 	"strings"
 	"time"
@@ -72,6 +73,10 @@ func main() {
 		log.Println("Error loading config. Error: " + err.Error())
 		return
 	}
+
+	go func() {
+		log.Println(http.ListenAndServe("localhost:6060", nil))
+	}()
 
 	commandLoop(cl, conf)
 }

@@ -65,14 +65,13 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 	log.Printf("\nBazaar response success was: %t. Products found: %d\n", resp.Success, len(resp.Products))
 
 	// products which pass our initial check, and will now be checked for market manipulating.
-	respectableProducts := make(chan api.PriceHistoryProduct, 100)
+	respectableProducts := make(chan api.PriceHistoryProduct, 150)
+	resultsChan := make(chan FoundFlip, 150)
 	var (
-		wg      sync.WaitGroup
-		mu      sync.Mutex
-		results []FoundFlip
+		wg sync.WaitGroup
 	)
 
-	maxWorkers := 50
+	maxWorkers := 20
 	for i := 0; i < maxWorkers; i++ {
 		wg.Add(1)
 		go func() {
@@ -87,18 +86,25 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 					continue
 				}
 
-				mu.Lock()
-				results = append(results, FoundFlip{
+				resultsChan <- FoundFlip{
 					ItemId:    product.ProductID,
 					Profit:    product.Profit,
 					Command:   "/bzs " + product.ProductID,
 					SellPrice: product.SellPrice,
 					BuyPrice:  product.BuyPrice,
-				})
-				mu.Unlock()
+				}
 			}
 		}()
 	}
+
+	var results []FoundFlip
+	collectorDone := make(chan struct{})
+	go func() {
+		for result := range resultsChan {
+			results = append(results, result)
+		}
+		collectorDone <- struct{}{}
+	}()
 
 	log.Println("Iterating through found products...")
 	for _, product := range resp.Products {
@@ -157,6 +163,9 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 	}
 	close(respectableProducts)
 	wg.Wait()
+	close(resultsChan)
+	<-collectorDone // wait for collector to finish
+
 	if len(results) == 0 {
 		return nil, fmt.Errorf("no flipped products found")
 	}
