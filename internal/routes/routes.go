@@ -23,4 +23,5 @@ func RegisterRoutes(e *echo.Echo, userDb *storage.DatabaseClient, hypixelApi *ap
 	e.POST("/create_account", handlers.CreateAccountPostHandler(&handlers.RegisteredPlayers{}, reqStruct))
 	protected := e.Group("/api/")
 	protected.Use(handlers.AuthMiddleware(reqStruct))
+	protected.GET("bzflips", handlers.GetBzFlipsHandler(reqStruct))
 }

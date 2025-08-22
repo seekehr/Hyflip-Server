@@ -5,14 +5,18 @@ import (
 	"github.com/labstack/echo/v4"
 	"log"
 	"net/http"
+	"strings"
 )
 
 func AuthMiddleware(data *RequiredStructs) echo.MiddlewareFunc {
 	return func(next echo.HandlerFunc) echo.HandlerFunc {
 		return func(c echo.Context) error {
-			log.Println("uwu (auth here)")
 			// userKeyHash
-			token := c.Request().Header.Get("Authorization")
+			authHeader := c.Request().Header.Get("Authorization")
+			if !strings.HasPrefix(authHeader, "Bearer ") {
+				return c.String(http.StatusUnauthorized, "Malformed Authorization header: missing 'Bearer ' prefix")
+			}
+			token := strings.TrimPrefix(authHeader, "Bearer ")
 			username := c.Request().URL.Query().Get("username")
 
 			if token == "" || username == "" {
