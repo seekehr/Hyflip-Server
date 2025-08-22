@@ -53,8 +53,8 @@ type FoundFlip struct {
 
 const BazaarTax = 1.25
 
-// Flip todo: stream the flips for more efficacy.
-func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error) {
+// Flip returns a channel of found flips (for efficiency purposes). It uses the config to filter items and then checks for market manipulation using `price_checker.go`.
+func Flip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan FoundFlip, error) {
 	reqTime := time.Now()
 	var resp Response
 	err := cl.Get(api.SbApiUrl+"bazaar", &resp)
@@ -74,10 +74,10 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 		wg sync.WaitGroup
 	)
 
-	priceHistoryTime := time.Now()
 	maxWorkers := 20
 	for i := 0; i < maxWorkers; i++ {
 		wg.Add(1)
+		// Price Checker/Market Manipulation Checker
 		go func() {
 			defer wg.Done()
 			for product := range respectableProducts {
@@ -101,85 +101,68 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 		}()
 	}
 
-	var results []FoundFlip
-	collectorDone := make(chan struct{})
+	// Manager goroutine to close the channels
 	go func() {
-		for result := range resultsChan {
-			results = append(results, result)
+		for _, product := range resp.Products {
+			// Name is excluded. Can be "COBBLE" e.g. to exclude COBBLESTONE, ENCHANTED_COBBLESTONE and so on
+			if isIdExcluded(product.ProductID, config) {
+				//log.Println("Ignoring product: " + product.ProductID + ". Cause: EXCLUDED_ITEMS.")
+				continue
+			}
+
+			taxFactor := 1 - BazaarTax/100.0 // 0.9875 if tax = 1.25%
+			profit := (product.QuickStatus.BuyPrice - product.QuickStatus.SellPrice) * taxFactor
+
+			if profit < float64(config.MinProfit) {
+				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_PROFIT (" + strconv.FormatFloat(profit, 'f', 2, 64) + ").")
+				continue
+			}
+
+			profitPercentage := profit / product.QuickStatus.SellPrice * 100
+			if profitPercentage < float64(config.MinProfitPercentage) {
+				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_PROFIT_% (" + strconv.FormatFloat(profitPercentage, 'f', 2, 64) + ").")
+				continue
+			}
+
+			buyVol := product.QuickStatus.BuyVolume
+			sellVol := product.QuickStatus.SellVolume
+			if buyVol < config.MinBuyVolume { // low demand
+				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_VOL (" + strconv.Itoa(buyVol) + ").")
+				continue
+			}
+			if buyVol-sellVol < config.MinVolumeDiff { // should have at least this much diff in demand compared to supply
+				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_VOL_DIFF (" + strconv.Itoa(buyVol-sellVol) + ").")
+				continue
+			}
+
+			buyMovingWeek := product.QuickStatus.BuyMovingWeek
+			sellMovingWeek := product.QuickStatus.SellMovingWeek
+			if buyMovingWeek < config.MinBuyMovingWeek || sellMovingWeek < config.MinSellMovingWeek {
+				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_/_SELL_WEEK (" + strconv.Itoa(buyMovingWeek) + "/" + strconv.Itoa(sellMovingWeek) + ").")
+				continue
+			}
+
+			//log.Println("Respectable product " + product.ProductID + " found.")
+
+			// copy everytime but allg ig. if we sent *Product then it would just point to the latest variable in the loop as the variable will be re-used
+			// so 0xUWU would replace 0x322 as product after an iteration
+			respectableProducts <- api.PriceHistoryProduct{
+				ProductID:      product.ProductID,
+				Profit:         int(profit),
+				SellPrice:      product.QuickStatus.SellPrice,
+				BuyPrice:       product.QuickStatus.BuyPrice,
+				SellVolume:     sellVol,
+				SellMovingWeek: sellMovingWeek,
+				BuyVolume:      buyVol,
+				BuyMovingWeek:  buyMovingWeek,
+			}
 		}
-		collectorDone <- struct{}{}
+		close(respectableProducts) // no more work for the price history checking goroutine
+		wg.Wait()                  // wait for price checking to be done so we can confirm all flips
+		close(resultsChan)         // no more work for the caller of this function
 	}()
 
-	iteratingTime := time.Now()
-	log.Println("Iterating through found products...")
-	for _, product := range resp.Products {
-		// Name is excluded. Can be "COBBLE" e.g. to exclude COBBLESTONE, ENCHANTED_COBBLESTONE and so on
-		if isIdExcluded(product.ProductID, config) {
-			//log.Println("Ignoring product: " + product.ProductID + ". Cause: EXCLUDED_ITEMS.")
-			continue
-		}
-
-		taxFactor := 1 - BazaarTax/100.0 // 0.9875 if tax = 1.25%
-		profit := (product.QuickStatus.BuyPrice - product.QuickStatus.SellPrice) * taxFactor
-
-		if profit < float64(config.MinProfit) {
-			//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_PROFIT (" + strconv.FormatFloat(profit, 'f', 2, 64) + ").")
-			continue
-		}
-
-		profitPercentage := profit / product.QuickStatus.SellPrice * 100
-		if profitPercentage < float64(config.MinProfitPercentage) {
-			//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_PROFIT_% (" + strconv.FormatFloat(profitPercentage, 'f', 2, 64) + ").")
-			continue
-		}
-
-		buyVol := product.QuickStatus.BuyVolume
-		sellVol := product.QuickStatus.SellVolume
-		if buyVol < config.MinBuyVolume { // low demand
-			//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_VOL (" + strconv.Itoa(buyVol) + ").")
-			continue
-		}
-		if buyVol-sellVol < config.MinVolumeDiff { // should have at least this much diff in demand compared to supply
-			//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_VOL_DIFF (" + strconv.Itoa(buyVol-sellVol) + ").")
-			continue
-		}
-
-		buyMovingWeek := product.QuickStatus.BuyMovingWeek
-		sellMovingWeek := product.QuickStatus.SellMovingWeek
-		if buyMovingWeek < config.MinBuyMovingWeek || sellMovingWeek < config.MinSellMovingWeek {
-			//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_/_SELL_WEEK (" + strconv.Itoa(buyMovingWeek) + "/" + strconv.Itoa(sellMovingWeek) + ").")
-			continue
-		}
-
-		//log.Println("Respectable product " + product.ProductID + " found.")
-
-		// copy everytime but allg ig. if we sent *Product then it would just point to the latest variable in the loop as the variable will be re-used
-		// so 0xUWU would replace 0x322 as product after an iteration
-		respectableProducts <- api.PriceHistoryProduct{
-			ProductID:      product.ProductID,
-			Profit:         int(profit),
-			SellPrice:      product.QuickStatus.SellPrice,
-			BuyPrice:       product.QuickStatus.BuyPrice,
-			SellVolume:     sellVol,
-			SellMovingWeek: sellMovingWeek,
-			BuyVolume:      buyVol,
-			BuyMovingWeek:  buyMovingWeek,
-		}
-	}
-	iterationTimeTook := time.Since(iteratingTime)
-	log.Println("Time to iterate through products took: " + iterationTimeTook.String())
-
-	close(respectableProducts)
-	wg.Wait()
-	close(resultsChan)
-	<-collectorDone // wait for collector to finish
-
-	if len(results) == 0 {
-		return nil, fmt.Errorf("no flipped products found")
-	}
-
-	log.Println("PriceHistory checking took " + time.Since(priceHistoryTime).String())
-	return results, nil
+	return resultsChan, nil
 }
 
 func isIdExcluded(itemId string, config *config.BZConfig) bool {

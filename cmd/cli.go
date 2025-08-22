@@ -132,7 +132,7 @@ func commandLoop(cl *api.HypixelApiClient, config *config.UserConfig) {
 			if err != nil {
 				panic(err)
 			}
-			for _, flip := range flips {
+			for flip := range flips {
 				log.Printf("\nFound flip! Id: %s, profit: %d.", flip.ItemId, flip.Profit)
 			}
 			log.Println("Flipping complete in ", time.Since(timeStart))
