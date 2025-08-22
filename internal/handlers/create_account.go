@@ -78,7 +78,7 @@ func CreateAccountPostHandler(p *RegisteredPlayers, data *RequiredStructs) echo.
 
 				// Save user default config
 				go func() {
-					err := data.ConfigTable.SaveDefaultConfig(hash)
+					err := data.ConfigTable.SaveConfig(hash, username, nil)
 					if err != nil {
 						respChan <- &ResponseType{
 							Success: false,
