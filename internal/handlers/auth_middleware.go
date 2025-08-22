@@ -23,7 +23,8 @@ func AuthMiddleware(data *RequiredStructs) echo.MiddlewareFunc {
 				})
 			}
 
-			exists, err := data.UsersTable.ExistsUser(storage.GetHash(username, token))
+			hash := storage.GetHash(username, token)
+			exists, err := data.UsersTable.ExistsUser(hash)
 			if err != nil || !exists {
 				log.Println(err)
 				return c.JSON(http.StatusUnauthorized, ResponseType{
@@ -33,6 +34,7 @@ func AuthMiddleware(data *RequiredStructs) echo.MiddlewareFunc {
 				})
 			}
 
+			c.Set("user_key_hash", hash)
 			// Continue. our next function (endpoint) will have access to userDb and hypixelApi
 			return next(c)
 		}

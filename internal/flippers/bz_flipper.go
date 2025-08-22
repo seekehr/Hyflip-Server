@@ -53,6 +53,7 @@ type FoundFlip struct {
 
 const BazaarTax = 1.25
 
+// Flip Todo: Cache.
 // Flip returns a channel of found flips (for efficiency purposes). It uses the config to filter items and then checks for market manipulation using `price_checker.go`.
 func Flip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan FoundFlip, error) {
 	reqTime := time.Now()
