@@ -8,7 +8,7 @@ import (
 
 const CreateUserConfigTableQuery = `
 CREATE TABLE IF NOT EXISTS user_configs (
-    user_key_hash CHAR(64) PRIMARY KEY,
+    user_key_hash VARCHAR(44) PRIMARY KEY,
     ahconfig JSONB NOT NULL,
     bzconfig JSONB NOT NULL
 );

@@ -20,6 +20,7 @@ func GetBzFlipsHandler(data *RequiredStructs) echo.HandlerFunc {
 			})
 		}
 
+		log.Println("Received request.")
 		// todo: cache this data.
 		conf, err := data.ConfigTable.GetConfig(userKeyHash.(string))
 		if err != nil {
@@ -42,11 +43,8 @@ func GetBzFlipsHandler(data *RequiredStructs) echo.HandlerFunc {
 
 		flusher, err := GetSSEFlusher(c)
 		if err != nil {
-			return c.JSON(500, ResponseType{
-				Success: false,
-				Message: "SSE Flusher error. Error: " + err.Error(),
-				Data:    nil,
-			})
+			log.Println("Error getting SSEFlusher. Error: " + err.Error())
+			return nil
 		}
 
 		for {

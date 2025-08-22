@@ -2,8 +2,8 @@ package handlers
 
 import (
 	"Hyflip-Server/internal/storage"
+	"fmt"
 	"github.com/labstack/echo/v4"
-	"log"
 	"net/http"
 	"strings"
 )
@@ -11,13 +11,18 @@ import (
 func AuthMiddleware(data *RequiredStructs) echo.MiddlewareFunc {
 	return func(next echo.HandlerFunc) echo.HandlerFunc {
 		return func(c echo.Context) error {
+			fmt.Println("Going through auth.")
 			// userKeyHash
 			authHeader := c.Request().Header.Get("Authorization")
 			if !strings.HasPrefix(authHeader, "Bearer ") {
-				return c.String(http.StatusUnauthorized, "Malformed Authorization header: missing 'Bearer ' prefix")
+				return c.JSON(http.StatusUnauthorized, ResponseType{
+					Success: false,
+					Message: "unauthorized (token header malformed)",
+					Data:    nil,
+				})
 			}
-			token := strings.TrimPrefix(authHeader, "Bearer ")
-			username := c.Request().URL.Query().Get("username")
+			token := strings.TrimSpace(strings.TrimPrefix(authHeader, "Bearer "))
+			username := strings.TrimSpace(c.Request().URL.Query().Get("username"))
 
 			if token == "" || username == "" {
 				return c.JSON(http.StatusUnauthorized, ResponseType{
@@ -27,10 +32,9 @@ func AuthMiddleware(data *RequiredStructs) echo.MiddlewareFunc {
 				})
 			}
 
-			hash := storage.GetHash(username, token)
+			hash := storage.GetHash(token, username)
 			exists, err := data.UsersTable.ExistsUser(hash)
 			if err != nil || !exists {
-				log.Println(err)
 				return c.JSON(http.StatusUnauthorized, ResponseType{
 					Success: false,
 					Message: "invalid token",
@@ -38,6 +42,7 @@ func AuthMiddleware(data *RequiredStructs) echo.MiddlewareFunc {
 				})
 			}
 
+			fmt.Println("Succeeded auth.")
 			c.Set("user_key_hash", hash)
 			// Continue. our next function (endpoint) will have access to userDb and hypixelApi
 			return next(c)

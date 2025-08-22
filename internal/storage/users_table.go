@@ -13,7 +13,7 @@ import (
 
 const CreateUsersTableQuery = `
 CREATE TABLE IF NOT EXISTS users (
-    user_key_hash CHAR(64) PRIMARY KEY,
+    user_key_hash VARCHAR(44) PRIMARY KEY,
     user_uuid TEXT UNIQUE NOT NULL,
     username TEXT UNIQUE NOT NULL
 );
@@ -39,7 +39,7 @@ const DeleteUserExistingKeyQuery = `
     DELETE FROM users WHERE username = $1;
 `
 const UserExistsQuery = `
-SELECT true FROM tokens WHERE token = $1 LIMIT 1;
+SELECT true FROM users WHERE user_key_hash = $1 LIMIT 1;
 `
 
 type DatabaseClient struct {
