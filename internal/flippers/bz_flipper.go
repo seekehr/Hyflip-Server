@@ -7,6 +7,7 @@ import (
 	"log"
 	"strings"
 	"sync"
+	"time"
 )
 
 const PriceHistoryTimeSpan = 3600 * 24 * 7 // 1 week
@@ -54,6 +55,7 @@ const BazaarTax = 1.25
 
 // Flip todo: stream the flips for more efficacy.
 func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error) {
+	reqTime := time.Now()
 	var resp Response
 	err := cl.Get(api.SbApiUrl+"bazaar", &resp)
 	if err != nil {
@@ -62,15 +64,17 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 	if !resp.Success {
 		return nil, fmt.Errorf("bzflip not successful")
 	}
-	log.Printf("\nBazaar response success was: %t. Products found: %d\n", resp.Success, len(resp.Products))
+	log.Printf("\nBazaar response success was: %t. Products found: %d. Time taken: %s\n", resp.Success, len(resp.Products), time.Since(reqTime).String())
 
 	// products which pass our initial check, and will now be checked for market manipulating.
 	respectableProducts := make(chan api.PriceHistoryProduct, 150)
+	// flips
 	resultsChan := make(chan FoundFlip, 150)
 	var (
 		wg sync.WaitGroup
 	)
 
+	priceHistoryTime := time.Now()
 	maxWorkers := 20
 	for i := 0; i < maxWorkers; i++ {
 		wg.Add(1)
@@ -82,7 +86,7 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 					continue
 				}
 				if fr {
-					log.Println(product.ProductID + " is suspected to be market manipulated.")
+					//log.Println(product.ProductID + " is suspected to be market manipulated.")
 					continue
 				}
 
@@ -106,11 +110,12 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 		collectorDone <- struct{}{}
 	}()
 
+	iteratingTime := time.Now()
 	log.Println("Iterating through found products...")
 	for _, product := range resp.Products {
 		// Name is excluded. Can be "COBBLE" e.g. to exclude COBBLESTONE, ENCHANTED_COBBLESTONE and so on
 		if isIdExcluded(product.ProductID, config) {
-			log.Println("Ignoring product: " + product.ProductID + ". Cause: EXCLUDED_ITEMS.")
+			//log.Println("Ignoring product: " + product.ProductID + ". Cause: EXCLUDED_ITEMS.")
 			continue
 		}
 
@@ -161,6 +166,9 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 			BuyMovingWeek:  buyMovingWeek,
 		}
 	}
+	iterationTimeTook := time.Since(iteratingTime)
+	log.Println("Time to iterate through products took: " + iterationTimeTook.String())
+
 	close(respectableProducts)
 	wg.Wait()
 	close(resultsChan)
@@ -169,6 +177,8 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) ([]FoundFlip, error
 	if len(results) == 0 {
 		return nil, fmt.Errorf("no flipped products found")
 	}
+
+	log.Println("PriceHistory checking took " + time.Since(priceHistoryTime).String())
 	return results, nil
 }
 

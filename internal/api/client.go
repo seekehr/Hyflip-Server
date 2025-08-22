@@ -37,11 +37,14 @@ func (cl *HypixelApiClient) Get(url string, dst any) error {
 	req.Header.Set("API-Key", cl.ApiKey)
 	req.Header.Set("Connection", "keep-alive")
 	req.Header.Set("Keep-Alive", "timeout=30, max=100")
-	
+
 	if err := cl.Client.Do(req, resp); err != nil {
 		return err
 	}
-	log.Println("Encountered status code " + strconv.Itoa(resp.StatusCode()) + " for url " + url)
+	if resp.StatusCode() == 500 {
+		log.Println("Encountered rate-limit status code " + strconv.Itoa(resp.StatusCode()) + " for url " + url)
+	}
+	
 	if resp.StatusCode() != 200 { // might need to change in future; 200 is a bit too general but works for pricechecker & hypixel api for now.
 		return fmt.Errorf("invalid status code; " + resp.String())
 	}
