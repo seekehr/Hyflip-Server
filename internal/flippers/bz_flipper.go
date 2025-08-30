@@ -2,6 +2,7 @@ package flippers
 
 import (
 	"Hyflip-Server/internal/api"
+	"Hyflip-Server/internal/cache"
 	"Hyflip-Server/internal/config"
 	"fmt"
 	"log"
@@ -12,7 +13,7 @@ import (
 
 const PriceHistoryTimeSpan = 3600 * 24 * 7 // 1 week
 
-type Response struct {
+type BazaarResponse struct {
 	Success     bool               `json:"success"`
 	LastUpdated int64              `json:"lastUpdated"`
 	Products    map[string]Product `json:"products"`
@@ -43,7 +44,7 @@ type QuickStatus struct {
 	BuyOrders      int     `json:"buyOrders"`
 }
 
-type FoundFlip struct {
+type BazaarFoundFlip struct {
 	ProductID                       string  `json:"productId"`
 	Command                         string  `json:"command"`
 	Profit                          int     `json:"profit"`
@@ -64,11 +65,14 @@ const (
 	BazaarTax                = 1.25
 )
 
-// Flip Todo: Cache.
-// Flip returns a channel of found flips (for efficiency purposes). It uses the config to filter items and then checks for market manipulation using `price_checker.go`.
-func Flip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan FoundFlip, error) {
+func GetBzFlipsFromCache(cache *cache.Cache[[]BazaarFoundFlip]) (<-chan BazaarFoundFlip, error) {
+
+}
+
+// BzFlip returns a channel of found flips (for efficiency purposes). It uses the config to filter items and then checks for market manipulation using `price_checker.go`.
+func BzFlip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan BazaarFoundFlip, error) {
 	reqTime := time.Now()
-	var resp Response
+	var resp BazaarResponse
 	err := cl.Get(api.SbApiUrl+"bazaar", &resp)
 	if err != nil {
 		return nil, fmt.Errorf("error while loading bazaar: " + err.Error())
@@ -81,7 +85,7 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan FoundFlip, 
 	// products which pass our initial check, and will now be checked for market manipulating.
 	respectableProducts := make(chan api.PriceHistoryProduct, 150)
 	// flips
-	resultsChan := make(chan FoundFlip, 150)
+	resultsChan := make(chan BazaarFoundFlip, 150)
 	var (
 		wg sync.WaitGroup
 	)
@@ -104,7 +108,7 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan FoundFlip, 
 
 				recomFlipVol := int(float64(product.BuyMovingWeek/VolumeAverageCheck) * RecommendedBuyPercentage)
 				profitFromRecom := product.Profit * recomFlipVol
-				resultsChan <- FoundFlip{
+				resultsChan <- BazaarFoundFlip{
 					ProductID:                       product.ProductID,
 					Command:                         "/bzs " + product.ProductID,
 					Profit:                          product.Profit,
@@ -186,7 +190,7 @@ func Flip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan FoundFlip, 
 		}
 		close(respectableProducts) // no more work for the price history checking goroutine
 		wg.Wait()                  // wait for price checking to be done so we can confirm all flips
-		close(resultsChan)         // no more work for the caller of this function
+		close(resultsChan)         // no more work for the caller of this function. everything DONE
 	}()
 
 	return resultsChan, nil

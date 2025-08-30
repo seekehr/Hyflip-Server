@@ -128,12 +128,12 @@ func commandLoop(cl *api.HypixelApiClient, config *config.UserConfig) {
 			createAccount(username)
 		case line == "bzflip":
 			timeStart := time.Now()
-			flips, err := flippers.Flip(cl, &config.BzConfig)
+			flips, err := flippers.BzFlip(cl, &config.BzConfig)
 			if err != nil {
 				panic(err)
 			}
 			for flip := range flips {
-				log.Printf("\nFound flip! Id: %s, profit: %d.", flip.ItemId, flip.Profit)
+				log.Printf("\nFound flip! Id: %s, profit: %d.", flip.ProductID, flip.Profit)
 			}
 			log.Println("Flipping complete in ", time.Since(timeStart))
 		case line == "exit":

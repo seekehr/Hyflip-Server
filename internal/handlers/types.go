@@ -2,13 +2,16 @@ package handlers
 
 import (
 	"Hyflip-Server/internal/api"
+	"Hyflip-Server/internal/cache"
+	"Hyflip-Server/internal/flippers"
 	"Hyflip-Server/internal/storage"
 )
 
-type RequiredStructs struct {
+type FlipperStructs struct {
 	Api         *api.HypixelApiClient
 	UsersTable  *storage.DatabaseClient
 	ConfigTable *storage.ConfigTableClient
+	BzCache     *cache.Cache[flippers.BazaarFoundFlip]
 }
 
 type ResponseType struct {

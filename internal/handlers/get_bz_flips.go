@@ -9,7 +9,7 @@ import (
 	"net/http"
 )
 
-func GetBzFlipsHandler(data *RequiredStructs) echo.HandlerFunc {
+func GetBzFlipsHandler(data *FlipperStructs) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		userKeyHash := c.Get("user_key_hash")
 		if userKeyHash == nil {
@@ -32,7 +32,7 @@ func GetBzFlipsHandler(data *RequiredStructs) echo.HandlerFunc {
 			})
 		}
 
-		flips, err := flippers.Flip(data.Api, &conf.BzConfig)
+		flips, err := flippers.BzFlip(data.Api, &conf.BzConfig)
 		if err != nil {
 			return c.JSON(500, ResponseType{
 				Success: false,
