@@ -10,7 +10,7 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 )
 
-func RegisterRoutes(e *echo.Echo, userDb *storage.DatabaseClient, hypixelApi *api.HypixelApiClient, configTable *storage.ConfigTableClient, bzCache *cache.Cache[flippers.BazaarFoundFlip]) {
+func RegisterRoutes(e *echo.Echo, userDb *storage.DatabaseClient, hypixelApi *api.HypixelApiClient, configTable *storage.ConfigTableClient, bzCache *cache.Cache[<-chan flippers.BazaarFoundFlip]) {
 	reqStruct := &handlers.FlipperStructs{
 		Api:         hypixelApi,
 		UsersTable:  userDb,

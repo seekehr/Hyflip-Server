@@ -2,6 +2,8 @@ package main
 
 import (
 	"Hyflip-Server/internal/api"
+	"Hyflip-Server/internal/cache"
+	"Hyflip-Server/internal/cache/cache_templates"
 	"Hyflip-Server/internal/config"
 	"Hyflip-Server/internal/env"
 	"Hyflip-Server/internal/flippers"
@@ -50,7 +52,7 @@ func main() {
 	// Register routes
 	e := echo.New()
 	e.HideBanner = true
-	routes.RegisterRoutes(e, userDb, cl, configTable)
+	routes.RegisterRoutes(e, userDb, cl, configTable, nil)
 	log.Println("Registered routes.")
 
 	// Start echo in a goroutine so we don't block our command loop ;3
@@ -58,22 +60,24 @@ func main() {
 		e.Logger.Fatal(e.Start(":3000"))
 	}()
 
-	token := os.Getenv("TOKEN")
-	if token == "" {
-		log.Println("Token not found in .env.")
+	hash := os.Getenv("USER_KEY_HASH")
+	if hash == "" {
+		log.Println("USER_KEY_HASH not found in .env.")
 		log.Println("Attempting to create account. Add the token in .env and reload...")
 		time.Sleep(250 * time.Millisecond) // wait for server to start
 		createAccount("Seekher")
 		return
 	}
 
-	conf, err := loadConfigs(token, configTable)
+	cacheTime := time.Now()
+	log.Println("Creating cache...")
+	bzCache, err := cache_templates.NewBazaarCache(cl)
 	if err != nil {
-		log.Println("Error loading config. Error: " + err.Error())
-		return
+		panic(err)
 	}
+	log.Println("Cache created in " + time.Now().Sub(cacheTime).String() + ".")
 
-	commandLoop(cl, conf)
+	commandLoop(cl, hash, configTable, bzCache)
 }
 
 func checkKey(cl *api.HypixelApiClient) {
@@ -107,7 +111,7 @@ func loadConfigs(token string, configTable *storage.ConfigTableClient) (*config.
 	return configTable.GetConfig(token)
 }
 
-func commandLoop(cl *api.HypixelApiClient, config *config.UserConfig) {
+func commandLoop(cl *api.HypixelApiClient, hash string, configTable *storage.ConfigTableClient, bzCache *cache.Cache[<-chan flippers.BazaarFoundFlip]) {
 	time.Sleep(230 * time.Millisecond) // for our > to LIKELY appear below the 'http server started at'
 	reader := bufio.NewReader(os.Stdin)
 
@@ -126,9 +130,17 @@ func commandLoop(cl *api.HypixelApiClient, config *config.UserConfig) {
 
 			username := parts[1]
 			createAccount(username)
+			log.Println("Set your token to the given token above and restart program.")
+			os.Exit(1)
 		case line == "bzflip":
+			conf, err := loadConfigs(hash, configTable)
+			if err != nil {
+				log.Println("Error loading config. Error: " + err.Error())
+				return
+			}
+
 			timeStart := time.Now()
-			flips, err := flippers.BzFlip(cl, &config.BzConfig)
+			flips, err := flippers.GetBzFlipsForUser(&conf.BzConfig, bzCache)
 			if err != nil {
 				panic(err)
 			}

@@ -35,7 +35,7 @@ func (p *RegisteredPlayers) Read() []string {
 	return strings.Split(strings.TrimSpace(content), "\n")
 }
 
-func CreateAccountPostHandler(p *RegisteredPlayers, data *RequiredStructs) echo.HandlerFunc {
+func CreateAccountPostHandler(p *RegisteredPlayers, data *FlipperStructs) echo.HandlerFunc {
 	return func(c echo.Context) error {
 		players := p.Read()
 		var req CreateAccountRequest

@@ -44,6 +44,14 @@ type QuickStatus struct {
 	BuyOrders      int     `json:"buyOrders"`
 }
 
+type filteredProductInfo struct {
+	Profit         int `json:"profit"`
+	SellVolume     int `json:"sellVolume"`
+	SellMovingWeek int `json:"sellMovingWeek"`
+	BuyVolume      int `json:"buyVolume"`
+	BuyMovingWeek  int `json:"buyMovingWeek"`
+}
+
 type BazaarFoundFlip struct {
 	ProductID                       string  `json:"productId"`
 	Command                         string  `json:"command"`
@@ -65,11 +73,24 @@ const (
 	BazaarTax                = 1.25
 )
 
-func GetBzFlipsFromCache(cache *cache.Cache[[]BazaarFoundFlip]) (<-chan BazaarFoundFlip, error) {
+// GetBzFlipsForUser is used to apply a user's config filter upon the flips data received from the cache. USE THIS FUNCTION FOR EVERYTHING. BZFLIP IS USED FOR UPDATING CACHE.
+func GetBzFlipsForUser(userConfig *config.BZConfig, bzCache *cache.Cache[<-chan BazaarFoundFlip]) (<-chan BazaarFoundFlip, error) {
+	resultsChan := make(chan BazaarFoundFlip, 200)
+	go func() { // goroutine is needed not because this function is very costly but because we will be receiving the bzCache slowly (upon update at least; will be fast enough if returned cached) and we js wanna filter n pass it on to the API
+		for foundFlip := range bzCache.Get() {
+			log.Println("Filtered one product received from cache.")
+			filteredProduct := filter(nil, &foundFlip, userConfig)
+			if filteredProduct == nil {
+				continue
+			}
+			resultsChan <- foundFlip // we just send our existing flip struct as we know no values will change. filter just filters it and returns info we already knew like profit
+		}
+	}()
 
+	return resultsChan, nil
 }
 
-// BzFlip returns a channel of found flips (for efficiency purposes). It uses the config to filter items and then checks for market manipulation using `price_checker.go`.
+// BzFlip returns a channel of found flips (for efficiency purposes). It uses the config to filter items and then checks for market manipulation using `price_checker.go`. Used for cache updates.
 func BzFlip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan BazaarFoundFlip, error) {
 	reqTime := time.Now()
 	var resp BazaarResponse
@@ -85,11 +106,12 @@ func BzFlip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan BazaarFou
 	// products which pass our initial check, and will now be checked for market manipulating.
 	respectableProducts := make(chan api.PriceHistoryProduct, 150)
 	// flips
-	resultsChan := make(chan BazaarFoundFlip, 150)
+	resultsChan := make(chan BazaarFoundFlip, 200)
 	var (
 		wg sync.WaitGroup
 	)
 
+	// worker pool for market manipulation checker
 	maxWorkers := 20
 	for i := 0; i < maxWorkers; i++ {
 		wg.Add(1)
@@ -127,73 +149,107 @@ func BzFlip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan BazaarFou
 
 	// Manager goroutine to close the channels
 	go func() {
+		filteringTime := time.Now()
 		for _, product := range resp.Products {
-			// Name is excluded. Can be "COBBLE" e.g. to exclude COBBLESTONE, ENCHANTED_COBBLESTONE and so on
-			if isIdExcluded(product.ProductID, config) {
-				//log.Println("Ignoring product: " + product.ProductID + ". Cause: EXCLUDED_ITEMS.")
+			filteredProduct := filter(&product, nil, config)
+			if filteredProduct == nil { // product does not match our given filters
 				continue
 			}
-
-			taxFactor := 1 - BazaarTax/100.0 // 0.9875 if tax = 1.25%
-			profit := (product.QuickStatus.BuyPrice - product.QuickStatus.SellPrice) * taxFactor
-
-			if profit < float64(config.MinProfit) {
-				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_PROFIT (" + strconv.FormatFloat(profit, 'f', 2, 64) + ").")
-				continue
-			}
-
-			profitPercentage := profit / product.QuickStatus.SellPrice * 100
-			if profitPercentage < float64(config.MinProfitPercentage) {
-				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_PROFIT_% (" + strconv.FormatFloat(profitPercentage, 'f', 2, 64) + ").")
-				continue
-			}
-
-			buyVol := product.QuickStatus.BuyVolume
-			sellVol := product.QuickStatus.SellVolume
-			if buyVol < config.MinBuyVolume { // low demand
-				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_VOL (" + strconv.Itoa(buyVol) + ").")
-				continue
-			}
-			if buyVol-sellVol < config.MinVolumeDiff { // should have at least this much diff in demand compared to supply
-				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_VOL_DIFF (" + strconv.Itoa(buyVol-sellVol) + ").")
-				continue
-			}
-
-			// less moving week buy
-			buyMovingWeek := product.QuickStatus.BuyMovingWeek
-			sellMovingWeek := product.QuickStatus.SellMovingWeek
-			if buyMovingWeek < config.MinBuyMovingWeek || sellMovingWeek < config.MinSellMovingWeek {
-				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_/_SELL_WEEK (" + strconv.Itoa(buyMovingWeek) + "/" + strconv.Itoa(sellMovingWeek) + ").")
-				continue
-			}
-
-			// to ensure there is enough daily demand that you dont have to do weekly flips lol
-			if buyMovingWeek/VolumeAverageCheck <= 10 || sellMovingWeek/VolumeAverageCheck <= 10 {
-				//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_DAILY_BUY_/_SELL_WEEK (" + strconv.Itoa(buyMovingWeek / VolumeAverageCheck) + "/" + strconv.Itoa(sellMovingWeek / VolumeAverageCheck) + ").")
-				continue
-			}
-
-			//log.Println("Respectable product " + product.ProductID + " found.")
 
 			// copy everytime but allg ig. if we sent *Product then it would just point to the latest variable in the loop as the variable will be re-used
 			// so 0xUWU would replace 0x322 as product after an iteration
 			respectableProducts <- api.PriceHistoryProduct{
 				ProductID:      product.ProductID,
-				Profit:         int(profit),
+				Profit:         filteredProduct.Profit,
 				SellPrice:      product.QuickStatus.SellPrice,
 				BuyPrice:       product.QuickStatus.BuyPrice,
-				SellVolume:     sellVol,
-				SellMovingWeek: sellMovingWeek,
-				BuyVolume:      buyVol,
-				BuyMovingWeek:  buyMovingWeek,
+				SellVolume:     filteredProduct.SellVolume,
+				SellMovingWeek: filteredProduct.SellMovingWeek,
+				BuyVolume:      filteredProduct.BuyVolume,
+				BuyMovingWeek:  filteredProduct.BuyMovingWeek,
 			}
 		}
 		close(respectableProducts) // no more work for the price history checking goroutine
-		wg.Wait()                  // wait for price checking to be done so we can confirm all flips
-		close(resultsChan)         // no more work for the caller of this function. everything DONE
+		log.Println("Filtering products took time: " + time.Since(filteringTime).String())
+		marketManipTime := time.Now()
+		wg.Wait()          // wait for price checking to be done so we can confirm all flips
+		close(resultsChan) // no more work for the caller of this function. everything DONE
+		log.Println("Market manipulation took (ESTIMATED): " + time.Since(marketManipTime).String())
 	}()
 
 	return resultsChan, nil
+}
+
+// filter using a config and EITHER Product or BazaarFoundFlip.
+func filter(product *Product, bzFlip *BazaarFoundFlip, bzConfig *config.BZConfig) *filteredProductInfo {
+	var (
+		productId      string
+		sellPrice      float64
+		buyPrice       float64
+		sellVolume     int
+		buyVolume      int
+		sellMovingWeek int
+		buyMovingWeek  int
+	)
+
+	if product != nil {
+		// one hell of a one-liner huh
+		productId, sellPrice, buyPrice, sellVolume, buyVolume, sellMovingWeek, buyMovingWeek = product.ProductID, product.QuickStatus.SellPrice, product.QuickStatus.BuyPrice, product.QuickStatus.SellVolume, product.QuickStatus.BuyVolume, product.QuickStatus.SellMovingWeek, product.QuickStatus.BuyMovingWeek
+	} else if bzFlip != nil {
+		productId, sellPrice, buyPrice, sellVolume, buyVolume, sellMovingWeek, buyMovingWeek = bzFlip.ProductID, bzFlip.SellPrice, bzFlip.BuyPrice, bzFlip.SellVolume, bzFlip.BuyVolume, bzFlip.SellMovingWeek, bzFlip.BuyMovingWeek
+	} else {
+		return nil // both product and bzFlip cannot be nil
+	}
+
+	// Name is excluded. Can be "COBBLE" e.g. to exclude COBBLESTONE, ENCHANTED_COBBLESTONE and so on
+	if isIdExcluded(productId, bzConfig) {
+		//log.Println("Ignoring product: " + product.ProductID + ". Cause: EXCLUDED_ITEMS.")
+		return nil
+	}
+
+	taxFactor := 1 - BazaarTax/100.0 // 0.9875 if tax = 1.25%
+	profit := (buyPrice - sellPrice) * taxFactor
+
+	if profit < float64(bzConfig.MinProfit) {
+		//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_PROFIT (" + strconv.FormatFloat(profit, 'f', 2, 64) + ").")
+		return nil
+	}
+
+	profitPercentage := profit / sellPrice * 100
+	if profitPercentage < float64(bzConfig.MinProfitPercentage) {
+		//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_PROFIT_% (" + strconv.FormatFloat(profitPercentage, 'f', 2, 64) + ").")
+		return nil
+	}
+
+	if buyVolume < bzConfig.MinBuyVolume { // low demand
+		//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_VOL (" + strconv.Itoa(buyVol) + ").")
+		return nil
+	}
+	if buyVolume-sellVolume < bzConfig.MinVolumeDiff { // should have at least this much diff in demand compared to supply
+		//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_VOL_DIFF (" + strconv.Itoa(buyVol-sellVol) + ").")
+		return nil
+	}
+
+	// less moving week buy
+	if buyMovingWeek < bzConfig.MinBuyMovingWeek || sellMovingWeek < bzConfig.MinSellMovingWeek {
+		//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_BUY_/_SELL_WEEK (" + strconv.Itoa(buyMovingWeek) + "/" + strconv.Itoa(sellMovingWeek) + ").")
+		return nil
+	}
+
+	// to ensure there is enough daily demand that you dont have to do weekly flips lol
+	if buyMovingWeek/VolumeAverageCheck <= 10 || sellMovingWeek/VolumeAverageCheck <= 10 {
+		//log.Println("Ignoring product: " + product.ProductID + ". Cause: MIN_DAILY_BUY_/_SELL_WEEK (" + strconv.Itoa(buyMovingWeek / VolumeAverageCheck) + "/" + strconv.Itoa(sellMovingWeek / VolumeAverageCheck) + ").")
+		return nil
+	}
+
+	//log.Println("Respectable product " + product.ProductID + " found.")
+	return &filteredProductInfo{
+		Profit:         int(profit),
+		SellVolume:     sellVolume,
+		SellMovingWeek: sellMovingWeek,
+		BuyVolume:      buyVolume,
+		BuyMovingWeek:  buyMovingWeek,
+	}
 }
 
 func isIdExcluded(itemId string, config *config.BZConfig) bool {

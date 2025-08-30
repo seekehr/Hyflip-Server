@@ -47,16 +47,16 @@ func GenerateDefaultAHConfig() *AHConfig {
 }
 
 func GenerateDefaultBZConfig() *BZConfig {
-	return &BZConfig{
+	return &BZConfig{ // very lenient as this is also used for caching so we need as many flips as possible
 		ConfigVersion:       "1.0.0",
-		MinProfit:           1000,
-		MinProfitPercentage: 20,
+		MinProfit:           50,
+		MinProfitPercentage: 10,
 		ExcludeItems:        nil,
-		IncludeCraftCost:    false,
-		MinBuyVolume:        1000,
-		MinVolumeDiff:       100,
-		MinSellMovingWeek:   10000,
-		MinBuyMovingWeek:    10000,
+		IncludeCraftCost:    false, // TODO
+		MinBuyVolume:        5,
+		MinVolumeDiff:       10,
+		MinSellMovingWeek:   30,
+		MinBuyMovingWeek:    30,
 	}
 }
 

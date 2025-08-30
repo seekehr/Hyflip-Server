@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func AuthMiddleware(data *RequiredStructs) echo.MiddlewareFunc {
+func AuthMiddleware(data *FlipperStructs) echo.MiddlewareFunc {
 	return func(next echo.HandlerFunc) echo.HandlerFunc {
 		return func(c echo.Context) error {
 			fmt.Println("Going through auth.")

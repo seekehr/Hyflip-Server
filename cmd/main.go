@@ -3,7 +3,7 @@ package main
 import (
 	"Hyflip-Server/internal/api"
 	"Hyflip-Server/internal/cache"
-	"Hyflip-Server/internal/config"
+	"Hyflip-Server/internal/cache/cache_templates"
 	"Hyflip-Server/internal/env"
 	"Hyflip-Server/internal/flippers"
 	"Hyflip-Server/internal/routes"
@@ -11,10 +11,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"io"
 	"log"
-	"net/http"
 	"os"
-	"sync"
-	"time"
 )
 
 // For testing purposes.
@@ -40,37 +37,25 @@ func main() {
 	// Register routes
 	e := echo.New()
 	e.HideBanner = true
-	routes.RegisterRoutes(e, userDb, cl, configTable)
+	routes.RegisterRoutes(e, userDb, cl, configTable, bzCache)
 	log.Println("Registered routes.")
 
 	e.Logger.Fatal(e.Start(":3000"))
 }
 
-func finishApiCalls(key string, config *config.BZConfig) (*api.HypixelApiClient, *cache.Cache[<-chan flippers.BazaarFoundFlip]) {
+func finishApiCalls(key string) (*api.HypixelApiClient, *cache.Cache[<-chan flippers.BazaarFoundFlip]) {
 	// Init API client
 	cl := api.Init(key)
 	verifyKey(cl)
 
 	// Finish getting cache
-	bzCache := getBazaarCache(cl, config)
+	bzCache, err := cache_templates.NewBazaarCache(cl)
+	if err != nil {
+		panic(err)
+	}
 	return cl, bzCache
 }
 
-func getBazaarCache(api *api.HypixelApiClient, config *config.BZConfig) *cache.Cache[<-chan flippers.BazaarFoundFlip] {
-	updateFunc := func() (<-chan flippers.BazaarFoundFlip, error) {
-		return flippers.BzFlip(api, config)
-	}
-	errorFunc := func(err error) {
-		log.Println("ERROR UPDATING BAZAAR CACHE. Error: " + err.Error())
-	}
-
-	newCache, err := cache.New[<-chan flippers.BazaarFoundFlip](20*time.Second, updateFunc, errorFunc)
-	if err != nil {
-		log.Fatal("Error creating new cache. " + err.Error())
-		return nil
-	}
-	return newCache
-}
 func verifyKey(cl *api.HypixelApiClient) {
 	valid, err := api.CheckApiKey(cl)
 	if err != nil {

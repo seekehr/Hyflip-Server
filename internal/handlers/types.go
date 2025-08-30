@@ -11,7 +11,7 @@ type FlipperStructs struct {
 	Api         *api.HypixelApiClient
 	UsersTable  *storage.DatabaseClient
 	ConfigTable *storage.ConfigTableClient
-	BzCache     *cache.Cache[flippers.BazaarFoundFlip]
+	BzCache     *cache.Cache[<-chan flippers.BazaarFoundFlip]
 }
 
 type ResponseType struct {

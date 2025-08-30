@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"Hyflip-Server/internal/flippers"
 	"encoding/json"
 	"fmt"
 	"github.com/labstack/echo/v4"
@@ -22,7 +21,7 @@ func GetBzFlipsHandler(data *FlipperStructs) echo.HandlerFunc {
 
 		log.Println("Received request.")
 		// todo: cache this data.
-		conf, err := data.ConfigTable.GetConfig(userKeyHash.(string))
+		/*conf, err := data.ConfigTable.GetConfig(userKeyHash.(string))
 		if err != nil {
 			log.Println("Error loading config. Error: " + err.Error())
 			return c.JSON(http.StatusUnauthorized, ResponseType{
@@ -30,16 +29,9 @@ func GetBzFlipsHandler(data *FlipperStructs) echo.HandlerFunc {
 				Message: "Request error (Loading Config). Error: " + err.Error(),
 				Data:    nil,
 			})
-		}
+		}*/
 
-		flips, err := flippers.BzFlip(data.Api, &conf.BzConfig)
-		if err != nil {
-			return c.JSON(500, ResponseType{
-				Success: false,
-				Message: "Flipper error. Error: " + err.Error(),
-				Data:    nil,
-			})
-		}
+		flips := data.BzCache.Get()
 
 		flusher, err := GetSSEFlusher(c)
 		if err != nil {
