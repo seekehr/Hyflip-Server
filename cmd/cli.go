@@ -3,7 +3,6 @@ package main
 import (
 	"Hyflip-Server/internal/api"
 	"Hyflip-Server/internal/cache"
-	"Hyflip-Server/internal/cache/cache_templates"
 	"Hyflip-Server/internal/config"
 	"Hyflip-Server/internal/env"
 	"Hyflip-Server/internal/flippers"
@@ -16,6 +15,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"strings"
 	"time"
 )
@@ -71,10 +71,7 @@ func main() {
 
 	cacheTime := time.Now()
 	log.Println("Creating cache...")
-	bzCache, err := cache_templates.NewBazaarCache(cl)
-	if err != nil {
-		panic(err)
-	}
+	bzCache := cache.NewBazaarCache(cl, time.Second*20)
 	log.Println("Cache created in " + time.Now().Sub(cacheTime).String() + ".")
 
 	commandLoop(cl, hash, configTable, bzCache)
@@ -111,7 +108,7 @@ func loadConfigs(token string, configTable *storage.ConfigTableClient) (*config.
 	return configTable.GetConfig(token)
 }
 
-func commandLoop(cl *api.HypixelApiClient, hash string, configTable *storage.ConfigTableClient, bzCache *cache.Cache[<-chan flippers.BazaarFoundFlip]) {
+func commandLoop(cl *api.HypixelApiClient, hash string, configTable *storage.ConfigTableClient, bzCache *cache.BazaarCache) {
 	time.Sleep(230 * time.Millisecond) // for our > to LIKELY appear below the 'http server started at'
 	reader := bufio.NewReader(os.Stdin)
 
@@ -140,13 +137,23 @@ func commandLoop(cl *api.HypixelApiClient, hash string, configTable *storage.Con
 			}
 
 			timeStart := time.Now()
-			flips, err := flippers.GetBzFlipsForUser(&conf.BzConfig, bzCache)
-			if err != nil {
-				panic(err)
+			ch := bzCache.Subscribe() // no need to defer this is an INFINITE loop TILL the universe collapses
+			snapshot := bzCache.Get()
+			for _, flip := range snapshot {
+				if flippers.Filter(nil, &flip, &conf.BzConfig) != nil {
+					log.Println("Found flip!. ID: " + flip.ProductID + ". Profit: " + strconv.Itoa(flip.Profit))
+				} else {
+					log.Println("Flip didn't pass filter (Snapshot)")
+				}
 			}
-			for flip := range flips {
-				log.Printf("\nFound flip! Id: %s, profit: %d.", flip.ProductID, flip.Profit)
+			for liveFlip := range ch {
+				if flippers.Filter(nil, &liveFlip, &conf.BzConfig) != nil {
+					log.Println("Found flip!. ID: " + liveFlip.ProductID + ". Profit: " + strconv.Itoa(liveFlip.Profit))
+				} else {
+					log.Println("Flip didn't pass filter (Live)")
+				}
 			}
+
 			log.Println("Flipping complete in ", time.Since(timeStart))
 		case line == "exit":
 			log.Println("Exiting...")

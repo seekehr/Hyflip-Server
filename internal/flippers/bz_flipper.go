@@ -2,7 +2,6 @@ package flippers
 
 import (
 	"Hyflip-Server/internal/api"
-	"Hyflip-Server/internal/cache"
 	"Hyflip-Server/internal/config"
 	"fmt"
 	"log"
@@ -44,7 +43,7 @@ type QuickStatus struct {
 	BuyOrders      int     `json:"buyOrders"`
 }
 
-type filteredProductInfo struct {
+type FilteredProductInfo struct {
 	Profit         int `json:"profit"`
 	SellVolume     int `json:"sellVolume"`
 	SellMovingWeek int `json:"sellMovingWeek"`
@@ -72,23 +71,6 @@ const (
 	RecommendedBuyPercentage = 0.01 // 1%;arbitrary for now
 	BazaarTax                = 1.25
 )
-
-// GetBzFlipsForUser is used to apply a user's config filter upon the flips data received from the cache. USE THIS FUNCTION FOR EVERYTHING. BZFLIP IS USED FOR UPDATING CACHE.
-func GetBzFlipsForUser(userConfig *config.BZConfig, bzCache *cache.Cache[<-chan BazaarFoundFlip]) (<-chan BazaarFoundFlip, error) {
-	resultsChan := make(chan BazaarFoundFlip, 200)
-	go func() { // goroutine is needed not because this function is very costly but because we will be receiving the bzCache slowly (upon update at least; will be fast enough if returned cached) and we js wanna filter n pass it on to the API
-		for foundFlip := range bzCache.Get() {
-			log.Println("Filtered one product received from cache.")
-			filteredProduct := filter(nil, &foundFlip, userConfig)
-			if filteredProduct == nil {
-				continue
-			}
-			resultsChan <- foundFlip // we just send our existing flip struct as we know no values will change. filter just filters it and returns info we already knew like profit
-		}
-	}()
-
-	return resultsChan, nil
-}
 
 // BzFlip returns a channel of found flips (for efficiency purposes). It uses the config to filter items and then checks for market manipulation using `price_checker.go`. Used for cache updates.
 func BzFlip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan BazaarFoundFlip, error) {
@@ -151,7 +133,7 @@ func BzFlip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan BazaarFou
 	go func() {
 		filteringTime := time.Now()
 		for _, product := range resp.Products {
-			filteredProduct := filter(&product, nil, config)
+			filteredProduct := Filter(&product, nil, config)
 			if filteredProduct == nil { // product does not match our given filters
 				continue
 			}
@@ -180,8 +162,8 @@ func BzFlip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan BazaarFou
 	return resultsChan, nil
 }
 
-// filter using a config and EITHER Product or BazaarFoundFlip.
-func filter(product *Product, bzFlip *BazaarFoundFlip, bzConfig *config.BZConfig) *filteredProductInfo {
+// Filter filter using a config and EITHER Product or BazaarFoundFlip.
+func Filter(product *Product, bzFlip *BazaarFoundFlip, bzConfig *config.BZConfig) *FilteredProductInfo {
 	var (
 		productId      string
 		sellPrice      float64
@@ -243,7 +225,7 @@ func filter(product *Product, bzFlip *BazaarFoundFlip, bzConfig *config.BZConfig
 	}
 
 	//log.Println("Respectable product " + product.ProductID + " found.")
-	return &filteredProductInfo{
+	return &FilteredProductInfo{
 		Profit:         int(profit),
 		SellVolume:     sellVolume,
 		SellMovingWeek: sellMovingWeek,

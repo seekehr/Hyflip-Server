@@ -3,14 +3,13 @@ package routes
 import (
 	"Hyflip-Server/internal/api"
 	"Hyflip-Server/internal/cache"
-	"Hyflip-Server/internal/flippers"
 	"Hyflip-Server/internal/handlers"
 	"Hyflip-Server/internal/storage"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
 
-func RegisterRoutes(e *echo.Echo, userDb *storage.DatabaseClient, hypixelApi *api.HypixelApiClient, configTable *storage.ConfigTableClient, bzCache *cache.Cache[<-chan flippers.BazaarFoundFlip]) {
+func RegisterRoutes(e *echo.Echo, userDb *storage.DatabaseClient, hypixelApi *api.HypixelApiClient, configTable *storage.ConfigTableClient, bzCache *cache.BazaarCache) {
 	reqStruct := &handlers.FlipperStructs{
 		Api:         hypixelApi,
 		UsersTable:  userDb,

@@ -3,15 +3,14 @@ package main
 import (
 	"Hyflip-Server/internal/api"
 	"Hyflip-Server/internal/cache"
-	"Hyflip-Server/internal/cache/cache_templates"
 	"Hyflip-Server/internal/env"
-	"Hyflip-Server/internal/flippers"
 	"Hyflip-Server/internal/routes"
 	"Hyflip-Server/internal/storage"
 	"github.com/labstack/echo/v4"
 	"io"
 	"log"
 	"os"
+	"time"
 )
 
 // For testing purposes.
@@ -43,16 +42,13 @@ func main() {
 	e.Logger.Fatal(e.Start(":3000"))
 }
 
-func finishApiCalls(key string) (*api.HypixelApiClient, *cache.Cache[<-chan flippers.BazaarFoundFlip]) {
+func finishApiCalls(key string) (*api.HypixelApiClient, *cache.BazaarCache) {
 	// Init API client
 	cl := api.Init(key)
 	verifyKey(cl)
 
 	// Finish getting cache
-	bzCache, err := cache_templates.NewBazaarCache(cl)
-	if err != nil {
-		panic(err)
-	}
+	bzCache := cache.NewBazaarCache(cl, time.Second*20)
 	return cl, bzCache
 }
 

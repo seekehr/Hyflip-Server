@@ -37,3 +37,35 @@ why NOT
 
 
 # DONE
+
+1. Buffer Everything During Update
+
+When you start the update, create a temporary slice (buffer).
+
+Every item the API produces is sent to the live channel and appended to this buffer.
+
+2. Users Joining Mid-Update
+
+When a user connects mid-update:
+
+First, they read all items currently in the buffer.
+
+Then, they continue reading new items from the live channel as they arrive.
+
+This ensures no user misses anything, even if they join 30 seconds into the 50-second update.
+
+3. After Update Finishes
+
+Save the final buffer as the snapshot.
+
+Clear the live buffer (or keep it if you want to allow replay for very late joiners).
+
+Mark the update as finished.
+
+4. Key Points
+
+Single update goroutine handles API fetch.
+
+Buffer + live channel guarantees mid-update users get all data.
+
+Snapshot guarantees new users after the update still have data
