@@ -131,7 +131,6 @@ func BzFlip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan BazaarFou
 
 	// Manager goroutine to close the channels
 	go func() {
-		filteringTime := time.Now()
 		for _, product := range resp.Products {
 			filteredProduct := Filter(&product, nil, config)
 			if filteredProduct == nil { // product does not match our given filters
@@ -152,11 +151,8 @@ func BzFlip(cl *api.HypixelApiClient, config *config.BZConfig) (<-chan BazaarFou
 			}
 		}
 		close(respectableProducts) // no more work for the price history checking goroutine
-		log.Println("Filtering products took time: " + time.Since(filteringTime).String())
-		marketManipTime := time.Now()
-		wg.Wait()          // wait for price checking to be done so we can confirm all flips
-		close(resultsChan) // no more work for the caller of this function. everything DONE
-		log.Println("Market manipulation took (ESTIMATED): " + time.Since(marketManipTime).String())
+		wg.Wait()                  // wait for price checking to be done so we can confirm all flips
+		close(resultsChan)         // no more work for the caller of this function. everything DONE
 	}()
 
 	return resultsChan, nil

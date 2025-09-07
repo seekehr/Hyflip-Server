@@ -8,6 +8,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"log"
 	"net/http"
+	"time"
 )
 
 func GetBzFlipsHandler(data *FlipperStructs) echo.HandlerFunc {
@@ -42,7 +43,7 @@ func GetBzFlipsHandler(data *FlipperStructs) echo.HandlerFunc {
 		}
 		flusher.Flush()
 
-		log.Println("Received request.")
+		start := time.Now()
 		// previous flips in the update in case we joined mid-update
 		snapshot := data.BzCache.Get()
 		// subscribe to get live updates now that we've joined the update stream
@@ -64,13 +65,14 @@ func GetBzFlipsHandler(data *FlipperStructs) echo.HandlerFunc {
 			select {
 			// client connection closed
 			case <-c.Request().Context().Done():
+				log.Println("Took " + time.Since(start).String() + " to complete flipping request.")
 				return nil
 
 			// new flip OR channel closed
 			case flip, ok := <-liveUpdatesChan:
 				// channel closed
 				if !ok {
-					log.Println("Flip stream completed for this update cycle.")
+					log.Println("Took " + time.Since(start).String() + " to complete flipping request.")
 					return nil
 				}
 

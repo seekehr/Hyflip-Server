@@ -110,12 +110,10 @@ func (c *BazaarCache) startUpdateGoroutine() {
 	for range ticker.C {
 		if c.isExpired() {
 			if !c.isUpdating.CompareAndSwap(false, true) {
-				log.Println("Skipping bazaar cache update: an update is already in progress.")
 				continue
 			}
 
 			func() {
-				log.Println("Starting bazaar cache update...")
 				defer c.isUpdating.Store(false)
 				c.lastUpdate.Store(time.Now().Unix())
 
@@ -151,14 +149,12 @@ func (c *BazaarCache) startUpdateGoroutine() {
 				}
 
 				c.flipsSnapshot.Store(newSnapshot) // we store the snapshot in case the next update is delayed (like the 1-4s delay of bzflip)
-				log.Printf("Bazaar cache update complete. Stored %d new flips.", len(newSnapshot))
 
 				// end of flips. close channels for subscribers
 				for _, subChan := range subscribersForThisUpdate {
 					close(subChan)
 				}
 
-				log.Printf("Closed %d subscriber channels for this update cycle.", len(subscribersForThisUpdate))
 			}()
 		}
 	}
