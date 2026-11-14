@@ -1,5 +1,5 @@
-.env
 .idea/
-.vscode/
 logs/
 *.out
+config.bat
+node_modules
